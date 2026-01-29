@@ -1,4 +1,4 @@
-# Seguridad en redes: Wi-Fi (WPA2/WPA3), VPN y firewalls básicos
+🔐 # Seguridad en redes: Wi-Fi (WPA2/WPA3), VPN y firewalls básicos
 
 ## 1. ¿Por qué importa la seguridad en redes?
 En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos la red, alguien puede:
@@ -11,20 +11,20 @@ Si no protegemos la red, alguien puede:
 
 | #  | Amenaza                                                      | Tipo de ataque en ciberseguridad                     |
 |----|--------------------------------------------------------------|------------------------------------------------------|
-| 1  | Escuchar el tráfico (robo de datos)                          | **Sniffing / Eavesdropping**                         |
-| 2  | Manipular comunicaciones (cambiar lo que llega)              | **Man-in-the-Middle (MitM)**                         |
-| 3  | Bloquear servicios (dejarte sin conexión)                    | **Denegación de Servicio (DoS/DDoS)**                |
-| 4  | Suplantar identidades en la red                              | **Spoofing (IP/ARP/DNS)**                            |
-| 5  | Entrar en dispositivos no protegidos                         | **Explotación de vulnerabilidades / Acceso no autorizado** |
-| 6  | Propagación automática de malware                            | **Gusanos (Worms) / Malware de red**                 |
-| 7  | Descubrir información sensible de la red                     | **Footprinting / Escaneo de puertos**                |
-| 8  | Secuestrar sesiones activas de usuarios                      | **Hijacking de sesión / Cookie theft**               |
-| 9  | Engañar a usuarios para que revelen credenciales             | **Phishing / Ingeniería social**                     |
-| 10 | Crear redes falsas para atraer víctimas                      | **Evil Twin / Rogue Access Point**                   |
-| 11 | Modificar datos en tránsito para dañar sistemas              | **Data tampering / Integrity attack**                |
-| 12 | Negar que se envió o recibió un mensaje                      | **Ataque de no repudio (Repudiation)**               |
-| 13 | Anular mecanismos de cifrado o autenticación                 | **Cryptographic attack / Authentication bypass**     |
-| 14 | Agotar recursos de red (como direcciones IP)                 | **DHCP starvation / Resource exhaustion**            |
+| 1  | **Escuchar** el tráfico (robo de datos)                      | **Sniffing / Eavesdropping**                         |
+| 2  | **Manipular** comunicaciones (cambiar lo que llega)          | **Man-in-the-Middle (MitM)**                         |
+| 3  | **Bloquear servicios** (dejarte sin conexión)                | **Denegación de Servicio (DoS/DDoS)**                |
+| 4  | **Suplantar** identidades en la red                          | **Spoofing (IP/ARP/DNS)**                            |
+| 5  | **Entrar** en dispositivos no protegidos                     | **Explotación de vulnerabilidades**                  |
+| 6  | **Propagación** automática de malware                            | **Gusanos (Worms) / Malware de red**                 |
+| 7  | **Descubrir** información sensible de la red                     | **Footprinting / Escaneo de puertos**                |
+| 8  | **Secuestrar** sesiones activas de usuarios                      | **Hijacking de sesión / Cookie theft**               |
+| 9  | **Engañar** a usuarios para que revelen credenciales             | **Phishing / Ingeniería social**                     |
+| 10 | **Crear redes falsas** para atraer víctimas                      | **Evil Twin / Rogue Access Point**                   |
+| 11 | **Modificar datos** en tránsito para dañar sistemas              | **Data tampering / Integrity attack**                |
+| 12 | Negar que se envió o recibió un mensaje                          | **Ataque de no repudio (Repudiation)**               |
+| 13 | **Anular** mecanismos de cifrado o autenticación                 | **Cryptographic attack / Authentication bypass**     |
+| 14 | **Agotar recursos de red** (como direcciones IP)                 | **DHCP starvation / Resource exhaustion**            |
 
 **Objetivo de la seguridad (CIA):**
 - **Confidencialidad:** que no lo lea quien no debe.
