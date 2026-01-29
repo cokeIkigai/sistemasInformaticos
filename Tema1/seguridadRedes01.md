@@ -31,7 +31,7 @@ Si no protegemos la red, alguien puede:
 - **Integridad:** que no lo modifiquen.
 - **Disponibilidad:** que el servicio funcione.
 
-📷 *Imagen sugerida:* diagrama “Dispositivo → Router/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red.
+![diagrama “Dispositivo → Router/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red.](../wifi1.png)
 
 ---
 
