@@ -1,29 +1,37 @@
-# 🔐 Seguridad en redes: Wi-Fi (WPA2/WPA3), VPN y firewalls básicos
+# 🔐 Seguridad en redes
 
 <div align="center">
-  <img src="../img/titlewifi.png" width=2200; height=300>
+  <img src="../img/titlewifi.jpg" width=2200; height=250>
 </div>
+
+--- 
+
 ## 1. ¿Por qué importa la seguridad en redes?
-Hoy en día, casi todo lo que hacemos pasa por una red: enviar mensajes, acceder a plataformas educativas, trabajar en remoto, pagar con el móvil o ver contenido en streaming.
+
 Cada vez que un dispositivo se conecta a una red, intercambia información que puede ser valiosa o sensible.
 
-Si una red no está protegida, esa información puede:
+Hoy en día, casi todo lo que hacemos pasa por una red: 
+- enviar mensajes,
+- acceder a plataformas educativas,
+- trabajar en remoto,
+- pagar con el móvil o ver contenido en streaming.
+  
+### Si una red no está protegida, esa información puede:
 
 - ser `interceptada` por terceros,
 - `alterarse` durante el envío,
 - quedar `inaccesible`por ataques o fallos.
 
-La seguridad en redes es, por tanto, la primera línea de defensa frente a amenazas digitales. No solo protege datos personales y empresariales, sino que garantiza que los sistemas funcionen correctamente y de forma continua. Da igual si hablamos de una red doméstica, un centro educativo o una empresa: una red insegura pone en riesgo todo lo que depende de ella.
+---
+
+### La seguridad en redes es, por tanto:
+
+* la primera `línea de defensa` frente a amenazas digitales.
+* No solo protege datos personales y empresariales, sino que `garantiza` que los sistemas funcionen correctamente y de forma `continua`. 
+* Da igual si hablamos de una red doméstica, un centro educativo o una empresa: una `red insegura` pone en riesgo todo lo que depende de ella.
 
 Por eso es fundamental conocer y aplicar mecanismos básicos como Wi-Fi segura (WPA2/WPA3), VPN y firewalls, que permiten proteger las comunicaciones y reducir los riesgos en cualquier entorno conectado.
 
-Si quieres, en el siguiente mensaje puedo:
-
-simplificarla aún más (nivel SMR),
-
-hacerla más técnica (ASIR),
-
-o añadir una pregunta provocadora para debate en clase.
 En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos la red, alguien puede:
 
 | #  | Amenaza                                                      | Tipo de ataque en ciberseguridad                     |
