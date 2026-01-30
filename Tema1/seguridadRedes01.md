@@ -1,6 +1,8 @@
 # 🔐 Seguridad en redes: Wi-Fi (WPA2/WPA3), VPN y firewalls básicos
 
-<img src="../img/titlewifi.png">
+<div align="center">
+  <img src="../img/titlewifi.png" width=2200; height=300>
+</div>
 ## 1. ¿Por qué importa la seguridad en redes?
 Hoy en día, casi todo lo que hacemos pasa por una red: enviar mensajes, acceder a plataformas educativas, trabajar en remoto, pagar con el móvil o ver contenido en streaming.
 Cada vez que un dispositivo se conecta a una red, intercambia información que puede ser valiosa o sensible.
