@@ -80,7 +80,7 @@ Con el tiempo se han encontrado fallos en cómo se negocian claves o se gestiona
 
 **Traducción a lenguaje simple:** no significa que “WPA2 no sirva”, sino que **hay casos donde un atacante experto puede aprovechar debilidades** si se cumplen ciertas condiciones.
 
-📷 *Imagen sugerida:* línea de tiempo: WPA2 → (KRACK 2017) → WPA3.
+<!--📷 *Imagen sugerida:* línea de tiempo: WPA2 → (KRACK 2017) → WPA3.-->
 
 ---
 
@@ -111,14 +111,9 @@ Cambia la autenticación típica de WPA2-PSK por **SAE** (*Simultaneous Authenti
 | Ataques de diccionario offline | Más viable si capturas tráfico y la clave es débil | Mucho más difícil |
 | Recomendación actual | Solo si WPA3 no está disponible | Preferido siempre que se pueda |
 
-📷 *Imagen sugerida:* tabla convertida a infografía.
+<!--📷 *Imagen sugerida:* tabla convertida a infografía.-->
 
 ---
 
-## 4. Ejemplos prácticos (muy claros)
 
-### Ejemplo 1: Casa / piso compartido (configuración recomendada)
-**Objetivo:** Wi-Fi segura sin complicarse.
-1. Activar **WPA3-Personal** (o **WPA2/WPA3 mixed** si hay dispositivos antiguos).
-2. Contraseña larga: **mínimo 14–16 caracteres**, con frases tipo:
-   - `M
+
