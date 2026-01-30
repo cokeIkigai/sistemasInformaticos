@@ -24,11 +24,11 @@ Hoy en día, casi todo lo que hacemos pasa por una red:
 
 ---
 
-### La seguridad en redes es, por tanto:
+### 3. La seguridad en redes es, por tanto:
 
 * la primera `línea de defensa` frente a amenazas digitales.
 * No solo protege datos personales y empresariales, sino que `garantiza` que los sistemas funcionen correctamente y de forma `continua`. 
-* Da igual si hablamos de una red doméstica, un centro educativo o una empresa: una `red insegura` pone en riesgo todo lo que depende de ella.
+* Una `red insegura` pone en riesgo todo lo que depende de ella.
 
 Por eso es fundamental conocer y aplicar mecanismos básicos como Wi-Fi segura (WPA2/WPA3), VPN y firewalls, que permiten proteger las comunicaciones y reducir los riesgos en cualquier entorno conectado.
 
@@ -61,21 +61,22 @@ En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos 
 
 ---
 
-## 2. Wi-Fi segura: del WPA2 al WPA3
+## 4. Wi-Fi segura: del WPA2 al WPA3
 
-### 2.1. WPA2 (lo clásico)
+### WPA2 (lo clásico)
 **WPA2** ha sido el estándar más usado durante años.
 - Usa **AES** para cifrar el tráfico (cifrado fuerte).
 - Normalmente se configura como **WPA2-PSK** (una contraseña para todos).
 
 **Punto clave:** aunque el cifrado sea fuerte, el sistema puede sufrir ataques si la contraseña es débil o si se explotan vulnerabilidades del protocolo.
 
-📷 *Imagen sugerida:* icono de candado + “AES” + “WPA2”.
+<!--📷 *Imagen sugerida:* icono de candado + “AES” + “WPA2”.-->
 
 ---
 
-### 2.2. Vulnerabilidades conocidas (idea general)
-Con el tiempo se han encontrado fallos en cómo se negocian claves o se gestiona la conexión. Ejemplo famoso: **KRACK (2017)**, que mostró que WPA2 no era “perfecto”.
+### 5. Vulnerabilidades conocidas (idea general)
+
+Con el tiempo se han encontrado fallos en cómo se negocian claves o se gestiona la conexión. 
 
 **Traducción a lenguaje simple:** no significa que “WPA2 no sirva”, sino que **hay casos donde un atacante experto puede aprovechar debilidades** si se cumplen ciertas condiciones.
 
