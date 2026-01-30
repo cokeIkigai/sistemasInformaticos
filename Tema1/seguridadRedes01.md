@@ -34,13 +34,13 @@ Por eso es fundamental conocer y aplicar mecanismos básicos como Wi-Fi segura (
 
 En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos la red, alguien puede:
 
-| #  | Amenaza                                                      | Tipo de ataque en ciberseguridad                     |
-|----|--------------------------------------------------------------|------------------------------------------------------|
-| 1  | **Escuchar** el tráfico (robo de datos)                      | **Sniffing / Eavesdropping**                         |
-| 2  | **Manipular** comunicaciones (cambiar lo que llega)          | **Man-in-the-Middle (MitM)**                         |
-| 3  | **Bloquear servicios** (dejarte sin conexión)                | **Denegación de Servicio (DoS/DDoS)**                |
-| 4  | **Suplantar** identidades en la red                          | **Spoofing (IP/ARP/DNS)**                            |
-| 5  | **Entrar** en dispositivos no protegidos                     | **Explotación de vulnerabilidades**                  |
+| #  | Amenaza                                                          | Tipo de ataque en ciberseguridad                     |
+|----|------------------------------------------------------------------|------------------------------------------------------|
+| 1  | **Escuchar** el tráfico (robo de datos)                          | **Sniffing / Eavesdropping**                         |
+| 2  | **Manipular** comunicaciones (cambiar lo que llega)              | **Man-in-the-Middle (MitM)**                         |
+| 3  | **Bloquear servicios** (dejarte sin conexión)                    | **Denegación de Servicio (DoS/DDoS)**                |
+| 4  | **Suplantar** identidades en la red                              | **Spoofing (IP/ARP/DNS)**                            |
+| 5  | **Entrar** en dispositivos no protegidos                         | **Explotación de vulnerabilidades**                  |
 | 6  | **Propagación** automática de malware                            | **Gusanos (Worms) / Malware de red**                 |
 | 7  | **Descubrir** información sensible de la red                     | **Footprinting / Escaneo de puertos**                |
 | 8  | **Secuestrar** sesiones activas de usuarios                      | **Hijacking de sesión / Cookie theft**               |
@@ -50,15 +50,14 @@ En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos 
 | 12 | Negar que se envió o recibió un mensaje                          | **Ataque de no repudio (Repudiation)**               |
 | 13 | **Anular** mecanismos de cifrado o autenticación                 | **Cryptographic attack / Authentication bypass**     |
 | 14 | **Agotar recursos de red** (como direcciones IP)                 | **DHCP starvation / Resource exhaustion**            |
-    
+
+---
+
+<img alt="outer/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red" src="../wifi1.png" align="right" width="220" height="220"/>
+
 - **Confidencialidad:** que no lo lea quien no debe.
 - **Integridad:** que no lo modifiquen.
 - **Disponibilidad:** que el servicio funcione.
-     
-<!--outer/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red.-->
-<div align="right">
-  <img src="../wifi1.png" width=500; height=250>
-</div>
 
 ---
 
