@@ -16,7 +16,7 @@ Hoy en día, casi todo lo que hacemos pasa por una red:
 - trabajar en remoto,
 - pagar con el móvil o ver contenido en streaming.
   
-### Si una red no está protegida, esa información puede:
+### 2. Si una red no está protegida, esa información puede:
 
 - ser `interceptada` por terceros,
 - `alterarse` durante el envío,
