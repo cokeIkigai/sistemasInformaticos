@@ -60,7 +60,9 @@ En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos 
 - **Disponibilidad:** que el servicio funcione.
 
 ---
+
 ## Ejercicios:
+
 ```consola
 curl -I https://www.google.com                 # Muestra las cabeceras HTTP y comprueba que la web usa HTTPS
 curl -I http://example.com                     # Comprueba si la web redirige automáticamente de HTTP a HTTPS
@@ -70,6 +72,7 @@ openssl s_client -connect www.google.com:443   # Muestra el certificado TLS del 
 ip a                                           # Muestra la configuración de red y si se usa IPv4 y/o IPv6
 ip route                                       # Indica la puerta de enlace utilizada para salir a Internet
 ```
+
 ## 4. Wi-Fi segura: del WPA2 al WPA3
 
 ### WPA2 (lo clásico)
