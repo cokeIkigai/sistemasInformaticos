@@ -67,8 +67,8 @@ curl -I http://example.com                     # Comprueba si la web redirige au
 curl -v https://www.google.com                 # Muestra el proceso de conexión TLS y confirma que la comunicación está cifrada
 wget https://www.google.com                    # Descarga la página usando HTTPS y verifica que el servidor acepta cifrado
 openssl s_client -connect www.google.com:443   # Muestra el certificado TLS del servidor (emisor, dominio y validez)
-ip a                                          # Muestra la configuración de red y si se usa IPv4 y/o IPv6
-ip route                                     # Indica la puerta de enlace utilizada para salir a Internet
+ip a                                           # Muestra la configuración de red y si se usa IPv4 y/o IPv6
+ip route                                       # Indica la puerta de enlace utilizada para salir a Internet
 ```
 ## 4. Wi-Fi segura: del WPA2 al WPA3
 
