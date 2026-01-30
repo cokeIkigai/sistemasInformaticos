@@ -50,13 +50,15 @@ En una red, los datos viajan por cables o por el aire (Wi-Fi). Si no protegemos 
 | 12 | Negar que se envió o recibió un mensaje                          | **Ataque de no repudio (Repudiation)**               |
 | 13 | **Anular** mecanismos de cifrado o autenticación                 | **Cryptographic attack / Authentication bypass**     |
 | 14 | **Agotar recursos de red** (como direcciones IP)                 | **DHCP starvation / Resource exhaustion**            |
-
-**Objetivo de la seguridad (CIA):**
+    
 - **Confidencialidad:** que no lo lea quien no debe.
 - **Integridad:** que no lo modifiquen.
 - **Disponibilidad:** que el servicio funcione.
-
-![diagrama “Dispositivo → Router/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red.](../wifi1.png)
+     
+<!--outer/AP → Internet” con un atacante cerca (Wi-Fi) y otro en la red.-->
+<div align="right">
+  <img src="../wifi1.png" width=500; height=250>
+</div>
 
 ---
 
