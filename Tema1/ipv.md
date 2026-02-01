@@ -79,5 +79,26 @@ Debido al **crecimiento global**, el suministro limitado se agotó oficialmente 
 * ¿Por qué NAT rompe la comunicación directa entre dispositivos?
 
 ---
+```concole
+| Buscar | Comando |
+|------------------------------------------------------------|----------------------|
+| ¿Qué dirección IPv4 te ha asignado tu red?                 | `ipconfig`           |
+| ¿Está activado DHCP?                                       | `ipconfig /all`      |
+| ¿Qué dispositivo te ha dado la IP (servidor DHCP)?         | `ipconfig /all`      |
+| ¿Cuál es tu máscara de subred?                             | `ipconfig`           |
+| ¿Cuál es tu puerta de enlace (router)?                     | `ipconfig`           |
+| ¿Cuándo caduca tu IP (lease)?                              | `ipconfig /all`      |
+| ¿Puedes comunicarte con tu router?                         | `ping 192.168.1.1`   |
+| ¿Tienes conexión directa a Internet por IP (sin DNS)?      | `ping 8.8.8.8`       |
+| ¿Funciona la resolución DNS?                               | `ping google.com`    |
+| ¿Qué IP real tiene google.com?                             | `nslookup google.com`|
+| ¿Qué rutas usa tu equipo para salir a Internet?            | `route print`        |
+| ¿Cuál es el primer salto hasta Internet (tu router)?       | `tracert 8.8.8.8`    |
+| ¿En qué salto sales de tu red local?                       | `tracert 8.8.8.8`    |
+| ¿Qué conexiones activas y puertos estás usando ahora mismo?| `netstat -ano`       |
+| ¿Qué significan los números después de ":" (puertos)?      | `netstat -ano`       |
+| ¿Cuántas conexiones simultáneas tienes abiertas?           | `netstat -ano`       |
+| ¿Qué IP pública ve Internet de ti (NAT en acción)?         | `curl ifconfig.me`   |
 
 
+``` 
