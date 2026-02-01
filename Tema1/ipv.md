@@ -25,7 +25,7 @@ Debido al **crecimiento global**, el suministro limitado se agotó oficialmente 
 ---
 
 ### Direccionamiento IPv4 
- <img src="../img/direccion4.png" width=2200; height=250>
+ <img src="../img/direccion4.png" width=500; height=250>
 
 #### Ip privada: 192.168.1.3
 ```
@@ -34,6 +34,8 @@ Debido al **crecimiento global**, el suministro limitado se agotó oficialmente 
 * 1 → subred concreta *“barrio dentro de la red”*
 * 3 → host (dispositivo)
 ```
+
+----
 
 
 🟢 **APARTADO I**
