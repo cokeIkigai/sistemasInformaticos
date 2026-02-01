@@ -25,7 +25,7 @@ Debido al **crecimiento global**, el suministro limitado se agotó oficialmente 
 ---
 
 ### Direccionamiento IPv4 
- <img src="../img/direccion4.jpg" width=2200; height=250>
+ <img src="../img/direccion4.png" width=2200; height=250>
 
 #### Ip privada: 192.168.1.3
 ```
