@@ -79,8 +79,11 @@ Debido al **crecimiento global**, el suministro limitado se agotó oficialmente 
 * ¿Por qué NAT rompe la comunicación directa entre dispositivos?
 
   [documentación ipv_1](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting)
+  
   [documentación ipv_2](https://www.kernel.org/doc/html/latest/networking/ip-sysctl.html)
+  
   [documentación ipv_3](https://datatracker.ietf.org/doc/html/rfc1918)
+  
   [documentacion ipv_4](https://datatracker.ietf.org/doc/html/rfc2663)
 
 ---
