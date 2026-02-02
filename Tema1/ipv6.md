@@ -11,17 +11,6 @@
 | **Espacio de direcciones** | 3.4×10³⁸ direcciones |
 | **Notación** | Hexadecimal, ocho grupos de cuatro dígitos |
 
-## Contenido
-1. [Historia](#historia)
-2. [Motivación y desarrollo](#motivación-y-desarrollo)
-3. [Características técnicas](#características-técnicas)
-4. [Formato de dirección](#formato-de-dirección)
-5. [Tipos de direcciones](#tipos-de-direcciones)
-6. [Transición desde IPv4](#transición-desde-ipv4)
-7. [Estado de implementación](#estado-de-implementación)
-8. [Véase también](#véase-también)
-9. [Referencias](#referencias)
-
 ---
 
 ## Historia
@@ -29,6 +18,7 @@
 ### Antecedentes
 El desarrollo de IPv6 comenzó a principios de la década de 1990 cuando se hizo evidente que el espacio de direcciones de 32 bits de IPv4 (aproximadamente 4.300 millones de direcciones) sería insuficiente para el crecimiento futuro de Internet. La IETF formó el Grupo de Trabajo de IP de Próxima Generación (IPng) en 1994 para estandarizar el protocolo.
 
+<img src="../img/ipv6curiosidad.jpg">
 ### Publicación del estándar
 La especificación inicial de IPv6 se publicó como **RFC 1883** en diciembre de 1995. La versión actual del estándar es **RFC 8200**, publicada en julio de 2017, que obsoleta el RFC 2460.
 
