@@ -49,8 +49,8 @@ Velocidad típica	500+ MB/s
 Ventajas	Mayor velocidad, menor consumo energético, resistencia mecánica superior, silenciosos, ligeros
 Estrategia de uso	Estándar para el día a día: sistema operativo, aplicaciones de oficina, navegador, videojuegos
 
-🔧 Tecnología clave: Wear Leveling (Nivelación de Desgaste)
-Algoritmo que extiende la vida útil del SSD distribuyendo las escrituras uniformemente entre todas las celdas, evitando que unas se desgasten antes que otras.
+  <img src="ssd1.jpg" width="220px"> <img src="ssd2.jpg" width="220px" height="164px"> 
+*Algoritmo que extiende la vida útil del SSD distribuyendo las escrituras uniformemente entre todas las celdas, evitando que unas se desgasten antes que otras.*
 
 ---
 
