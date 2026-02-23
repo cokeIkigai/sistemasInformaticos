@@ -113,10 +113,10 @@ Los datos residen en centros de datos de proveedores (Google, Microsoft, Amazon)
 
 **Estrategias de uso:**
 
-- Colaboración: Editar un mismo documento con un equipo en tiempo real
-- Movilidad: Acceder a archivos desde cualquier dispositivo
-- Respaldo Remoto (Offsite): La capa final de la estrategia de backup
-- Proveedores principales: Google Drive, Microsoft OneDrive, Amazon S3, Dropbox
+- **Colaboración:** Editar un mismo documento con un equipo en tiempo real
+- **Movilidad:** Acceder a archivos desde cualquier dispositivo
+- **Respaldo Remoto (Offsite):** La capa final de la estrategia de backup
+- **Proveedores principales:** Google Drive, Microsoft OneDrive, Amazon S3, Dropbox
 
 Estrategia Profesional: Combinar, no Elegir
 La "Estantería Inteligente" del profesional
@@ -164,3 +164,141 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
   - Disco guardado en otra ubicación.
 
 ---
+---
+
+
+## 🧪 Ejercicios prácticos I
+---
+
+### 🟢 Ejercicio 1 — Identificar el tipo de disco
+
+**Objetivo:** saber si el equipo usa HDD o SSD.
+
+**Pasos**
+1. Abrir **PowerShell**.
+2. Ejecutar:
+
+```powershell
+Get-PhysicalDisk
+```
+
+**Preguntas**
+- ¿Qué aparece en `MediaType`?
+- ¿Cuántos discos tiene el equipo?
+- ¿Cuál usarías para instalar el sistema operativo y por qué?
+
+---
+
+### 🟡 Ejercicio 2 — Optimización de unidades (TRIM)
+
+**Objetivo:** comprobar cómo Windows optimiza un SSD.
+
+**Pasos**
+1. Buscar: `Desfragmentar y optimizar unidades`.
+2. Seleccionar el disco principal.
+3. Pulsar **Optimizar**.
+
+**Preguntas**
+- ¿Windows indica SSD o HDD?
+- ¿Qué diferencia hay entre optimizar y desfragmentar?
+
+---
+---
+
+## 🧪 Ejercicios prácticos II (CrystalDiskInfo)
+
+---
+
+### 🟢 Ejercicio 1 — Análisis de salud del SSD
+
+**Objetivo:** aprender a interpretar el estado real del disco.
+
+**Herramienta:** CrystalDiskInfo o Samsung Magician
+
+**Pasos**
+1. Abrir el programa.
+2. Localizar:
+   - Temperatura
+   - Estado de salud
+   - Horas encendido
+3. Hacer una captura de pantalla.
+
+**Preguntas**
+- ¿El disco está en estado Bueno / Normal?
+- ¿Qué temperatura tiene?
+- ¿Qué significa el porcentaje de salud?
+
+---
+
+### 🟡 Ejercicio 2 — Interpretar atributos S.M.A.R.T.
+
+**Objetivo:** entender qué mide un SSD internamente.
+
+**Pasos**
+1. Ir a la pestaña de información avanzada.
+2. Buscar atributos como:
+   - Total Host Writes
+   - Power-On Hours
+   - Wear Leveling Count
+
+**Actividad**
+Explica con tus palabras:
+- Qué indica cada valor.
+- Qué pasaría si aumenta demasiado.
+
+---
+
+### 🟠 Ejercicio 3 — Test de rendimiento
+
+**Objetivo:** comparar velocidad real vs teórica.
+
+**Herramienta:** Samsung Magician (Benchmark)
+
+**Pasos**
+1. Ejecutar test de velocidad.
+2. Anotar:
+   - Lectura secuencial
+   - Escritura secuencial
+
+**Preguntas**
+- ¿Está más cerca de 550 MB/s (SATA) o de varios GB/s (NVMe)?
+- ¿Qué tipo de SSD crees que es?
+
+---
+
+### 🔵 Ejercicio 4 — Simulación desgaste SSD
+
+**Objetivo:** comprender el wear leveling.
+
+**Actividad**
+1. Buscar en el programa el dato:
+   - TBW o Bytes escritos.
+2. Reflexionar:
+   - ¿Cuánto se ha escrito ya?
+   - ¿Crees que el disco está muy usado?
+
+**Entrega**
+Escribir 3 conclusiones técnicas.
+
+---
+
+### 🟣 Ejercicio 5 — Diseño profesional de mantenimiento
+
+**Objetivo:** pensar como administrador de sistemas.
+
+**Tarea**
+Crea un plan básico que incluya:
+
+```
+- Frecuencia de revisión del disco
+- Qué métricas vigilarías
+- Cuándo cambiarías el SSD
+```
+
+**Formato**
+Tabla Markdown:
+
+```
+| Acción | Frecuencia | Herramienta |
+```
+
