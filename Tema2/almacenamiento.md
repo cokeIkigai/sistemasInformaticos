@@ -15,29 +15,32 @@
 
 ## 📐 La Pirámide del Almacenamiento
 
-<img src="Jerarquia_memoria.png" width="320px" align="right" style="margin-left: 20px;">
+<img src="Jerarquia_memoria.png" width="280px" align="right" style="margin-left: 80px;">
 
 El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y la base es la `capacidad/economía`.
 
-**Nivel 1:** Caché / RAM (No persistente)
-
-**Nivel 2:** NVMe (Velocidad extrema)
-
-**Nivel 3:** SSD (Equilibrio óptimo)
-
-**Nivel 4:** HDD y Cloud Storage (Capacidad y Acceso)
+- **Nivel 1:** Caché / RAM (No persistente)
+- **Nivel 2:** NVMe (Velocidad extrema)
+- **Nivel 3:** SSD (Equilibrio óptimo)
+- **Nivel 4:** HDD y Cloud Storage (Capacidad y Acceso)
 
 ---
 
 ### 💽 HDD (Hard Disk Drive) - El Almacenero
-**🔧 ¿De qué está compuesto?**
+
+
+
+**¿De qué está compuesto?**
 - Platos magnéticos: Discos rígidos apilados que giran a alta velocidad (5400-7200 RPM)
 - Brazo mecánico: Con cabezal de lectura/escritura que se mueve sobre los platos.
 - Motor: Hace girar los platos constantemente
 - Carcasa sellada: Protege el mecanismo del polvo
 
+  <img src="hdd1.jpg" width="220px"> <img src="hdd2.jpg" width="220px" height="164px"> 
+
 *Los platos giran mientras un brazo mecánico se mueve hacia la posición correcta para leer/escribir datos magnéticamente. Es como un tocadiscos dentro de una caja metálica.*
 
+---
 
 ### SSD (Solid-State Drive) - El Ejecutivo
 Característica	Descripción
@@ -45,12 +48,14 @@ Cómo funciona	Memoria flash NAND. Sin partes móviles. Como una memoria USB gig
 Velocidad típica	500+ MB/s
 Ventajas	Mayor velocidad, menor consumo energético, resistencia mecánica superior, silenciosos, ligeros
 Estrategia de uso	Estándar para el día a día: sistema operativo, aplicaciones de oficina, navegador, videojuegos
+
 🔧 Tecnología clave: Wear Leveling (Nivelación de Desgaste)
 Algoritmo que extiende la vida útil del SSD distribuyendo las escrituras uniformemente entre todas las celdas, evitando que unas se desgasten antes que otras.
 
 NVMe - El Salto Cuántico
 NVMe (Non-Volatile Memory Express) - El Fórmula 1
 text
+
 📊 COMPARATIVA DE VELOCIDAD:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 HDD  ............  150 MB/s
@@ -90,22 +95,22 @@ Estrategia Profesional: Combinar, no Elegir
 La "Estantería Inteligente" del profesional
 text
 ┌─────────────────────────────────────────┐
-│  🚀 ESTANTE DE MANO (NVMe/SSD)          │
-│  Lo que necesitas AHORA                  │
-│  • Sistema operativo                      │
-│  • Proyecto activo                        │
-│  • Aplicaciones frecuentes                │
-│  [RENDIMIENTO]                            │
+│  🚀 ESTANTE DE MANO (NVMe/SSD)         │
+│  Lo que necesitas AHORA                 │
+│  • Sistema operativo                    │
+│  • Proyecto activo                      │
+│  • Aplicaciones frecuentes              │
+│  [RENDIMIENTO]                          │
 ├─────────────────────────────────────────┤
-│  📦 ESTANTE DE ARCHIVO (HDD/NAS local)   │
-│  Proyectos terminados                     │
-│  Biblioteca multimedia                     │
-│  [CAPACIDAD Y CONTROL]                    │
+│  📦 ESTANTE DE ARCHIVO (HDD/NAS local) │
+│  Proyectos terminados                   │
+│  Biblioteca multimedia                  │
+│  [CAPACIDAD Y CONTROL]                  │
 ├─────────────────────────────────────────┤
-│  🔒 CAJA DE SEGURIDAD EXTERNA (Cloud)    │
-│  Copia de respaldo                         │
-│  Protección contra fallos/ransomware      │
-│  [RESPALDO Y ACCESO REMOTO]               │
+│  🔒 CAJA DE SEGURIDAD EXTERNA (Cloud)  │
+│  Copia de respaldo                      │
+│  Protección contra fallos/ransomware    │
+│  [RESPALDO Y ACCESO REMOTO]             │
 └─────────────────────────────────────────┘
 Herramientas de gestión:
 Herramienta	Función
