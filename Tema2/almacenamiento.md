@@ -224,15 +224,18 @@ Get-PhysicalDisk
    • Haz capturas de lo que ves y para que son cada función.
 
 
-### ◼️ Ejercicio 6. EVOLUCIÓN Memoria y Velocidad   • Abre "Este equipo"
+### ◼️ Ejercicio 6. EVOLUCIÓN Memoria y Velocidad   
+
    • Buscar información para cada tipo de memoria. 
-   • Donde el Eje X serían los años y el Eje Y la memoria.
+   • Dónde el Eje X serían los años y el Eje Y la memoria.
    • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
-   
+   • Ver la evolución de la capacidad y velocidad.
+   • ¿Qué propiedad a crecido más rápido?
+   • ¿En 20 años que se estima sea su velocidad / capacidad?
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
    • Aprender qué es desfragmentación, TRIM, CHKDSK, Wear Leveling.
-
+   • Crear una presentación de cada uno de los conceptos y saber diferenciarlos.
 
 ---
 ---
