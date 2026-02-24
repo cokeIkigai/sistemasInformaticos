@@ -231,7 +231,7 @@ Get-PhysicalDisk
    • Haz capturas de lo que ves y para que son cada función.
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
-   • Aprender qué es desfragmentación, TRIM, CHKDSK, Wearing Leveling.
+   • Aprender qué es desfragmentación, TRIM, CHKDSK, Wear Leveling.
 
 
 ---
