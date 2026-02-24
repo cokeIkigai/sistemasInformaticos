@@ -225,10 +225,10 @@ Get-PhysicalDisk
 
 
 ### ◼️ Ejercicio 6. EVOLUCIÓN Memoria y Velocidad   • Abre "Este equipo"
-   • Click derecho en C: > Propiedades
-   • Verás espacio usado/libre
-   • Herramientas > Optimizar (solo para VER, no para ejecutar)
-   • Haz capturas de lo que ves y para que son cada función.
+   • Buscar información para cada tipo de memoria. 
+   • Donde el Eje X serían los años y el Eje Y la memoria.
+   • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
+   
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
    • Aprender qué es desfragmentación, TRIM, CHKDSK, Wear Leveling.
