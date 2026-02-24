@@ -238,9 +238,71 @@ Get-PhysicalDisk
    • Crear una presentación de cada uno de los conceptos y saber diferenciarlos.
 
 ---
+## 🧪 Ejercicios prácticos II
+
+1. ¿Cuánto pesaba el primer disco duro de la historia y qué capacidad tenía?
+
+2. ¿Cuánto costaba un disco duro de 1 GB en 1980 y cuánto pesaba?
+
+3. ¿Qué eran los "packs de discos" removibles de los años 60 y cómo funcionaban?
+
+4. ¿Cuánto ha aumentado la densidad de almacenamiento en los últimos 50 años?
+
+5. ¿Cómo se fabricaban los discos duros antes comparado con ahora?
+
+6. ¿Qué empresa fabricó el primer disco duro y en qué año?
+
+7. ¿Cuándo aparecieron los primeros SSD comerciales y qué capacidad tenían?
+
+8. ¿A qué distancia vuela el cabezal de un HDD sobre el plato?
+
+9. ¿Qué significa MTTF y por qué no significa que tu disco dure 116 años?
+
+10. ¿Por qué los discos duros modernos usan helio en su interior?
+
+11. ¿Qué profesionales trabajan en el diseño de discos duros actualmente?
+
+12. ¿Qué son los sectores defectuosos y cómo se gestionan?
+
+13. ¿Cómo afectan las vibraciones externas al rendimiento de un disco?
+
+14. ¿Qué es el "efecto servoposicionamiento" y por qué es crítico?
+
+15. ¿Cómo funciona exactamente una celda de memoria NAND en un SSD?
+
+16. ¿Qué diferencia hay entre celdas SLC, MLC, TLC y QLC en SSD?
+
+17. ¿Por qué los SSD NVMe son más rápidos que los SSD SATA?
+
+18. ¿Es malo dejar un disco duro externo siempre conectado?
+
+19. ¿Formatear muchas veces daña el disco?
+
+20. ¿Se pueden recuperar los datos de un disco con sectores defectuosos?
+
+21. ¿Los datos en un SSD apagado se pierden con el tiempo?
+
+22. ¿Desfragmentar un SSD es recomendable?
+
+23. ¿Los cortes de luz pueden dañar físicamente un disco duro?
+
+24. ¿Los imanes de nevera pueden borrar un disco duro?
+
+25. ¿El calor excesivo acorta la vida de un disco?
+
+26. ¿Cuántos datos genera el tráfico mundial de Internet al mes?
+
+27. ¿Cuánta información cabe en un gramo de ADN?
+
+28. ¿Cuánto duran los discos en sistemas de videovigilancia 24/7?
+
+29. ¿Qué es un yottabyte y cuántos discos harían falta para almacenarlo?
+
+30. ¿Qué discos se utilizan en los centros de datos de empresas como Google?
+
 ---
 
-## 🧪 Ejercicios prácticos II (CrystalDiskInfo)
+## 🧪 Ejercicios prácticos III (CrystalDiskInfo)
 
 ---
 
