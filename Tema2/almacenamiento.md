@@ -213,7 +213,7 @@ Get-PhysicalDisk
    • Configuración > Sistema > Almacenamiento
    • Activa "Storage Sense"
    • Configura limpieza automática
-    • Haz capturas de lo que ves y para que son cada función.
+   • Haz capturas de lo que ves y para que son cada función.
 
 
 ### 🔵 Ejercicio 5. VER ESTADO DEL DISCO
@@ -222,6 +222,17 @@ Get-PhysicalDisk
    • Verás espacio usado/libre
    • Herramientas > Optimizar (solo para VER, no para ejecutar)
    • Haz capturas de lo que ves y para que son cada función.
+
+
+### ◼️ Ejercicio 6. EVOLUCIÓN Memoria y Velocidad   • Abre "Este equipo"
+   • Click derecho en C: > Propiedades
+   • Verás espacio usado/libre
+   • Herramientas > Optimizar (solo para VER, no para ejecutar)
+   • Haz capturas de lo que ves y para que son cada función.
+
+### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
+   • Aprender qué es desfragmentación, TRIM, CHKDSK, Wearing Leveling.
+
 
 ---
 ---
