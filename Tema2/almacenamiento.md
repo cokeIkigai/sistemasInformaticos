@@ -83,7 +83,7 @@ NVMe usa PCIe, que es mucho más rápido, por eso puede alcanzar varios miles de
   - SSD SATA ≈ 500–550 MB/s
   - NVMe ≈ 3.000 – 7.000 MB/s (según generación PCIe)
     
-![nvme](https://www.allaboutcircuits.com/uploads/articles/Typical_example_of_an_SSD_architecture..jpg)
+<img src="mev1.jpg" width="220px"> <img src="ssd2.jpg" width="220px" height="164px"> 
     
 **¿Cuándo se usa?**
 
