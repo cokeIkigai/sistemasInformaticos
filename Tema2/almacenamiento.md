@@ -103,6 +103,8 @@ Muchos servidores cloud usan NVMe porque:
 
 ### 💽🌐 Cloud Storage 
 
+<img src="cloud1.jpg" width="280px" align="right" style="margin-left: 80px;">
+
 **¿Cómo funciona?**
 
 Los datos residen en centros de datos de proveedores (Google, Microsoft, Amazon) y se accede vía Internet.
