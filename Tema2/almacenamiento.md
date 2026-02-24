@@ -189,7 +189,7 @@ Get-PhysicalDisk
 
 ---
 
-### 🟡 Ejercicio 2 — Optimización de unidades (TRIM)
+### 🟡 Ejercicio 2 — Optimización de unidades (TRIM) (Casa)
 
 **Objetivo:** comprobar cómo Windows optimiza un SSD.
 
@@ -202,25 +202,25 @@ Get-PhysicalDisk
 - ¿Windows indica SSD o HDD?
 - ¿Qué diferencia hay entre optimizar y desfragmentar?
 
-### 🔴 Ejercicio 3. LIMPIEZA DE DISCO (DISK CLEANUP)
+### 🔴 Ejercicio 3. LIMPIEZA DE DISCO (DISK CLEANUP)  (Casa)
    • Abre: Inicio > Escribir "Disk Cleanup"
    • Selecciona unidad C:
    • Marca: Archivos temporales, Papelera, Miniaturas
    • Haz clic en "Limpiar archivos del sistema"
     • Haz capturas de lo que ves y para que son cada función.
 
-### 🟢 Ejercicio 4. STORAGE SENSE (Windows 10/11)
+### 🟢 Ejercicio 4. STORAGE SENSE (Windows 10/11)  (Casa)
    • Configuración > Sistema > Almacenamiento
    • Activa "Storage Sense"
    • Configura limpieza automática
    • Haz capturas de lo que ves y para que son cada función.
 
 
-### 🔵 Ejercicio 5. VER ESTADO DEL DISCO
+### 🔵 Ejercicio 5. VER ESTADO DEL DISCO (Casa)
    • Abre "Este equipo"
    • Click derecho en C: > Propiedades
    • Verás espacio usado/libre
-   • Herramientas > Optimizar (solo para VER, no para ejecutar)
+   • Herramientas > Optimizar 
    • Haz capturas de lo que ves y para que son cada función.
 
 
