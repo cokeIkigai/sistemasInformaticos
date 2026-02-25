@@ -1,7 +1,5 @@
 # 🧰 Tipos de Almacenamiento - HDD, SSD, NVMe y Cloud Storage
 
-### Introducción
-
 - El almacenamiento es uno de los pilares de cualquier sistema informático. 
 - Sin un medio confiable donde guardar los datos, ningún ordenador o servidor podría funcionar correctamente. 
 - No todos los tipos de almacenamiento son iguales en: 
@@ -29,6 +27,7 @@ El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y l
 ### 💽 HDD (Hard Disk Drive) - El Almacenero
 
 **¿De qué está compuesto?**
+
 - Platos magnéticos: Discos rígidos apilados que giran a alta velocidad (5400-7200 RPM)
 - Brazo mecánico: Con cabezal de lectura/escritura que se mueve sobre los platos.
 - Motor: Hace girar los platos constantemente
@@ -43,6 +42,7 @@ El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y l
 ### 💽 SSD (Solid-State Drive) 
 
 **¿De qué está compuesto?**
+
 - Memoria flash NAND. No tiene piezas mecánicas, por eso es rápido y resistente.
 - Guarda los datos en chips electrónicos, similar a una memoria USB pero mucho más veloz.
 - Velocidad típica: Más de 500 MB/s (los modelos NVMe pueden ser aún más rápidos).
@@ -60,7 +60,6 @@ El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y l
 ¿Wear Leveling?
 
 <img src="ssd1.jpg" width="220px"> <img src="ssd2.jpg" width="220px" height="164px"> 
-  
 
 ---
 
@@ -133,9 +132,9 @@ La "Estantería Inteligente" del profesional
 | **Samsung Magician / Crucial Storage Executive** | Optimización oficial del fabricante: firmware, rendimiento y mantenimiento. |
 | **rclone** | Sincronizar archivos y automatizar copias entre PC y servicios cloud. |
 
-⚠️ **Importante**  
-Los SSD **no deben desfragmentarse**. Genera escrituras innecesarias y reduce su vida útil.  
-Usa **TRIM**, que limpia bloques internos y mantiene el rendimiento.
+*Los SSD **no deben desfragmentarse**. Genera escrituras innecesarias y reduce su vida útil.*  
+
+*Usa **TRIM**, que limpia bloques internos y mantiene el rendimiento.*
 
 ---
 
@@ -143,8 +142,6 @@ Usa **TRIM**, que limpia bloques internos y mantiene el rendimiento.
 
 La regla **3-2-1** es una metodología sencilla para reducir el riesgo de pérdida de datos.  
 Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
-
-### 📌 ¿Qué significa 3-2-1?
 
 **3 copias de los datos**
 - 1 copia principal (la que usas normalmente).
@@ -169,11 +166,9 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ## 🛠️ Herramientas y Consejos
 
-
   <img src="Herramientas01.png" width="850px">
   <img src="Herramientas02.png" width="850px">
   <img src="Herramientas03.png" width="850px">
-
 
 ---
 
@@ -194,12 +189,23 @@ Get-PhysicalDisk
 
 **Preguntas**
 - ¿Qué aparece en `MediaType`?
-- ¿Cuántos discos tiene el equipo?
-- ¿Cuál usarías para instalar el sistema operativo y por qué?
+- ¿Cuántos `discos` tiene el equipo?
+- ¿Cuál usarías para `instalar` el sistema operativo y por qué?
 
 ---
 
-### 🟡 Ejercicio 2 — Optimización de unidades (TRIM) (Casa)
+### ◼️ Ejercicio 2. EVOLUCIÓN Memoria y Velocidad   
+
+   • Buscar información para cada tipo de memoria. 
+   • Dónde el Eje X serían los años y el Eje Y la memoria.
+   • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
+   • Ver la evolución de la capacidad y velocidad.
+   • ¿Qué propiedad a crecido más rápido?
+   • ¿En 20 años que se estima sea su velocidad / capacidad?
+
+---
+
+### 🟡 Ejercicio 3 — Optimización de unidades (TRIM) (Casa)
 
 **Objetivo:** comprobar cómo Windows optimiza un SSD.
 
@@ -212,36 +218,27 @@ Get-PhysicalDisk
 - ¿Windows indica SSD o HDD?
 - ¿Qué diferencia hay entre optimizar y desfragmentar?
 
-### 🔴 Ejercicio 3. LIMPIEZA DE DISCO (DISK CLEANUP)  (Casa)
+
+### 🔴 Ejercicio 4. LIMPIEZA DE DISCO (DISK CLEANUP)  (Casa)
    • Abre: Inicio > Escribir "Disk Cleanup"
    • Selecciona unidad C:
    • Marca: Archivos temporales, Papelera, Miniaturas
    • Haz clic en "Limpiar archivos del sistema"
     • Haz capturas de lo que ves y para que son cada función.
 
-### 🟢 Ejercicio 4. STORAGE SENSE (Windows 10/11)  (Casa)
+### 🟢 Ejercicio 5. STORAGE SENSE (Windows 10/11)  (Casa)
    • Configuración > Sistema > Almacenamiento
    • Activa "Storage Sense"
    • Configura limpieza automática
    • Haz capturas de lo que ves y para que son cada función.
 
 
-### 🔵 Ejercicio 5. VER ESTADO DEL DISCO (Casa)
+### 🔵 Ejercicio 6. VER ESTADO DEL DISCO (Casa)
    • Abre "Este equipo"
    • Click derecho en C: > Propiedades
    • Verás espacio usado/libre
    • Herramientas > Optimizar 
    • Haz capturas de lo que ves y para que son cada función.
-
-
-### ◼️ Ejercicio 6. EVOLUCIÓN Memoria y Velocidad   
-
-   • Buscar información para cada tipo de memoria. 
-   • Dónde el Eje X serían los años y el Eje Y la memoria.
-   • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
-   • Ver la evolución de la capacidad y velocidad.
-   • ¿Qué propiedad a crecido más rápido?
-   • ¿En 20 años que se estima sea su velocidad / capacidad?
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
    • Aprender qué es desfragmentación, TRIM, CHKDSK, Wear Leveling.
