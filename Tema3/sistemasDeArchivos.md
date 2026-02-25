@@ -1,9 +1,9 @@
-# Sistemas de archivos (NTFS, EXT4, APFS, ZFS, Btrfs)
+# ⚡Sistemas de archivos (NTFS, EXT4, APFS, ZFS, Btrfs)
 
 ## Introducción
-Un sistema de archivos define cómo un sistema operativo organiza, almacena y recupera la información en un dispositivo. 
-No solo gestiona nombres y carpetas, también controla la integridad de los datos, los permisos, el rendimiento y la capacidad de recuperación ante errores. 
-Cada sistema tiene objetivos distintos: compatibilidad, estabilidad, optimización para SSD o máxima protección frente a corrupción.
+Un sistema de archivos define cómo un `sistema operativo` organiza, `almacena` y `recupera` la información en un dispositivo. 
+No solo gestiona nombres y carpetas, también controla la integridad de los datos, los `permisos`, el `rendimiento` y la `capacidad` de recuperación ante errores. 
+Cada sistema tiene objetivos distintos: `compatibilidad`, `estabilidad`, `optimización` para SSD o máxima `protección` frente a corrupción.
 
 ---
 
