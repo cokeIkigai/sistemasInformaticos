@@ -167,9 +167,13 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ---
 
-<img src="Herramientas01.png" width="650px" >
-<img src="Herramientas02.png" width="650px" >
-<img src="Herramientas03.png" width="650px" >
+## 🛠️ Herramientas y Consejos
+
+<div align="center">
+  <img src="Herramientas01.png" width="650px">
+  <img src="Herramientas02.png" width="650px">
+  <img src="Herramientas03.png" width="650px">
+</div>
 ---
 
 
