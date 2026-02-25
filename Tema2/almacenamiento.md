@@ -123,9 +123,9 @@ Estrategia Profesional: Combinar, no Elegir
 La "Estantería Inteligente" del profesional
 
 ---
+### ESQUEMA VISUAL
 
-
-
+ <img src="Esquema.png" width="850px">
 
 
 ---
