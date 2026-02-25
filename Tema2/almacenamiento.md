@@ -123,6 +123,12 @@ Estrategia Profesional: Combinar, no Elegir
 La "Estantería Inteligente" del profesional
 
 ---
+
+
+
+
+
+---
 ## 🛠️ Herramientas de gestión de almacenamiento
 
 | Herramienta | Para qué sirve |
