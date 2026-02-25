@@ -166,6 +166,10 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
   - Disco guardado en otra ubicación.
 
 ---
+
+<img src="Herramientas01.png" width="650px" >
+<img src="Herramientas02.png" width="650px" >
+<img src="Herramientas03.png" width="650px" >
 ---
 
 
