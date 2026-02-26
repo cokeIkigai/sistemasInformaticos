@@ -317,8 +317,6 @@ Get-PhysicalDisk
 
 ## 🧪 Ejercicios prácticos III (CrystalDiskInfo)
 
----
-
 ### 🟢 Ejercicio 1 — Análisis de salud del SSD
 
 **Objetivo:** aprender a interpretar el estado real del disco.
