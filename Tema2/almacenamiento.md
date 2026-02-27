@@ -13,7 +13,7 @@
 
 ## 📐 La Pirámide del Almacenamiento
 
-<img src="Jerarquia_memoria.png" width="280px" align="right" style="margin-left: 80px;">
+<img src="./img/Jerarquia_memoria.png" width="280px" align="right" style="margin-left: 80px;">
 
 El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y la base es la `capacidad/economía`.
 
@@ -33,7 +33,7 @@ El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y l
 - Motor: Hace girar los platos constantemente
 - Carcasa sellada: Protege el mecanismo del polvo
 
-  <img src="hdd1.jpg" width="220px"> <img src="hdd2.jpg" width="220px" height="164px"> 
+  <img src="./img/hdd1.jpg" width="220px"> <img src="./img/hdd2.jpg" width="220px" height="164px"> 
 
 *Los platos giran mientras un brazo mecánico se mueve hacia la posición correcta para leer/escribir datos magnéticamente. Es como un tocadiscos dentro de una caja metálica.*
 
@@ -59,7 +59,7 @@ El **almacenamiento** se organiza en niveles donde la cima es la `velocidad` y l
 
 ¿Wear Leveling?
 
-<img src="ssd1.jpg" width="220px"> <img src="ssd2.jpg" width="220px" height="164px"> 
+<img src="./img/ssd1.jpg" width="220px"> <img src="./img/ssd2.jpg" width="220px" height="164px"> 
 
 ---
 
@@ -82,7 +82,7 @@ NVMe usa PCIe, que es mucho más rápido, por eso puede alcanzar varios miles de
   - SSD SATA ≈ 500–550 MB/s
   - NVMe ≈ 3.000 – 7.000 MB/s (según generación PCIe)
     
-<img src="mev1.jpg" width="450px" align="right">
+<img src="./img/mev1.jpg" width="450px" align="right">
     
 **¿Cuándo se usa?**
 
@@ -102,7 +102,7 @@ Muchos servidores cloud usan NVMe porque:
 
 ### 💽🌐 Cloud Storage 
 
-<img src="cloud1.jpg" width="280px" align="right" style="margin-left: 80px;">
+<img src="./img/cloud1.jpg" width="280px" align="right" style="margin-left: 80px;">
 
 **¿Cómo funciona?**
 
@@ -125,7 +125,7 @@ La "Estantería Inteligente" del profesional
 ---
 ### ESQUEMA VISUAL
 
- <img src="Esquema.png" width="850px">
+ <img src="./img/Esquema.png" width="850px">
 
 
 ---
@@ -172,9 +172,9 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ## 🛠️ Herramientas y Consejos
 
-  <img src="Herramientas01.png" width="850px">
-  <img src="Herramientas02.png" width="850px">
-  <img src="Herramientas03.png" width="850px">
+  <img src="./img/Herramientas01.png" width="850px">
+  <img src="./img/Herramientas02.png" width="850px">
+  <img src="./img/Herramientas03.png" width="850px">
 
 ---
 
