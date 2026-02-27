@@ -3,11 +3,11 @@
 - El almacenamiento es uno de los pilares de cualquier sistema informático. 
 - Sin un medio confiable donde guardar los datos, ningún ordenador o servidor podría funcionar correctamente. 
 - No todos los tipos de almacenamiento son iguales en: 
-  - **Velocidad**
-  - **Durabilidad**
-  - **Consumo**
-  - **Precio**
-  - **Tipo de uso**
+  - **Velocidad:** 100–200 MB/s
+  - **Durabilidad:** 3–5 años
+  - **Consumo:** 6–9 W
+  - **Precio:** 0,02–0,04 €/GB
+  - **Tipo de uso:** 1–20 TB
 
 ---
 
