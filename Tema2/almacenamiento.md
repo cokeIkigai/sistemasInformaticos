@@ -300,7 +300,7 @@ Get-PhysicalDisk
 
 ---
 
-### ◼️ Ejercicio 2. EVOLUCIÓN Memoria y Velocidad   
+### 🟣 Ejercicio 2. EVOLUCIÓN Memoria y Velocidad   
 
    • Buscar información para cada tipo de memoria. 
    • Dónde el Eje X serían los años y el Eje Y la memoria.
@@ -347,9 +347,10 @@ Get-PhysicalDisk
    • Haz capturas de lo que ves y para que son cada función.
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
-   • Aprender qué es desfragmentación, TRIM, CHKDSK, Wear Leveling.
+   • ¿ qué es desfragmentación, TRIM, CHKDSK, Wear Leveling ?
    • Crear una presentación de cada uno de los conceptos y saber diferenciarlos.
 
+---
 
 ## 🧪 Ejercicios prácticos III (CrystalDiskInfo)
 
