@@ -9,9 +9,9 @@ Cada sistema tiene objetivos distintos: `compatibilidad`, `estabilidad`, `optimi
 
 ---
 
-## NTFS (Windows)
+## 🗃 NTFS (Windows)
 
-<img src="">
+<img src="./img/nfts01.jpg" width="280px" align="right" style="margin-left: 80px;">
 NTFS es el sistema de archivos estándar en Windows desde la familia Windows NT. 
 Está diseñado para entornos profesionales donde se necesita control detallado y seguridad.
 
