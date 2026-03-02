@@ -29,6 +29,7 @@ Características principales:
   - Eliminación
   - Control total
    
+---
 
 **2. Journaling para evitar corrupción tras apagones.**
 
@@ -39,14 +40,24 @@ Características principales:
 - Ejecutar cambio.
 - Confirmar en el journal.
   > chkdsk C:
+
+---
    
 **3. Compresión y cifrado (EFS): [BitLoker](https://blog.elhacker.net/2021/12/diferencias-entre-el-cifrado-bitlocker-y-EFS-en-Windows.html).**
+
+<img src="./img/efs.jpg" width="350px" align="right" style="margin-left: 80px;">
 
 - Comprime archivos sin software externo.
 - Propiedades → Avanzados → Comprimir contenido. (windows)
 - Ideal para:  Documentación | Logs | Texto plano | ⛔ Videos
 
+---
+
 **4.  Cuotas de disco y soporte para archivos grandes.**
+
+- Permite limitar el espacio que puede usar cada usuario.
+  - Útil para: Servidores educativos, Entornos corporativos, Escritorios.
+  - Propiedades del disco -> Pestaña Cuota -> Activar y definir límite.
 
 **5. Enlaces duros y simbólicos.**
 
