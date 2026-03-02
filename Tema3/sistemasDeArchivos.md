@@ -9,18 +9,46 @@ Cada sistema tiene objetivos distintos: `compatibilidad`, `estabilidad`, `optimi
 
 ---
 
+
 ## 🗃 NTFS (Windows)
 
-<img src="./img/nfts01.jpg" width="280px" align="right" style="margin-left: 80px;">
+<img src="./img/nfts01.jpg" width="130px" align="right" style="margin-left: 80px;">
+
 NTFS es el sistema de archivos estándar en Windows desde la familia Windows NT. 
 Está diseñado para entornos profesionales donde se necesita control detallado y seguridad.
 
 Características principales:
-- Permisos avanzados mediante ACLs.
-- Journaling para evitar corrupción tras apagones.
-- Compresión y cifrado (EFS).
-- Cuotas de disco y soporte para archivos grandes.
-- Enlaces duros y simbólicos.
+
+<img src="./img/ntfs02.jpg" width="150px" align="right" style="margin-left: 80px;">
+
+**1. Permisos avanzados mediante ACLs (`Access Control List`):**
+  - Lectura
+  - Escritura
+  - Modificación
+  - Ejecución
+  - Eliminación
+  - Control total
+   
+
+**2. Journaling para evitar corrupción tras apagones.**
+
+<img src="./img/journal.jpg" width="300px" align="right" style="margin-left: 80px;">
+
+- NTFS registra en un log los cambios antes de aplicarlos.
+- Escribir en el journal lo que va a cambiar.
+- Ejecutar cambio.
+- Confirmar en el journal.
+  > chkdsk C:
+   
+**3. Compresión y cifrado (EFS): [BitLoker](https://blog.elhacker.net/2021/12/diferencias-entre-el-cifrado-bitlocker-y-EFS-en-Windows.html).**
+
+- Comprime archivos sin software externo.
+- Propiedades → Avanzados → Comprimir contenido. (windows)
+- Ideal para:  Documentación | Logs | Texto plano | ⛔ Videos
+
+**4.  Cuotas de disco y soporte para archivos grandes.**
+
+**5. Enlaces duros y simbólicos.**
 
 Limitaciones:
 - Compatibilidad parcial fuera de Windows.
