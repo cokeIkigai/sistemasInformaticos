@@ -69,8 +69,8 @@ Uso recomendado: estaciones de trabajo y servidores Windows.
 
 ---
 
-## EXT4 (Linux)
-EXT4 es uno de los sistemas de archivos más utilizados en GNU/Linux. Prioriza estabilidad y rendimiento constante.
+## 🗃 EXT4 (Linux)
+EXT4 es uno de los sistemas de archivos más utilizados en `GNU/Linux`. Prioriza estabilidad y rendimiento constante.
 
 Características principales:
 - Journaling mejorado.
@@ -85,7 +85,7 @@ Uso recomendado: entornos Linux generales, servidores y estaciones de desarrollo
 
 ---
 
-## APFS (Apple)
+## 🗃 APFS (Apple)
 APFS es el sistema de archivos moderno de Apple, optimizado para SSD y NVMe.
 
 Características principales:
@@ -101,7 +101,7 @@ Uso recomendado: macOS y dispositivos Apple, especialmente en unidades SSD.
 
 ---
 
-## ZFS y Btrfs: nueva generación
+## 🗃 ZFS y Btrfs: nueva generación
 ZFS y Btrfs representan una evolución al integrar sistema de archivos y gestión de volúmenes en una sola capa. Ambos utilizan Copy-on-Write y checksums para detectar corrupción silenciosa.
 
 ### ZFS
