@@ -2,12 +2,16 @@
 
 ## Introducción
 Un sistema de archivos define cómo un `sistema operativo` organiza, `almacena` y `recupera` la información en un dispositivo. 
+
 No solo gestiona nombres y carpetas, también controla la integridad de los datos, los `permisos`, el `rendimiento` y la `capacidad` de recuperación ante errores. 
+
 Cada sistema tiene objetivos distintos: `compatibilidad`, `estabilidad`, `optimización` para SSD o máxima `protección` frente a corrupción.
 
 ---
 
 ## NTFS (Windows)
+
+<img src="">
 NTFS es el sistema de archivos estándar en Windows desde la familia Windows NT. 
 Está diseñado para entornos profesionales donde se necesita control detallado y seguridad.
 
