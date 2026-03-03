@@ -185,7 +185,6 @@ Deduplicación:
 
 ### 🧪 PARTE 1 – Entendiendo Btrfs de verdad (sin definiciones vacías)
 
-🔍 Sistema a investigar:
 **Btrfs**
 
 Cada apartado debe incluir:
@@ -201,7 +200,6 @@ Cada apartado debe incluir:
 ---
 
 🔹 1️⃣ Subvolúmenes
-🔍 Lo que deben investigar
 
 1. ¿Qué es exactamente un subvolumen?
 
@@ -216,7 +214,6 @@ Cada apartado debe incluir:
 ---
 
 🔹 2️⃣ Snapshots rápidos
-🔍 Lo que deben investigar
 
 1. ¿Qué significa que el snapshot sea instantáneo?
 
