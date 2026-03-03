@@ -102,60 +102,126 @@ Uso recomendado: macOS y dispositivos Apple, especialmente en unidades SSD.
 ---
 
 ## 🗃 ZFS y Btrfs: nueva generación
-ZFS y Btrfs representan una evolución al integrar sistema de archivos y gestión de volúmenes en una sola capa. Ambos utilizan Copy-on-Write y checksums para detectar corrupción silenciosa.
+
+**ZFS y Btrfs** representan una `evolución` al integrar sistema de archivos y gestión de volúmenes en una sola capa. Ambos utilizan `Copy-on-Write` y `checksums` para detectar corrupción silenciosa.
+
+En los sistemas clásicos (NTFS, EXT4):
+```
+Disco → RAID → Gestor de volúmenes → Sistema de archivos
+```
+
+En ZFS y Btrfs:
+```
+Disco → ZFS/Btrfs (todo integrado)
+```
 
 ### ZFS
-- Pools de almacenamiento dinámicos (zpool).
-- Protección end-to-end mediante checksums.
-- Snapshots y clones eficientes.
-- Scrubs periódicos para detectar y reparar errores.
-- Compresión y deduplicación opcional.
 
-Enfoque: integridad y fiabilidad en NAS y servidores críticos.
+1️⃣ Pools de almacenamiento dinámicos (zpool). Tienes 3 discos de 4 TB. Puede crecer añadiendo discos. Gestiona redundancia internamente. Reparte datos de forma inteligente.
+*Clave: abstrae el almacenamiento físico.*
 
-### Btrfs
-- Subvolúmenes y snapshots rápidos.
-- RAID por software.
-- Envío y recepción de snapshots para replicación.
-- Administración flexible y moderna.
+```  
+zpool create datos disk1 disk2 disk3
+```
 
-Enfoque: flexibilidad en estaciones Linux y servidores.
+2️⃣ **Protección `end-to-end` mediante checksums**. Cada bloque de datos tiene un checksum (huella digital matemática).
+  - **Cuando lees un archivo:** ZFS recalcula el checksum. Lo compara con el guardado.
+  - **Si no coincide:** Detecta corrupción silenciosa (bit rot). Si hay redundancia (RAID-Z), repara automáticamente.
+  - **!importante!:** La corrupción silenciosa NO la detectan NTFS ni EXT4 de forma completa.
+  
+3️⃣ **Snapshots y clones eficientes:** ZFS usa Copy-on-Write (COW).
+  - Cuando modificas un archivo: No sobrescribe el bloque antiguo. Escribe uno nuevo. Actualiza referencias.
+  - Un snapshot:
+    Es simplemente un puntero al estado actual. No copia datos completos. Solo guarda bloques modificados después.
 
----
+Ejemplo:
 
-## Elección según escenario
-- NTFS: integración completa en Windows.
-- EXT4: estabilidad en Linux.
-- APFS: rendimiento en macOS con SSD.
-- ZFS/Btrfs: integridad avanzada, snapshots y gestión de almacenamiento.
-- exFAT: compatibilidad entre sistemas en discos externos.
+```
+Archivo de 10 GB
+Snapshot creado
+Modificas 200 MB
+```
 
----
-
-## Conceptos clave
-- **Journaling:** registro previo de cambios para evitar corrupción.
-- **Copy-on-Write:** escritura en nuevos bloques sin sobrescribir datos existentes.
-- **Checksums:** verificación de integridad real de los datos.
-- **Snapshots:** estado del sistema en un momento concreto para restauración rápida.
+*El snapshot solo “bloquea” los 200 MB originales.*
 
 ---
 
-## Caso de estudio: ZFS Project
-ZFS nació en Sun Microsystems con el objetivo de unificar RAID, gestor de volúmenes y sistema de archivos. 
-Su arquitectura basada en pools dinámicos y checksums end-to-end permite detectar corrupción silenciosa y autoreparar datos usando redundancia. 
-Gracias a snapshots, clones y tareas de mantenimiento como `scrub`, ZFS se ha convertido en una referencia en NAS y entornos empresariales donde la integridad y disponibilidad son prioritarias.
+4️⃣ Scrubs periódicos para detectar y reparar errores.
+
+Un *scrub* es una revisión completa del almacenamiento.
+
+```
+zpool scrub datos
+```
+¿Qué hace?
+
+- Lee todos los bloques.
+- Verifica checksums.
+- Repara si detecta error (si hay redundancia).
+
+Es mantenimiento preventivo real.
+
+
+
+- 5️⃣ Compresión y deduplicación opcional.
+
+Compresión:
+
+- Reduce tamaño automáticamente.
+
+- Transparente para el usuario.
+
+Deduplicación:
+
+- Si dos bloques son idénticos, solo guarda uno.
+
+- Muy útil en backups o máquinas virtuales.
+
+*Consume mucha RAM.*
+
+**Enfoque:** integridad y fiabilidad en NAS y servidores críticos.
 
 ---
 
-## Buenas prácticas
-- Programar snapshots automáticos en ZFS/Btrfs.
-- Realizar scrubs periódicos para verificar integridad.
-- Evitar llenar completamente los SSD para mantener rendimiento.
-- Usar compresión cuando los datos sean textuales o logs.
+### 🧪 PARTE 1 – Entendiendo Btrfs de verdad (sin definiciones vacías)
+
+🔍 Sistema a investigar:
+**Btrfs**
+
+Cada apartado debe incluir:
+
+1. Explicación técnica (cómo funciona internamente)
+
+2. Un ejemplo real
+
+3. Un pequeño esquema o dibujo simple
+
+4. Al menos un comando real de Linux
 
 ---
 
-## Resumen
-Los sistemas de archivos determinan cómo se guardan y protegen los datos. 
-NTFS, EXT4 y APFS son opciones nativas optimizadas para su sistema operativo, mientras que ZFS y Btrfs añaden integridad avanzada mediante checksums y Copy-on-Write.
-Para compartir información entre plataformas, exFAT ofrece la mejor compatibilidad.
+🔹 1️⃣ Subvolúmenes
+🔍 Lo que deben investigar
+
+1. ¿Qué es exactamente un subvolumen?
+
+2. ¿Es una partición física?
+
+3. ¿Comparte espacio con otros subvolúmenes?
+
+4. ¿Tiene su propio sistema de permisos?
+
+5. ¿Puede eliminarse sin afectar a los demás?
+
+---
+
+🔹 2️⃣ Snapshots rápidos
+🔍 Lo que deben investigar
+
+1. ¿Qué significa que el snapshot sea instantáneo?
+
+2. ¿Qué papel juega Copy-on-Write?
+
+3. ¿Copia los datos físicamente?
+
+4. ¿Qué ocurre si modifico un archivo después del snapshot?
