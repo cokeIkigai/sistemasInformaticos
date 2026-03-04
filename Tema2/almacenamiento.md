@@ -274,8 +274,6 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 30. ¿Qué discos se utilizan en los centros de datos de empresas como Google?
 
-31. ¿Cómo gestionan los SSD la escritura de datos internamente y qué papel desempeña el wear leveling para evitar el desgaste prematuro de las celdas de memoria NAND?
-
 ---
 
 ## 🧪 Ejercicios prácticos II
