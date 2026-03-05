@@ -99,30 +99,33 @@ La tabla FAT registraría la siguiente información:
 
 ---
 
-### En qué se diferencia (comparativa práctica)
+### Comparación de FAT32 con otros sistemas de archivos
 
-**FAT16 vs FAT32**
+| Comparación | Diferencia principal |
+|---|---|
+| **FAT16 vs FAT32** | FAT32 permite **muchos más clusters**, por lo que puede manejar **volúmenes mucho más grandes**. Además, el **directorio raíz no está en una posición fija** como en FAT16. |
+| **FAT32 vs exFAT** | **exFAT** está diseñado para **memorias flash modernas** y soporta **archivos mucho más grandes**, mientras que FAT32 tiene un **límite de 4 GB por archivo**. |
+| **FAT32 vs NTFS / EXT4 / APFS** | FAT32 es más simple y compatible, pero **carece de funciones avanzadas** presentes en sistemas modernos. |
 
-- FAT32 permite muchos más clusters (mejor para volúmenes grandes) y un root directory no fijo.
+---
 
-**FAT32 vs exFAT**
+### Funciones que FAT32 no tiene
 
-- exFAT está pensado para memorias flash modernas y archivos grandes (FAT32 tiene el límite de 4 GB por archivo).
+| Característica | Explicación |
+|---|---|
+| Permisos / ACL | No permite definir **seguridad por usuario o grupo** |
+| Journaling | No registra cambios antes de realizarlos, por lo que es **más vulnerable a corrupción** si se apaga el sistema inesperadamente |
+| Cifrado / Compresión | No tiene **cifrado ni compresión integrada** como NTFS |
+| Tolerancia a fallos | Tiene **peor recuperación ante cortes de energía o errores** |
 
-**FAT32 vs (NTFS/EXT4/APFS)**
+---
 
-FAT32 no tiene:
-    - permisos/ACL (seguridad por usuario/grupo)
-    - journaling (registro de cambios para recuperación)
-    - cifrado/compresión integrada del FS (tipo NTFS)
+### Limitaciones de FAT32
 
-buena tolerancia a cortes de luz (más propenso a corrupción)
+1. **Tamaño máximo de archivo:**  4 GB − 1 byte
+2. **Tamaño de partición:** Técnicamente hasta ~2 TB, aunque muchas herramientas como Windows solo permiten formatear hasta 32 GB en FAT32 
 
-Y tiene limitaciones típicas:
-
-Tamaño máximo de archivo: 4 GB − 1 byte
-
-Particiones grandes: en la práctica se usa, pero muchas herramientas (p. ej. Windows) limitan el formateo FAT32 a 32 GB por decisión de herramienta, no por imposibilidad técnica.
+---
 
 4) Cómo funciona (la idea esencial)
 
