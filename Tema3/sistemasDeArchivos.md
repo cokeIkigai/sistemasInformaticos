@@ -2,7 +2,8 @@
 
 ## Introducción
 
-- Un sistema de archivos define cómo un sistema operativo:  **ORGANIZA**, **ALMACENA** y **RECUPERA** la información en un dispositivo.
+- Un sistema de archivos define cómo un sistema operativo:
+  - **ORGANIZA**, **ALMACENA** y **RECUPERA** la información en un dispositivo.
 
 <p align="center">
   <img src="./img/sistemasArchivos01.png" width="650px">
