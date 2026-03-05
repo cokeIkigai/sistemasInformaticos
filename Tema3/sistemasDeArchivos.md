@@ -64,9 +64,7 @@ Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda 
 ### 🚩FAT #1 y FAT #2 (copia): 
 
 Si la FAT principal se corrompe (apagado brusco), el sistema puede recuperar la información usando la copia. 
-Esto existe para proteger el sistema de archivos.
-
-En la **tabla FAT**, cada posición corresponde a **un cluster del disco**.  
+Esto existe para proteger el sistema de archivos. En la **tabla FAT**, cada posición corresponde a **un cluster del disco**.  
 El valor almacenado indica **qué ocurre con ese cluster**.
 
 | Valor en la FAT   | Significado                                                                                       |
