@@ -99,7 +99,7 @@ La tabla FAT registraría la siguiente información:
 
 ---
 
-### Comparación de FAT32 con otros sistemas de archivos
+### 🤼‍♂️ Comparación de FAT32 con otros
 
 | Comparación | Diferencia principal |
 |---|---|
@@ -109,7 +109,7 @@ La tabla FAT registraría la siguiente información:
 
 ---
 
-### Funciones que FAT32 no tiene
+### ⚒️ Funciones que FAT32 no tiene
 
 | Característica | Explicación |
 |---|---|
@@ -120,58 +120,64 @@ La tabla FAT registraría la siguiente información:
 
 ---
 
-### Limitaciones de FAT32
+### ⛔ Limitaciones de FAT32
 
 1. **Tamaño máximo de archivo:**  4 GB − 1 byte
 2. **Tamaño de partición:** Técnicamente hasta ~2 TB, aunque muchas herramientas como Windows solo permiten formatear hasta 32 GB en FAT32 
 
 ---
 
-4) Cómo funciona (la idea esencial)
+### ⚙️ Funcionamiento de FAT32
 
-FAT32 funciona como un “mapa” de clusters.
+FAT32 funciona como un **mapa de clusters** que indica dónde está cada parte de un archivo.
 
-4.1 Guardar un archivo
-
-El sistema busca clusters libres.
-
-Escribe el contenido del archivo en esos clusters.
-
-En la FAT guarda la “cadena”:
+#### 🟢 Guardar un archivo
+1. El sistema **busca clusters libres** en el disco.
+2. **Escribe el contenido del archivo** en esos clusters.
+3. En la **tabla FAT** guarda la **cadena de clusters** que forman el archivo.
 
 Ejemplo:
 
-Archivo ocupa clusters: 120, 121, 130
+Cluster 120 → 121  
+Cluster 121 → 122  
+Cluster 122 → EOF
 
-La FAT indica:
+---
 
-120 → 121
+#### 🟢 Leer un archivo
+1. El sistema busca en el **directorio** la entrada del archivo (nombre, tamaño y **cluster inicial**).
+2. Va a ese cluster y **sigue la cadena en la FAT**.
+3. Va leyendo los clusters hasta encontrar **EOF (fin del archivo)**.
+4. Con esos clusters **reconstruye el archivo completo**.
 
-121 → 130
+---
 
-130 → EOF (fin)
+#### 🟢 Borrar un archivo
+1. El sistema **no borra los datos inmediatamente**.
+2. Marca la **entrada del archivo en el directorio como borrada**.
+3. En la **FAT marca sus clusters como libres**.
 
-4.2 Leer un archivo
+Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han sobrescrito todavía**.
 
-En el directorio, localiza la entrada del archivo (nombre, tamaño, cluster inicial).
+---
 
-Va a ese cluster y sigue la cadena por la FAT hasta EOF.
+### 🧩 Fragmentación
 
-Reconstruye el archivo leyendo los clusters en orden.
+Un archivo **no siempre se guarda en clusters consecutivos**.
 
-4.3 Borrar un archivo (importante para clase)
+Tenemos por ejemplo: Cluster 120 → 121 → 130 → 131
 
-Normalmente no borra el contenido inmediatamente.
+Esto ocurre porque **el sistema va utilizando el espacio libre disponible**.
 
-Marca la entrada del directorio como “borrada” y en la FAT marca sus clusters como libres.
+Consecuencia:
 
-Por eso se pueden “recuperar” archivos borrados si no se sobrescribe.
+- Los datos quedan **dispersos por el disco**.
+- En discos mecánicos (**HDD**) el cabezal debe **moverse más para leerlos**, lo que reduce el rendimiento.
 
-4.4 Fragmentación
+A este fenómeno se le llama **fragmentación**.
 
-Como un archivo puede acabar en clusters no contiguos (120, 121, 130…), se produce fragmentación y baja el rendimiento en discos mecánicos (en USB/flash el efecto es distinto, pero sigue existiendo “dispersión”).
-
-Si quieres, lo convierto en un guion de 10 minutos para clase con un ejemplo de pizarra (clusters numerados y una mini-tabla FAT) y un ejercicio práctico para que lo simulen a mano.
+---
+---
 
 ## 🗃 NTFS (Windows)
 
