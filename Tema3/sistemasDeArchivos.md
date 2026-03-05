@@ -35,25 +35,25 @@ En una partición FAT32 suele haber estas zonas:
 * **Zona de datos**
 
 ---
-####  🔛 Boot Sector / BPB (sector de arranque):
+###  🔛 Boot Sector / BPB (sector de arranque):
   
-Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente.
-Información del volumen: 
-- Tamaño de sector
-- Tamaño de cluster
-- Número de FATs
-- Dónde empieza la zona de datos 
+Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente:
+
+- **Tamaño de sector:** Unidad física mínima del disco (normalmente 512 bytes o 4096 bytes)
+- **Tamaño de cluster:** Grupo de sectores que el sistema de archivos usa para almacenar datos
+- **Número de FATs**
+- **Dónde empieza la zona de datos** 
 
 ---
 
-#### 🔎 FSInfo (típico en FAT32): 
+### 🔎 FSInfo (típico en FAT32): 
 
 Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda la FAT, lo que podía ser lento en discos grandes.
 
 **FSInfo guarda dos datos orientativos:**
 
-- Número estimado de clusters libres (cuánto espacio queda disponible)
-- Próximo cluster libre sugerido (Dónde empezar a buscar espacio libre cuando se guarda un archivo nuevo)
+- Número estimado de clusters libres ( ¿espacio disponible? )
+- Próximo cluster libre sugerido ( ¿Dónde empezar a buscar espacio libre cuando se guarda un archivo nuevo? )
 
 ℹ️ FSInfo es una pista rápida para encontrar espacio libre sin revisar toda la tabla FAT.
 
@@ -61,26 +61,34 @@ Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda 
 
 ---
 
-#### 🚩FAT #1 y FAT #2 (copia): 
+### 🚩FAT #1 y FAT #2 (copia): 
 
-Si la FAT principal se corrompe (por ejemplo, apagado brusco), el sistema puede recuperar la información usando la copia. Esto existe para proteger el sistema de archivos.
+Si la FAT principal se corrompe (apagado brusco), el sistema puede recuperar la información usando la copia. Esto existe para proteger el sistema de archivos.
 
 En la **tabla FAT**, cada posición corresponde a **un cluster del disco**.  
 El valor almacenado indica **qué ocurre con ese cluster**.
 
-| Valor en la FAT | Significado |
-|---|---|
-| 0 | El cluster está **libre** y puede usarse para guardar datos |
+| Valor en la FAT   | Significado                                                                                       |
+|-------------------|---------------------------------------------------------------------------------------------------|
+| 0                 | El cluster está **libre** y puede usarse para guardar datos                                       |
 | Número de cluster | El cluster **pertenece a un archivo** y apunta al **siguiente cluster donde continúa el archivo** |
-| EOF (End Of File) | Ese cluster es **el último del archivo** |
-| BAD | Cluster **defectuoso**, no se utiliza para almacenar datos |
+| EOF (End Of File) | Ese cluster es **el último del archivo**                                                          |
+| BAD               | Cluster **defectuoso**, no se utiliza para almacenar datos                                        |
 
-Cada entrada de la FAT corresponde a un cluster y dice su estado:
+--- 
 
-    - libre
-    - ocupado
-    - fin de cadena (EOF)
-    - defectuoso
+### 📗 Ejemplo de cómo se guarda un archivo
+
+Supongamos que un archivo ocupa **tres clusters del disco**: 120, 121 y 122.
+
+La tabla FAT registraría la siguiente información:
+
+| Cluster | Valor en la FAT | Interpretación |
+|---|---|---|
+| 120 | 121 | El archivo continúa en el cluster 121 |
+| 121 | 122 | El archivo continúa en el cluster 122 |
+| 122 | EOF | Este es el **último cluster del archivo** |
+
 ---
 
 #### 🏝️ Zona de datos (Data Region)
@@ -374,3 +382,8 @@ Cada apartado debe incluir:
 3. ¿Copia los datos físicamente?
 
 4. ¿Qué ocurre si modifico un archivo después del snapshot?
+
+---
+
+
+[FAT32](https://recoverit.wondershare.es/file-system/fat32-file-system.html)
