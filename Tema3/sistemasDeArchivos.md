@@ -16,69 +16,89 @@
 
 ## 🗃 FAT32  (Windows, Linux, macOS, cámaras, consolas, TVs)
 
-### 1) ¿Qué es FAT32?
+### ¿Qué es FAT32?
 
-- **FAT**: File Allocation Table (Tabla de Asignación de Archivos). Es una **tabla** o índice que **GUARDA** el sistema para saber en qué partes del disco está almacenado cada archivo.
+- **FAT**: File Allocation Table (Tabla de Asignación de Archivos).
+- Es una **tabla** o índice que **GUARDA** el sistema para saber en qué partes del disco está almacenado cada archivo.
 - En lugar de guardar un archivo en un único lugar continuo, el sistema puede dividirlo en varios **clusters** (bloques del disco).
 - La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer.
 
-### 2) Cómo está estructurado 
+---
+
+### ¿Cómo está estructurado?
 
 En una partición FAT32 suele haber estas zonas:
 
-1. Boot Sector / BPB (sector de arranque): Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente.
+* **Boot Sector / BPB**
+* **FSInfo**
+* **FAT #1 y FAT #2**
+* **Zona de datos**
 
-2. Información del volumen: tamaño de sector, tamaño de cluster, número de FATs, dónde empieza la zona de datos, etc.
+---
+####  🔛 Boot Sector / BPB (sector de arranque):
+  
+Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente.
+Información del volumen: 
+- Tamaño de sector
+- Tamaño de cluster
+- Número de FATs
+- Dónde empieza la zona de datos 
 
-3. FSInfo (típico en FAT32)
+---
 
-4. Guarda pistas como “clusters libres estimados” y “siguiente cluster libre sugerido” para acelerar.
+#### 🔎 FSInfo (típico en FAT32): 
 
-FAT #1 y FAT #2 (copia)
+Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda la FAT, lo que podía ser lento en discos grandes.
 
-Dos tablas (por seguridad): la FAT principal y una copia.
+**FSInfo guarda dos datos orientativos:**
 
+- Número estimado de clusters libres (cuánto espacio queda disponible)
+- Próximo cluster libre sugerido (Dónde empezar a buscar espacio libre cuando se guarda un archivo nuevo)
+
+Importante:
+Estos valores son aproximados, porque pueden quedarse desactualizados.
+Si el sistema detecta incoherencias, vuelve a comprobar la FAT completa.
+
+Idea clave:
+
+FSInfo es una pista rápida para encontrar espacio libre sin revisar toda la tabla FAT.
+
+---
+
+#### 🚩FAT #1 y FAT #2 (copia):
+   
 Cada entrada de la FAT corresponde a un cluster y dice su estado:
+    - libre
+    - ocupado
+    - fin de cadena (EOF)
+    - defectuoso
 
-libre
+---
 
-ocupado
+#### 🏝️ Zona de datos (Data Region)
 
-fin de cadena (EOF)
+- En este está el contenido real de los archivos (en clusters) y también los directorios, incluido el directorio raíz.
+- Concepto clave: cluster = unidad mínima de asignación (grupo de sectores).
+- Si un archivo ocupa 1 byte, consume 1 cluster entero.
 
-defectuoso
+---
 
-Zona de datos (Data Region)
+### En qué se diferencia (comparativa práctica)
 
-Aquí viven:
+**FAT16 vs FAT32**
 
-el contenido real de los archivos (en clusters)
+- FAT32 permite muchos más clusters (mejor para volúmenes grandes) y un root directory no fijo.
 
-y también los directorios, incluido el directorio raíz (en FAT32 el root es un directorio normal dentro de la zona de datos, no una zona fija como en FAT16).
+**FAT32 vs exFAT**
 
-Concepto clave: cluster = unidad mínima de asignación (grupo de sectores).
-Si un archivo ocupa 1 byte, consume 1 cluster entero.
+- exFAT está pensado para memorias flash modernas y archivos grandes (FAT32 tiene el límite de 4 GB por archivo).
 
-### 3) En qué se diferencia (comparativa práctica)
-Diferencias frente a otros FAT
-
-FAT16 vs FAT32
-
-FAT32 permite muchos más clusters (mejor para volúmenes grandes) y un root directory no fijo.
-
-FAT32 vs exFAT
-
-exFAT está pensado para memorias flash modernas y archivos grandes (FAT32 tiene el límite famoso de 4 GB por archivo).
-
-Diferencias frente a sistemas “modernos” (NTFS/EXT4/APFS)
+**FAT32 vs (NTFS/EXT4/APFS)**
 
 FAT32 no tiene:
-
-permisos/ACL (seguridad por usuario/grupo)
-
-journaling (registro de cambios para recuperación)
-
-cifrado/compresión integrada del FS (tipo NTFS)
+    - permisos/ACL (seguridad por usuario/grupo)
+    - journaling (registro de cambios para recuperación)
+    - cifrado/compresión integrada del FS (tipo NTFS)
 
 buena tolerancia a cortes de luz (más propenso a corrupción)
 
