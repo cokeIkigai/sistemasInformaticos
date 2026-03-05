@@ -14,6 +14,125 @@
 
 ---
 
+## 🗃 FAT32  (Windows, Linux, macOS, cámaras, consolas, TVs)
+
+### 1) ¿Qué es FAT32?
+
+- **FAT**: File Allocation Table (Tabla de Asignación de Archivos). Es una **tabla** o índice que **GUARDA** el sistema para saber en qué partes del disco está almacenado cada archivo.
+- En lugar de guardar un archivo en un único lugar continuo, el sistema puede dividirlo en varios **clusters** (bloques del disco).
+- La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer.
+
+### 2) Cómo está estructurado 
+
+En una partición FAT32 suele haber estas zonas:
+
+1. Boot Sector / BPB (sector de arranque): Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente.
+
+2. Información del volumen: tamaño de sector, tamaño de cluster, número de FATs, dónde empieza la zona de datos, etc.
+
+3. FSInfo (típico en FAT32)
+
+4. Guarda pistas como “clusters libres estimados” y “siguiente cluster libre sugerido” para acelerar.
+
+FAT #1 y FAT #2 (copia)
+
+Dos tablas (por seguridad): la FAT principal y una copia.
+
+Cada entrada de la FAT corresponde a un cluster y dice su estado:
+
+libre
+
+ocupado
+
+fin de cadena (EOF)
+
+defectuoso
+
+Zona de datos (Data Region)
+
+Aquí viven:
+
+el contenido real de los archivos (en clusters)
+
+y también los directorios, incluido el directorio raíz (en FAT32 el root es un directorio normal dentro de la zona de datos, no una zona fija como en FAT16).
+
+Concepto clave: cluster = unidad mínima de asignación (grupo de sectores).
+Si un archivo ocupa 1 byte, consume 1 cluster entero.
+
+### 3) En qué se diferencia (comparativa práctica)
+Diferencias frente a otros FAT
+
+FAT16 vs FAT32
+
+FAT32 permite muchos más clusters (mejor para volúmenes grandes) y un root directory no fijo.
+
+FAT32 vs exFAT
+
+exFAT está pensado para memorias flash modernas y archivos grandes (FAT32 tiene el límite famoso de 4 GB por archivo).
+
+Diferencias frente a sistemas “modernos” (NTFS/EXT4/APFS)
+
+FAT32 no tiene:
+
+permisos/ACL (seguridad por usuario/grupo)
+
+journaling (registro de cambios para recuperación)
+
+cifrado/compresión integrada del FS (tipo NTFS)
+
+buena tolerancia a cortes de luz (más propenso a corrupción)
+
+Y tiene limitaciones típicas:
+
+Tamaño máximo de archivo: 4 GB − 1 byte
+
+Particiones grandes: en la práctica se usa, pero muchas herramientas (p. ej. Windows) limitan el formateo FAT32 a 32 GB por decisión de herramienta, no por imposibilidad técnica.
+
+4) Cómo funciona (la idea esencial)
+
+FAT32 funciona como un “mapa” de clusters.
+
+4.1 Guardar un archivo
+
+El sistema busca clusters libres.
+
+Escribe el contenido del archivo en esos clusters.
+
+En la FAT guarda la “cadena”:
+
+Ejemplo:
+
+Archivo ocupa clusters: 120, 121, 130
+
+La FAT indica:
+
+120 → 121
+
+121 → 130
+
+130 → EOF (fin)
+
+4.2 Leer un archivo
+
+En el directorio, localiza la entrada del archivo (nombre, tamaño, cluster inicial).
+
+Va a ese cluster y sigue la cadena por la FAT hasta EOF.
+
+Reconstruye el archivo leyendo los clusters en orden.
+
+4.3 Borrar un archivo (importante para clase)
+
+Normalmente no borra el contenido inmediatamente.
+
+Marca la entrada del directorio como “borrada” y en la FAT marca sus clusters como libres.
+
+Por eso se pueden “recuperar” archivos borrados si no se sobrescribe.
+
+4.4 Fragmentación
+
+Como un archivo puede acabar en clusters no contiguos (120, 121, 130…), se produce fragmentación y baja el rendimiento en discos mecánicos (en USB/flash el efecto es distinto, pero sigue existiendo “dispersión”).
+
+Si quieres, lo convierto en un guion de 10 minutos para clase con un ejemplo de pizarra (clusters numerados y una mini-tabla FAT) y un ejercicio práctico para que lo simulen a mano.
 
 ## 🗃 NTFS (Windows)
 
