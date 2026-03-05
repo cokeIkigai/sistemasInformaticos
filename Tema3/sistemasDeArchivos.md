@@ -4,6 +4,10 @@
 
 - Un sistema de archivos define cómo un sistema operativo:  **ORGANIZA**, **ALMACENA** y **RECUPERA** la información en un dispositivo.
 
+<p align="center">
+  <img src="./img/sistemasArchivos01.jpg" width="950px">
+</p>
+
 - Además **CONTROLA** la integridad de los datos, los **PERMISOS**, el **RENDIMIENTO** y la **CAPACIDAD** de recuperación ante errores.-  
 
 - Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **OPTIMIZACIÓN**  o máxima **PROTECCIÓN** frente a corrupción.
