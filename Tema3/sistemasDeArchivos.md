@@ -55,24 +55,32 @@ Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda 
 - Número estimado de clusters libres (cuánto espacio queda disponible)
 - Próximo cluster libre sugerido (Dónde empezar a buscar espacio libre cuando se guarda un archivo nuevo)
 
-Importante:
-Estos valores son aproximados, porque pueden quedarse desactualizados.
-Si el sistema detecta incoherencias, vuelve a comprobar la FAT completa.
+ℹ️ FSInfo es una pista rápida para encontrar espacio libre sin revisar toda la tabla FAT.
 
-Idea clave:
-
-FSInfo es una pista rápida para encontrar espacio libre sin revisar toda la tabla FAT.
+⚠️ *Si se quedan desactualizados, el sistema detecta incoherencias, vuelve a comprobar la FAT completa.*
 
 ---
 
-#### 🚩FAT #1 y FAT #2 (copia):
-   
+#### 🚩FAT #1 y FAT #2 (copia): 
+
+Si la FAT principal se corrompe (por ejemplo, apagado brusco), el sistema puede recuperar la información usando la copia. Esto existe para proteger el sistema de archivos.
+
+En la **tabla FAT**, cada posición corresponde a **un cluster del disco**.  
+El valor almacenado indica **qué ocurre con ese cluster**.
+
+| Valor en la FAT | Significado |
+|---|---|
+| 0 | El cluster está **libre** y puede usarse para guardar datos |
+| Número de cluster | El cluster **pertenece a un archivo** y apunta al **siguiente cluster donde continúa el archivo** |
+| EOF (End Of File) | Ese cluster es **el último del archivo** |
+| BAD | Cluster **defectuoso**, no se utiliza para almacenar datos |
+
 Cada entrada de la FAT corresponde a un cluster y dice su estado:
+
     - libre
     - ocupado
     - fin de cadena (EOF)
     - defectuoso
-
 ---
 
 #### 🏝️ Zona de datos (Data Region)
