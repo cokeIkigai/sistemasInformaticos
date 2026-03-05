@@ -323,8 +323,8 @@ Get-PhysicalDisk
 - ¿Qué diferencia hay entre optimizar y desfragmentar?
 
 
-### 🔴 Ejercicio 4. LIMPIEZA DE DISCO (DISK CLEANUP)  (Casa)
-   • Abre: Inicio > Escribir "Disk Cleanup"
+### 🔴 Ejercicio 4. LIMPIEZA DE DISCO (Defraggler)  (Casa)
+   
    • Selecciona unidad C:
    • Marca: Archivos temporales, Papelera, Miniaturas
    • Haz clic en "Limpiar archivos del sistema"
