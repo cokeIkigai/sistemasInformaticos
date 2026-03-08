@@ -29,6 +29,10 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
 - En lugar de guardar un archivo en un único lugar continuo, el sistema puede dividirlo en varios **clusters** (bloques del disco).
 - La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer.
 
+<p align="center">
+  <img src="./img/fat32tabla.PNG" width="550px">
+</p>
+
 ---
 
 ### ¿Cómo está estructurado?
