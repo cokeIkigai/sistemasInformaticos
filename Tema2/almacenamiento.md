@@ -301,10 +301,15 @@ Get-PhysicalDisk
 ### 🟣 Ejercicio 2. EVOLUCIÓN Memoria y Velocidad   
 
    • Buscar información para cada tipo de memoria. 
+   
    • Dónde el Eje X serían los años y el Eje Y la memoria.
+   
    • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
+   
    • Ver la evolución de la capacidad y velocidad.
+   
    • ¿Qué propiedad a crecido más rápido?
+   
    • ¿En 20 años que se estima sea su velocidad / capacidad?
 
 ---
@@ -314,38 +319,57 @@ Get-PhysicalDisk
 **Objetivo:** comprobar cómo Windows optimiza un SSD.
 
 **Pasos**
+
 1. Buscar: `Desfragmentar y optimizar unidades`.
-2. Seleccionar el disco principal.
-3. Pulsar **Optimizar**.
+   
+3. Seleccionar el disco principal.
+   
+5. Pulsar **Optimizar**.
 
 **Preguntas**
+
 - ¿Windows indica SSD o HDD?
+- 
 - ¿Qué diferencia hay entre optimizar y desfragmentar?
 
 
 ### 🔴 Ejercicio 4. LIMPIEZA DE DISCO (Defraggler)  (Casa)
    
    • Selecciona unidad C:
+   
    • Marca: Archivos temporales, Papelera, Miniaturas
+   
    • Haz clic en "Limpiar archivos del sistema"
-    • Haz capturas de lo que ves y para que son cada función.
+   
+   • Haz capturas de lo que ves y para que son cada función.
 
 ### 🟢 Ejercicio 5. STORAGE SENSE (Windows 10/11)  (Casa)
+
    • Configuración > Sistema > Almacenamiento
+   
    • Activa "Storage Sense"
+   
    • Configura limpieza automática
+   
    • Haz capturas de lo que ves y para que son cada función.
 
 
 ### 🔵 Ejercicio 6. VER ESTADO DEL DISCO (Casa)
+
    • Abre "Este equipo"
+   
    • Click derecho en C: > Propiedades
+   
    • Verás espacio usado/libre
+   
    • Herramientas > Optimizar 
+   
    • Haz capturas de lo que ves y para que son cada función.
 
 ### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
+
    • ¿ qué es desfragmentación, TRIM, CHKDSK, Wear Leveling ?
+   
    • Crear una presentación de cada uno de los conceptos y saber diferenciarlos.
 
 ---
@@ -353,4 +377,5 @@ Get-PhysicalDisk
 ## 🧪 Ejercicios prácticos EXTRA
 
 - ¿Cuál es el proceso de Comprimir archivos de windows? ¿Qué % de eficacia hace?
+  
 - Comprime un archivo grande min (150 mb) y mira las diferencias entre .rar, .zip, .7zip, para el mismo archivo.
