@@ -54,6 +54,18 @@ Describe la estructura del sistema de archivos para que el sistema operativo pue
 - **Número de FATs**
 - **Dónde empieza la zona de datos** 
 
+| Campo | Qué indica | Para qué sirve |
+|---|---|---|
+| Bytes per Sector | Tamaño de cada sector del disco (ej. 512 o 4096 bytes) | Define la unidad física mínima de lectura/escritura |
+| Sectors per Cluster | Cuántos sectores forman un cluster | Determina el tamaño de los bloques donde se guardan archivos |
+| Reserved Sectors | Número de sectores reservados al inicio | Indica dónde empieza la FAT |
+| Number of FATs | Número de copias de la FAT (normalmente 2) | Permite redundancia si una FAT se corrompe |
+| FAT Size | Cuántos sectores ocupa cada FAT | Permite localizar toda la tabla FAT |
+| Total Sectors | Tamaño total del volumen en sectores | Permite calcular el tamaño total del sistema de archivos |
+| Root Cluster | Cluster donde empieza el directorio raíz | Punto de inicio para localizar archivos |
+| FSInfo Sector | Sector que guarda información de clusters libres | Optimiza la gestión del espacio libre |
+| Boot Sector Signature | Firma `55 AA` | Indica que el sector de arranque es válido |
+
 ---
 
 ### 🔎 FSInfo (típico en FAT32): 
