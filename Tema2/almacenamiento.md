@@ -278,62 +278,47 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ## 🧪 Ejercicios prácticos II
 
----
-### 🟢 Ejercicio 1 — Identificar el tipo de disco
+### 🟣 Ejercicio 1. EVOLUCIÓN Memoria y Velocidad   
 
-**Objetivo:** saber si el equipo usa HDD o SSD.
+• Buscar información para cada tipo de memoria. 
 
-**Pasos**
-1. Abrir **PowerShell**.
-2. Ejecutar:
+| Año | Tipo | Capacidad típica | Velocidad lectura | Precio aproximado |
+|----|----|----|----|----|
+| 2005 | HDD | | | |
+| 2010 | HDD / SSD | | | |
+| 2015 | HDD / SSD | | | |
+| 2020 | SSD | | | |
+| 2025 | SSD NVMe | | | |
 
-```powershell
-Get-PhysicalDisk
-```
-
-**Preguntas**
-- ¿Qué aparece en `MediaType`?
-- ¿Cuántos `discos` tiene el equipo?
-- ¿Cuál usarías para `instalar` el sistema operativo y por qué?
-
----
-
-### 🟣 Ejercicio 2. EVOLUCIÓN Memoria y Velocidad   
-
-   • Buscar información para cada tipo de memoria. 
-   
-   • Dónde el Eje X serían los años y el Eje Y la memoria.
-   
-   • Otra gráfica donde Eje X son los años, y el Eje Y la velocidad.
-   
-   • Ver la evolución de la capacidad y velocidad.
-   
-   • ¿Qué propiedad a crecido más rápido?
+   • A partir de la tabla anterior crea 3 gráficas (excel) en líneas para ver la evoluación por años y por dispositivos.
    
    • ¿En 20 años que se estima sea su velocidad / capacidad?
 
+   • ¿Qué es límite de Shannon? ¿Qué factores que determinan el Límite de Shannon?. - Nombra las 4 principales dificultades para sobrepasar el límite de Shanon.
+   
+   • ¿Qué propiedad ha crecido más rápido?
+
+   • ¿Qué es la Ley de Moore?
+
+   | Año | Transistores aproximados |
+   |----|----|
+   | 1971 | 2.300 |
+   | 1982 | 134.000 |
+   | 1993 | 3.100.000 |
+   | 2006 | 291.000.000 |
+   | 2020 | 39.000.000.000 |
+
+   • ¿Qué hecho hizo que la ley de Moore se disparara y cuándo?
+   
+   • ¿Que tamaño tenía antes los transistores antes de la miniaturización, su relación esn % a los actuales?
+
+   • ¿Qué tamaño tendría un disco de 1 Tb si los transistores fueran del tamaño anterior a la miniaturización?
+
+   • Si utilizáramos la tecnología de discos duros de hace unas décadas, ¿qué tamaño físico tendría aproximadamente un sistema capaz de almacenar 1 TB de información?
+
 ---
 
-### 🟡 Ejercicio 3 — Optimización de unidades (TRIM) (Casa)
-
-**Objetivo:** comprobar cómo Windows optimiza un SSD.
-
-**Pasos**
-
-1. Buscar: `Desfragmentar y optimizar unidades`.
-   
-3. Seleccionar el disco principal.
-   
-5. Pulsar **Optimizar**.
-
-**Preguntas**
-
-- ¿Windows indica SSD o HDD?
-- 
-- ¿Qué diferencia hay entre optimizar y desfragmentar?
-
-
-### 🔴 Ejercicio 4. LIMPIEZA DE DISCO (Defraggler)  (Casa)
+### 🔴 Ejercicio 2. LIMPIEZA DE DISCO (Defraggler) (Máquina Virtual) 
    
    • Selecciona unidad C:
    
@@ -341,41 +326,28 @@ Get-PhysicalDisk
    
    • Haz clic en "Limpiar archivos del sistema"
    
-   • Haz capturas de lo que ves y para que son cada función.
+   • Haz capturas de la ventan principal y cuando está desfragmentando.
 
-### 🟢 Ejercicio 5. STORAGE SENSE (Windows 10/11)  (Casa)
+   • Si existe diferentes partes menciona que es cada cosa, o con numeración en la aptura selecionada y leugo lo describes después.
 
-   • Configuración > Sistema > Almacenamiento
-   
-   • Activa "Storage Sense"
-   
-   • Configura limpieza automática
-   
-   • Haz capturas de lo que ves y para que son cada función.
-
-
-### 🔵 Ejercicio 6. VER ESTADO DEL DISCO (Casa)
-
-   • Abre "Este equipo"
-   
-   • Click derecho en C: > Propiedades
-   
-   • Verás espacio usado/libre
-   
-   • Herramientas > Optimizar 
-   
-   • Haz capturas de lo que ves y para que son cada función.
-
-### 🟠 Ejercicio 7. BÚSQUEDA Y PRESENTACIÓN
-
-   • ¿ qué es desfragmentación, TRIM, CHKDSK, Wear Leveling ?
-   
-   • Crear una presentación de cada uno de los conceptos y saber diferenciarlos.
+   • ¿Qué es lo que no se puede desfragmentar y por qué?
 
 ---
 
-## 🧪 Ejercicios prácticos EXTRA
+### 🟢 Ejercicio 3. STORAGE SENSE (Windows 10/11) (Máquina Virtual) 
 
-- ¿Cuál es el proceso de Comprimir archivos de windows? ¿Qué % de eficacia hace?
+   • Proponer al menos **tres acciones que podrían hacerse para liberar espacio en el disco** sin borrar archivos importantes.
+   
+   • ¿Cuál es el proceso de Comprimir archivos de windows? ¿Qué % de eficacia hace?
   
-- Comprime un archivo grande min (150 mb) y mira las diferencias entre .rar, .zip, .7zip, para el mismo archivo.
+   • Comprime un archivo grande min (50 mb) y mira las diferencias entre .rar, .zip, .7zip, para el mismo archivo.
+
+---
+
+### 🟠 Ejercicio 4. DIFERENCIAR
+
+   • ¿ Qué es desfragmentación, TRIM, CHKDSK, Wear Leveling ?
+   
+   • Crear una presentación o esquema de cada uno de los conceptos y saber diferenciarlos.
+
+---
