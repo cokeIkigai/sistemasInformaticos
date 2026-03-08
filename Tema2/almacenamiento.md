@@ -87,6 +87,10 @@ Cada celda NAND:
 |TLC	|3 bits	        |8 estados         |
 |QLC	|4 bits	        |16 estados        |
 
+<p align="center">
+  <img src="./img/nand01.PNG" width="950px">
+</p>
+
 Más bits → más precisión necesaria → más desgaste.
 
 📌 Qué implica
