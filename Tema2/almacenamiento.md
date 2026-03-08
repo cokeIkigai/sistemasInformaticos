@@ -339,7 +339,7 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ---
 
-### 🟢 Ejercicio 3. STORAGE SENSE (Windows 10/11) (Máquina Virtual) 
+### 🟢 Ejercicio 3.
 
    • Proponer al menos **tres acciones que podrían hacerse para liberar espacio en el disco** sin borrar archivos importantes.
    
