@@ -78,7 +78,10 @@ Cada celda NAND:
 - Si hay carga → representa un valor.
 - Si no hay carga → otro valor.
 
+
 📊 Según tipo de celda:
+
+<img src="./img/nand01.PNG" width="380px" align="right" style="margin-left: 80px;">
 
 |Tipo	|Bits por celda	|Estados eléctricos|
 |-----|---------------|------------------|
@@ -87,7 +90,6 @@ Cada celda NAND:
 |TLC	|3 bits	        |8 estados         |
 |QLC	|4 bits	        |16 estados        |
 
-<img src="./img/nand01.PNG" width="380px" align="right" style="margin-left: 80px;">
 
 Más bits → más precisión necesaria → más desgaste.
 
@@ -118,9 +120,10 @@ NVMe usa PCIe, que es mucho más rápido, por eso puede alcanzar varios miles de
   - SSD SATA ≈ 500–550 MB/s
   - NVMe ≈ 3.000 – 7.000 MB/s (según generación PCIe)
     
-<img src="./img/mev1.jpg" width="450px" align="right">
     
 **¿Cuándo se usa?**
+
+<img src="./img/mev1.jpg" width="450px" align="right">
 
 - Edición de vídeo pesada
 - Desarrollo y máquinas virtuales
