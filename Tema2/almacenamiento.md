@@ -359,3 +359,21 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
    • Crear una presentación o esquema de cada uno de los conceptos y saber diferenciarlos.
 
 ---
+
+### 🔴 Ejercicio 5. ¿Qué pasaría si…?
+
+- ¿Qué pasaría si todos los ordenadores del mundo usaran solo HDD?
+
+- ¿Qué pasaría si solo existieran SSD pero no HDD?
+
+- ¿Qué tecnología crees que dominará dentro de 20 años?
+
+Investiga si existen tecnologías futuras como: 
+
+- DNA Storage
+
+- Memoria 3D XPoint
+
+- Holographic Storage
+
+Explica brevemente cómo funcionan.
