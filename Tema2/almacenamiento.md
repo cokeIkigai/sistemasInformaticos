@@ -279,6 +279,8 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 30. ¿Qué discos se utilizan en los centros de datos de empresas como Google?
 
+
+[Encuesta](https://docs.google.com/forms/d/e/1FAIpQLSejsYUPj0sFm0NqhVBUIujet9FX19cHBulAqhJegr6Io8fGtw/viewform?usp=header)
 ---
 
 ## 🧪 Ejercicios prácticos II
