@@ -326,7 +326,7 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 
 ---
 
-### 🔴 Ejercicio 2. LIMPIEZA DE DISCO (Defraggler) (Máquina Virtual) 
+### 🔴 Ejercicio 2. LIMPIEZA DE DISCO (instalar Defraggler) (Máquina Virtual) 
    
    • Selecciona unidad C:
    
@@ -336,7 +336,7 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
    
    • Haz capturas de la ventan principal y cuando está desfragmentando.
 
-   • Si existe diferentes partes menciona que es cada cosa, o con numeración en la aptura selecionada y leugo lo describes después.
+   • Si existe diferentes partes menciona que es cada cosa, o con numeración en la captura selecionada y luego lo describes después.
 
    • ¿Qué es lo que no se puede desfragmentar y por qué?
 
