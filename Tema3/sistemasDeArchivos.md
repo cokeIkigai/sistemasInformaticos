@@ -419,3 +419,53 @@ Cada apartado debe incluir:
 
 
 [FAT32](https://recoverit.wondershare.es/file-system/fat32-file-system.html)
+
+
+---
+🧪 Ejercicio: seguir la cadena de un archivo en FAT32
+
+En el siguiente ejemplo tienes una tabla FAT simplificada.
+Cada entrada indica qué cluster viene después en la cadena del archivo.
+
+Reglas:
+
+Cada fila representa un cluster.
+
+- El valor Siguiente cluster indica dónde continúa el archivo.
+- El valor FFFF significa fin de archivo (EOF).
+- El valor 0000 significa cluster libre.
+
+📂 Archivo en el directorio
+
+El sistema indica que el archivo datos.txt comienza en el cluster 0003.
+
+- 1️⃣ Sigue la cadena de clusters empezando desde 0003.
+
+**Completa la cadena:**
+
+```0003 → ____ → ____ → ____ → ____ → FIN```
+
+- 2️⃣ ¿Qué clusters ocupa el archivo?
+- 3️⃣ ¿Cuántos clusters tiene el archivo?
+- 4️⃣ ¿Qué clusters están libres en la tabla FAT?
+
+### Tabla FAT
+
+|Cluster|	Siguiente cluster|
+|---|---|
+|0001	|FFF8|
+|0002	|FFFF|
+|0003	|0004|
+|0004	|0005|
+|0005	|0009|
+|0006	|0000|
+|0007	|0000|
+|0008	|0000|
+|0009	|0012|
+|0010	|0000|
+|0011	|0000|
+|0012	|FFFF|
+|0013	|0000|
+|0014	|0000|
+
+
