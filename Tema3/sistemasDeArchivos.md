@@ -468,4 +468,32 @@ El sistema indica que el archivo datos.txt comienza en el cluster 0003.
 |0013	|0000|
 |0014	|0000|
 
+---
+
+🧪 Ejercicio 2: localizar archivos en una tabla FAT32
+
+En la siguiente tabla aparece una parte de la FAT de un sistema FAT32. Cada entrada representa el siguiente cluster en la cadena del archivo.
+
+El directorio del sistema indica el cluster inicial de los archivos:
+
+|Archivo	|Cluster inicial|
+|---|---|
+|Informe.docx	|0002|
+|VideoClase.mp4	|0020|
+
+```
+00004000  f8ffff0f ffffff0f 07000000 0fffff0f
+00004010  00000000 00000000 00000000 00000000
+00004020  0c000000 0d000000 12000000 00000000
+00004030  14000000 0fffff0f 00000000 00000000
+00004040  19000000 1a000000 1b000000 1c000000
+00004050  1d000000 1e000000 1f000000 20000000
+00004060  21000000 22000000 0fffff0f 00000000
+00004070  00000000 00000000 00000000 00000000
+00004080  2a000000 2b000000 2c000000 2d000000
+00004090  2e000000 2f000000 30000000 31000000
+000040A0  32000000 33000000 34000000 0fffff0f
+000040B0  00000000 00000000 00000000 00000000
+```
+
 
