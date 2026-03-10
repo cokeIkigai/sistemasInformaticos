@@ -377,3 +377,40 @@ Investiga si existen tecnologías futuras como:
 - Holographic Storage
 
 Explica brevemente cómo funcionan.
+
+---
+
+### ☣ EXTRA 
+
+Instalación de programas en la Máquina virtual de gestión de software:
+
+- [Crystaldiskinfo](https://sourceforge.net/projects/crystaldiskinfo/) Released /9.8.0/CrystalDiskInfo9_8_0Shizuku.zip
+
+- [AIDA64](https://www.aida64.com/downloads/NDY1NjI4Y2E=#google_vignette)  Download.aida64.com (EU)
+
+- [Defraggler](https://defraggler.softonic.com/descargar)
+  
+- [WinDirStat](https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi)
+
+---
+
+**OBJETIVO**
+
+Vas a actuar como tester de herramientas profesionales de diagnóstico de hardware. Las empresas que desarrollan este tipo de software necesitan personas que prueben los programas, exploren sus funciones y expliquen claramente qué se puede hacer con ellos. Tu trabajo consiste en analizar dos herramientas reales utilizadas por técnicos informáticos y elaborar una mini guía de uso que ayude a otros usuarios a entender qué permiten hacer.
+
+¿Para qué sirve cada programa? (3–4 líneas)
+
+¿En qué situaciones lo usaría un técnico? (3–4 líneas)
+
+Identificar mínimo 10 opciones, datos o funciones que permita ver cada programa. (Captura y su descripción de su lectura)
+
+
+**Conclusión de la guía investigación**
+
+¿Cuál de los programas muestra más información?
+
+¿Cuál sería más útil para un técnico informático?
+
+¿Cuál sería más útil para un usuario normal?
+
+
