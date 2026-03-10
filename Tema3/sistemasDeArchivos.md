@@ -45,6 +45,7 @@ En una partición FAT32 suele haber estas zonas:
 * **Zona de datos**
 
 ---
+
 ###  🔛 Boot Sector / BPB (sector de arranque):
   
 Describe la estructura del sistema de archivos para que el sistema operativo pueda leer el disco correctamente:
@@ -199,7 +200,6 @@ Consecuencia:
 
 A este fenómeno se le llama **fragmentación**.
 
----
 ---
 
 ## 🗃 NTFS (Windows)
