@@ -67,6 +67,7 @@ Describe la estructura del sistema de archivos para que el sistema operativo pue
 | Boot Sector Signature | Firma `55 AA` | Indica que el sector de arranque es válido |
 
 [BootSector](https://github.com/cokeIkigai/sistemasInformaticos/edit/main/Tema3/BootSector.md)
+
 ---
 
 ### 🔎 FSInfo (típico en FAT32): 
