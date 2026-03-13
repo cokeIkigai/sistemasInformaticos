@@ -61,7 +61,9 @@ En la dirección **00002010** encontramos *14 00 00 00*, pero eso está en litte
 14 00 00 00  -> 0x14
 0x14         -> 1x16 + 4x1 = 20
 Cluster siguiente = 20 
-``` 
+```
+
+---
 
 🔍 **Repetimos la búsqueda pero para 20**
 
@@ -86,6 +88,8 @@ TABLA FAT
 Cluster siguiente = 12
 ``` 
 
+---
+
 🔍 **Repetimos la búsqueda pero para 12**
 
 - inicio_FAT = `00002000`
@@ -108,6 +112,8 @@ TABLA FAT
 0x0d         -> 13x1 = 13
 Cluster siguiente = 13
 ``` 
+
+---
 
 🔍 **Repetimos la búsqueda pero para 13**
 
