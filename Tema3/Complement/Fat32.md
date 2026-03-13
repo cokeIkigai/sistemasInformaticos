@@ -1,14 +1,16 @@
-# LECTURA DE LA TABLA FAT32
+# 💻 LECTURA DE LA TABLA FAT32
 
 **Hay que busar en los siguientes archivos:**
 
-index.html  → cluster inicial 4
+🗃️ index.html  → cluster inicial 4
 
-index.css  → cluster inicial 8
+🗃️ index.css  → cluster inicial 8
 
-index.js  → cluster inicial 20
+🗃️ index.js  → cluster inicial 20
 
-**Tabla FAT32:**
+---
+
+📋 **Tabla FAT32:**
 
 ```
 00002000  f0 ff ff 0f  ff ff ff 0f  f8 ff ff 0f  ff ff ff 0f
@@ -33,7 +35,9 @@ index.js  → cluster inicial 20
 00004070  ff ff ff 0f  ff ff ff 0f  00 00 00 00  00 00 00 00
 ```
 
-### index.html
+---
+
+### 📜 index.html
 
 🔍 Primero leémos la primera entrada de la tabla. La FAT empieza en `00002000` y que cada entrada ocupa 4 bytes, así que siempre usamos la fórmula:
 El cluster inicial para index.html es 4, por lo que buscamos su FAT[4]. ¿Cómo lo hacemos? Pues buscando su claster correspondiente.
