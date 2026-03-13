@@ -35,7 +35,7 @@ index.js  → cluster inicial 20
 
 ### index.html
 
-Primero leémos la primera entrada de la tabla. La FAT empieza en `00002000` y que cada entrada ocupa 4 bytes, así que siempre usamos la fórmula:
+🔍 Primero leémos la primera entrada de la tabla. La FAT empieza en `00002000` y que cada entrada ocupa 4 bytes, así que siempre usamos la fórmula:
 El cluster inicial para index.html es 4, por lo que buscamos su FAT[4]. ¿Cómo lo hacemos? Pues buscando su claster correspondiente.
 
 ```dirección = inicio_FAT + (cluster × 4)```
@@ -63,7 +63,7 @@ En la dirección **00002010** encontramos *14 00 00 00*, pero eso está en litte
 Cluster siguiente = 20 
 ``` 
 
-Repetimos la búsqueda
+🔍 **Repetimos la búsqueda pero para 20**
 
 - inicio_FAT = `00002000`
 - cluster = `20`
@@ -78,63 +78,55 @@ dirección = 00002050
 
 TABLA FAT
 *00002050  0c 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00*
+```
+
+```
+0c 00 00 00  -> 0x0c
+0x0c         -> 12x1 = 12
+Cluster siguiente = 12
 ``` 
 
+🔍 **Repetimos la búsqueda pero para 12**
 
-Buscamos **FAT[20]**
+- inicio_FAT = `00002000`
+- cluster = `12`
 
-**00002000 + (20 × 4) = 00002050**
+```
+dirección = inicio_FAT + (cluster × 4)
+dirección = 00002000   + (4    ×    12) 
+Pasar (4 × 12) = 48 -> Hexadecimal 0000030
+dirección = 00002000 + 0000030 = 00002030
+-----------------------------------------
+dirección = 00002050
 
-En **00002050** encontramos:
+TABLA FAT
+*00002030  0d 00 00 00  ff ff ff 0f  00 00 00 00  00 00 00 00*
+```
 
-**0c 00 00 00**
+```
+0d 00 00 00  -> 0x0d
+0x0d         -> 13x1 = 13
+Cluster siguiente = 13
+``` 
 
-Interpretación:
+🔍 **Repetimos la búsqueda pero para 13**
 
-- `0x0C` = **12**
+- inicio_FAT = `00002000`
+- cluster = `13`
 
-Resultado:
+```
+dirección = inicio_FAT + (cluster × 4)
+dirección = 00002000   + (4    ×    13) 
+Pasar (4 × 13) = 52 -> Hexadecimal 0000031
+dirección = 00002000 + 0000031 = 00002031
+-----------------------------------------
+dirección = 00002031
 
-**20 → 12**
+TABLA FAT  
+*00002030  0d 00 00 00  *ff ff ff 0f*  00 00 00 00  00 00 00 00*
+```
 
----
+```
+ff ff ff 0f -> EOF (fin de archivo)
+``` 
 
-### Siguiente cluster: 12
-
-Buscamos **FAT[12]**
-
-**00002000 + (12 × 4) = 00002030**
-
-En **00002030** encontramos:
-
-**0d 00 00 00**
-
-Interpretación:
-
-- `0x0D` = **13**
-
-Resultado:
-
-**12 → 13**
-
----
-
-### Siguiente cluster: 13
-
-Buscamos **FAT[13]**
-
-**00002000 + (13 × 4) = 00002034**
-
-En esa posición aparece:
-
-**ff ff ff 0f**
-
-Este valor significa:
-
-**EOF (fin de archivo)**
-
----
-
-### Cadena final de clusters de A.txt
-
-**4 → 20 → 12 → 13 → EOF**
