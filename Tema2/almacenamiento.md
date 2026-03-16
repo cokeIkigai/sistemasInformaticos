@@ -384,7 +384,7 @@ Explica brevemente cómo funcionan.
 
 Instalación de programas en la Máquina virtual de gestión de software:
 
-- [Crystaldiskinfo](https://sourceforge.net/projects/crystaldiskinfo/) Released /9.8.0/CrystalDiskInfo9_8_0Shizuku.zip
+- [Crystaldiskinfo](https://sourceforge.net/projects/crystaldiskinfo/) Released /9.8.0/CrystalDiskInfo.zip
 
 - [AIDA64](https://www.aida64.com/downloads/NDY1NjI4Y2E=#google_vignette)  Download.aida64.com (EU)
 
