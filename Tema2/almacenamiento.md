@@ -298,7 +298,7 @@ Se basa en diversificar copias y ubicaciones para evitar fallos únicos.
 | 2020 | SSD | | | |
 | 2025 | SSD NVMe | | | |
 
-   • A partir de la tabla anterior crea 3 gráficas (excel) en líneas para ver la evoluación por años y por dispositivos.
+   • A partir de la tabla anterior crea 3 gráficas (excel) en líneas para ver la evolución por años y por dispositivos.
    
    • ¿En 20 años que se estima sea su velocidad / capacidad?
 
