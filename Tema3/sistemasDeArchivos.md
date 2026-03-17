@@ -6,20 +6,20 @@ Un sistema de archivos define cómo un sistema operativo.
 
 📂 **ORGANIZA**, **ALMACENA** y **RECUPERA** la información en un dispositivo.
 
-<p align="center">
+<p align="left">
   <img src="./img/sistemasArchivos01.png" width="650px">
 </p>
 
 👮‍♂️ **CONTROLA** la integridad de los datos, los **PERMISOS**, el **RENDIMIENTO** y la **CAPACIDAD** de recuperación ante errores.  
 
 
-<p align="center">
+<p align="left">
   <img src="./img/permisos.png" width="650px">
 </p>
 
 Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **OPTIMIZACIÓN**  o máxima **PROTECCIÓN** frente a corrupción.
 
-<p align="center">
+<p align="left">
   <img src="./img/sistemas01.jpg" width="950px">
 </p>
 
@@ -34,7 +34,7 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
 - En lugar de guardar un archivo en un único lugar continuo, el sistema puede dividirlo en varios **clusters** (bloques del disco).
 - La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer.
 
-<p align="center">
+<p align="left">
   <img src="./img/fat32tabla.PNG" width="750px">
 </p>
 
