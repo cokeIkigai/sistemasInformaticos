@@ -106,25 +106,41 @@ El valor almacenado indica **qué ocurre con ese cluster**.
 
 --- 
 
-### 📗 Ejemplo de cómo se guarda un archivo
-
-Supongamos que un archivo ocupa **tres clusters del disco**: 120, 121 y 122.
-
-La tabla FAT registraría la siguiente información:
-
-| Cluster | Valor en la FAT | Interpretación |
-|---|---|---|
-| 120 | 121 | El archivo continúa en el cluster 121 |
-| 121 | 122 | El archivo continúa en el cluster 122 |
-| 122 | EOF | Este es el **último cluster del archivo** |
-
----
-
-#### 🏝️ Zona de datos (Data Region)
+### 🏝️ Zona de datos (Data Region)
 
 - En este está el contenido real de los archivos (en clusters) y también los directorios, incluido el directorio raíz.
 - Concepto clave: cluster = unidad mínima de asignación (grupo de sectores).
 - Si un archivo ocupa 1 byte, consume 1 cluster entero.
+
+---
+
+### ⚙️ Funcionamiento de FAT32
+
+FAT32 funciona como un **mapa de clusters** que indica dónde está cada parte de un archivo. Supongamos que un archivo ocupa **tres clusters del disco**: 120, 121 y 122.
+
+#### ⚙️ Guardar un archivo
+1. El sistema **busca clusters libres** en el disco.
+2. **Escribe el contenido del archivo** en esos clusters.
+3. En la **tabla FAT** guarda la **cadena de clusters** que forman el archivo.
+
+Cluster 120 → 121, Cluster 121 → 122, Cluster 122 → EOF
+
+---
+
+#### 📖 Leer un archivo
+1. El sistema busca en el **directorio** la entrada del archivo (nombre, tamaño y **cluster inicial**).
+2. Va a ese cluster y **sigue la cadena en la FAT**.
+3. Va leyendo los clusters hasta encontrar **EOF (fin del archivo)**.
+4. Con esos clusters **reconstruye el archivo completo**.
+
+---
+
+#### 🔥 Borrar un archivo
+1. El sistema **no borra los datos inmediatamente**.
+2. Marca la **entrada del archivo en el directorio como borrada**.
+3. En la **FAT marca sus clusters como libres**.
+
+Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han sobrescrito todavía**.
 
 ---
 
@@ -153,40 +169,6 @@ La tabla FAT registraría la siguiente información:
 
 1. **Tamaño máximo de archivo:**  4 GB − 1 byte
 2. **Tamaño de partición:** Técnicamente hasta ~2 TB, aunque muchas herramientas como Windows solo permiten formatear hasta 32 GB en FAT32 
-
----
-
-### ⚙️ Funcionamiento de FAT32
-
-FAT32 funciona como un **mapa de clusters** que indica dónde está cada parte de un archivo.
-
-#### 🟢 Guardar un archivo
-1. El sistema **busca clusters libres** en el disco.
-2. **Escribe el contenido del archivo** en esos clusters.
-3. En la **tabla FAT** guarda la **cadena de clusters** que forman el archivo.
-
-Ejemplo:
-
-Cluster 120 → 121  
-Cluster 121 → 122  
-Cluster 122 → EOF
-
----
-
-#### 🟢 Leer un archivo
-1. El sistema busca en el **directorio** la entrada del archivo (nombre, tamaño y **cluster inicial**).
-2. Va a ese cluster y **sigue la cadena en la FAT**.
-3. Va leyendo los clusters hasta encontrar **EOF (fin del archivo)**.
-4. Con esos clusters **reconstruye el archivo completo**.
-
----
-
-#### 🟢 Borrar un archivo
-1. El sistema **no borra los datos inmediatamente**.
-2. Marca la **entrada del archivo en el directorio como borrada**.
-3. En la **FAT marca sus clusters como libres**.
-
-Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han sobrescrito todavía**.
 
 ---
 
