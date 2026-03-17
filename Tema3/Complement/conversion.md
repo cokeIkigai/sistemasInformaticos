@@ -1,4 +1,4 @@
-# Convertir hexadecimal
+# Convertir a hexadecimal
 
 Para poder entender como pasar a base hexadecimal, debemosentender como usamos y entendemos cómo se usa sistema decimal.
 EL sistema decimal recordamos que consta de la composición de 10 cifras {0 ,1 , 2, 3, 4, 5, 6, 7, 8, 9}.
@@ -17,7 +17,6 @@ $$
 1 \cdot 10^{3} + 8 \cdot 10^{2} + 4 \cdot 10^{1} + 3 \cdot 10^{0}
 $$
 
-  
 $$
 1000 + 800 + 40 + 3 = 1843
 $$
