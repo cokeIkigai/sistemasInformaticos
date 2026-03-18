@@ -1,136 +1,120 @@
-🧪 Ejercicios prácticos II — Resueltos
-🟣 Ejercicio 1. Evolución memoria y velocidad
-1) Tabla de evolución
+# 🧪 Ejercicios prácticos II — Resueltos
 
-Valores aproximados y típicos de consumo/generalista, no de un único modelo concreto. Sirven para ver la tendencia histórica. Los HDD de mediados de los 2000 solían rondar 200–400 GB con velocidades secuenciales del orden de 50–70 MB/s; hacia 2010 los HDD de 1 TB eran comunes y los SSD de 80–256 GB ya se movían en torno a 250–520 MB/s; en 2015 los SSD SATA ya estaban cerca del techo de SATA (~540 MB/s); en 2025 los NVMe PCIe 4.0 de 1 TB rondan 7.450 MB/s de lectura.
+## 🟣 Ejercicio 1. Evolución memoria y velocidad
 
-Año	Tipo	Capacidad típica	Velocidad lectura típica	Precio aproximado
-2005	HDD	200–250 GB	50–70 MB/s	80–120 €
-2010	HDD / SSD	HDD: 1 TB / SSD: 80–160 GB	HDD: 100–130 MB/s / SSD: 250–300 MB/s	HDD: 90–130 € / SSD: 180–300 €
-2015	HDD / SSD	HDD: 2 TB / SSD: 250–500 GB	HDD: 140–170 MB/s / SSD SATA: 500–550 MB/s	HDD: 70–100 € / SSD: 90–180 €
-2020	SSD	500 GB–1 TB	500–560 MB/s	80–150 €
-2025	SSD NVMe	1–2 TB	5.000–7.500 MB/s	70–180 €
-2) Gráficas que haría en Excel
+### 1) Tabla de evolución
 
-Haz 3 gráficas de líneas:
+- Valores aproximados y típicos de consumo/generalista, no de un único modelo concreto. 
+- Sirven para ver la tendencia histórica:
+  - Los HDD de mediados de los 2000 solían rondar 200–400 GB con velocidades secuenciales del orden de 50–70 MB/s;
+  - Hacia 2010 los HDD de 1 TB eran comunes.
+  - SSD de 80–256 GB ya se movían en torno a 250–520 MB/s.
+  - 2015 los SSD SATA ya estaban cerca del techo de SATA (~540 MB/s).
+  - 2025 los NVMe PCIe 4.0 de 1 TB rondan 7.450 MB/s de lectura.
 
-Gráfica 1: Capacidad por año
+### 2) Gráficas que haría en Excel
 
-Eje X: año
+### 3) ¿En 20 años qué se estima de velocidad/capacidad?
 
-Eje Y: capacidad
-
-Series: HDD, SSD, SSD NVMe
-
-Gráfica 2: Velocidad de lectura por año
-
-Eje X: año
-
-Eje Y: MB/s
-
-Series: HDD, SSD, SSD NVMe
-
-Gráfica 3: Precio por año
-
-Eje X: año
-
-Eje Y: €
-
-Series: HDD, SSD, SSD NVMe
-
-3) ¿En 20 años qué se estima de velocidad/capacidad?
-
-Como estimación razonable para 2045–2046, lo más probable es que el almacenamiento dominante siga siendo de estado sólido, con más apilamiento 3D, mejor eficiencia y mayor paralelismo. En consumo, sería razonable imaginar SSD de varios TB por unidad doméstica y velocidades muy superiores a PCIe 4.0 actuales; en centros de datos seguirán coexistiendo SSD y HDD de muy alta densidad, porque el HDD mantiene ventaja de coste por TB y sigue creciendo con tecnologías como HAMR. Esto es una proyección, no una cifra cerrada.
+Como estimación razonable para **2045–2046**:
+- Lo más probable es que el almacenamiento dominante siga siendo de estado sólido, con más apilamiento 3D, mejor eficiencia y mayor paralelismo.
+- En consumo, sería razonable imaginar SSD de varios TB por unidad doméstica y velocidades muy superiores a PCIe 4.0 actuales;
+- Enn centros de datos seguirán coexistiendo SSD y HDD de muy alta densidad, porque el HDD mantiene ventaja de coste por TB y sigue creciendo con tecnologías como HAMR.
 
 Estimación docente simple:
 
-SSD doméstico: 8–32 TB habituales
+**SSD doméstico: 8–32 TB habituales**
 
-NVMe doméstico: 15–40 GB/s
+**NVMe doméstico: 15–40 GB/s**
 
-HDD datacenter: decenas o incluso más de 100 TB por unidad
+**HDD datacenter: decenas o incluso más de 100 TB por unidad**
 
 Archivado masivo: podrían entrar tecnologías como DNA Storage o sistemas ópticos/holográficos, pero todavía no como almacenamiento normal de usuario.
 
-4) ¿Qué es el límite de Shannon?
+### 4) ¿Qué es el límite de Shannon?
 
-El límite de Shannon indica la máxima cantidad de información que puede transmitirse o almacenarse de forma fiable en un canal con un cierto ancho de banda y con ruido. En términos simples: aunque mejores la tecnología, hay un punto en que el ruido y las interferencias impiden seguir aumentando indefinidamente la cantidad de información útil.
+El **límite de Shannon** indica la máxima cantidad de información que puede transmitirse o almacenarse de forma fiable en un canal con un cierto ancho de banda y con ruido. En términos simples: aunque mejores la tecnología, hay un punto en que el ruido y las interferencias impiden seguir aumentando indefinidamente la cantidad de información útil.
 
-5) Factores que determinan el límite de Shannon
+### 5) Factores que determinan el límite de Shannon
 
 Los factores clave son:
 
-Ancho de banda disponible
+- Ancho de banda disponible
 
-Relación señal/ruido (SNR)
+- Relación señal/ruido (SNR)
 
-Nivel de ruido del sistema
+- Nivel de ruido del sistema
 
-Calidad de la codificación/corrección de errores
+- Calidad de la codificación/corrección de errores
 
-6) Cuatro dificultades principales para sobrepasarlo
+### 6) Cuatro dificultades principales para sobrepasarlo
 
-Aplicado al almacenamiento magnético y a la electrónica real, las dificultades más importantes son:
+- Aplicado al almacenamiento magnético y a la electrónica real, las dificultades más importantes son:
 
-Ruido e interferencias
+- Ruido e interferencias
 
-Límite físico al reducir el tamaño del bit
+- Límite físico al reducir el tamaño del bit
 
-Problemas de estabilidad térmica de bits muy pequeños
+- Problemas de estabilidad térmica de bits muy pequeños
 
-Dificultad de leer/escribir señales cada vez más débiles y densas
+- Dificultad de leer/escribir señales cada vez más débiles y densas
 
-En HDD modernos esto se relaciona mucho con el límite superparamagnético y con la necesidad de tecnologías como HAMR para seguir aumentando densidad.
+- En HDD modernos esto se relaciona mucho con el límite superparamagnético y con la necesidad de tecnologías como HAMR para seguir aumentando densidad.
 
 7) ¿Qué propiedad ha crecido más rápido?
 
 La propiedad que más rápido ha crecido en estas décadas ha sido la capacidad, especialmente por:
 
-aumento de densidad de grabación en HDD,
+- aumento de densidad de grabación en HDD,
 
-apilamiento 3D NAND en SSD,
+- apilamiento 3D NAND en SSD,
 
-y mejora de la fabricación de chips.
+- mejora de la fabricación de chips.
 
 La velocidad ha mejorado mucho, pero la capacidad ha crecido más de forma más espectacular.
 
 Ley de Moore
-8) ¿Qué es la Ley de Moore?
+
+### 8) ¿Qué es la Ley de Moore?
 
 La Ley de Moore es la observación de que el número de transistores en un chip integrado tendía a duplicarse aproximadamente cada dos años. No es una ley física, sino una tendencia histórica de la industria.
 
-9) Tabla de transistores aproximados
+### 9) Tabla de transistores aproximados
 Año	Transistores aproximados
 1971	2.300
 1982	134.000
 1993	3.100.000
 2006	291.000.000
 2020	39.000.000.000
-10) ¿Qué hecho hizo que la Ley de Moore se disparara y cuándo?
+
+### 10) ¿Qué hecho hizo que la Ley de Moore se disparara y cuándo?
 
 Lo que la disparó fue, sobre todo, la industrialización del circuito integrado y después la expansión de la tecnología MOS y de la fotolitografía cada vez más fina, especialmente desde los años 60–70. Gordon Moore señaló como factores clave la adopción de MOS, el aumento del tamaño de los chips con mejores rendimientos de fabricación y la reducción continua de las dimensiones mínimas.
 
-11) ¿Qué tamaño tenían antes los transistores y qué relación hay con los actuales?
+### 11) ¿Qué tamaño tenían antes los transistores y qué relación hay con los actuales?
 
-Como referencia clara, el Intel 4004 de 1971 usaba un proceso de 10 micrómetros (10 µm). Hoy se habla de nodos de 2 nm en prototipos avanzados. Eso significa, a nivel lineal, una reducción de unas 5.000 veces; dicho al revés, 2 nm es solo el 0,02% de 10 µm. Si lo miras por superficie, el salto es muchísimo mayor todavía.
+Como referencia clara, el Intel 4004 de 1971 usaba un proceso de 10 micrómetros (10 µm). Hoy se habla de nodos de 2 nm en prototipos avanzados. 
+Eso significa, a nivel lineal, una reducción de unas 5.000 veces; dicho al revés, 2 nm es solo el 0,02% de 10 µm. 
+Si lo miras por superficie, el salto es muchísimo mayor todavía.
 
-12) ¿Qué tamaño tendría un disco de 1 Tb si los transistores fueran del tamaño anterior?
+### 12) ¿Qué tamaño tendría un disco de 1 Tb si los transistores fueran del tamaño anterior?
 
 Aquí hay que contestar con cuidado: no se puede calcular de forma exacta porque la capacidad de un disco no depende solo del tamaño del transistor, sino también de la densidad del medio de almacenamiento, del cabezal, de la electrónica de control y del sistema de codificación.
 
-Como aproximación didáctica:
+**Como aproximación didáctica:**
 
-si la electrónica integrada tuviera tamaños de hace 1971, sería enorme comparada con la actual;
+- si la electrónica integrada tuviera tamaños de hace 1971, sería enorme comparada con la actual;
 
-la miniaturización de transistores ha sido una condición clave para controlar y gestionar almacenamientos masivos modernos;
+- la miniaturización de transistores ha sido una condición clave para controlar y gestionar almacenamientos masivos modernos;
 
-en un SSD, mantener la misma capacidad con transistores muchísimo mayores implicaría dispositivos físicamente descomunales.
+- en un SSD, mantener la misma capacidad con transistores muchísimo mayores implicaría dispositivos físicamente descomunales.
 
 13) ¿Qué tamaño físico tendría un sistema para almacenar 1 TB con tecnología de HDD de hace décadas?
 
 El IBM RAMAC de 1956 almacenaba unos 5 millones de caracteres de 6 bits, aproximadamente del orden de unos pocos MB, en una unidad del tamaño de grandes armarios/refrigeradores. Si tomas la cifra popular aproximada de 5 MB, para llegar a 1 TB necesitarías unas 200.000 unidades equivalentes. Eso no sería “un disco”, sino prácticamente un edificio o varios pabellones llenos de armarios de almacenamiento.
 
-🔴 Ejercicio 2. Limpieza de disco / Defraggler
+### 🔴 Ejercicio 2. Limpieza de disco / Defraggler
+
 Qué pondrías en la práctica
 Pasos
 
@@ -138,11 +122,11 @@ Abrir Defraggler
 
 Seleccionar unidad C:
 
-Analizar
+- Analizar
 
-Elegir limpieza si procede
+- Elegir limpieza si procede
 
-Desfragmentar
+- Desfragmentar
 
 Hacer captura de:
 
@@ -174,13 +158,13 @@ Información del disco (capacidad, libre, sistema de archivos)
 
 Normalmente no se pueden desfragmentar fácilmente algunos archivos del sistema en uso, porque Windows los tiene bloqueados mientras el sistema está funcionando. Entre ellos suelen estar:
 
-archivos de sistema críticos,
+- archivos de sistema críticos,
 
-algunos metadatos del sistema de archivos,
+- algunos metadatos del sistema de archivos,
 
-el archivo de hibernación,
+- el archivo de hibernación,
 
-y en ciertos casos el archivo de paginación o partes protegidas del sistema.
+- y en ciertos casos el archivo de paginación o partes protegidas del sistema.
 
 La razón es que están siendo usados por el sistema operativo y moverlos en caliente puede comprometer la estabilidad del arranque o del propio sistema.
 
