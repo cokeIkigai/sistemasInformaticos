@@ -23,7 +23,7 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
   <img src="./img/sistemas01.jpg" width="950px">
 </p>
 
-(FAT16)[./Complement/Fat16]
+[FAT16](./Complement/Fat16.md)
 ---
 
 ## 🗃 FAT32  (Windows, Linux, macOS, cámaras, consolas, TVs)
