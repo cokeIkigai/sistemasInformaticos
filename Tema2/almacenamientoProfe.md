@@ -35,45 +35,41 @@ Archivado masivo: podrían entrar tecnologías como DNA Storage o sistemas ópti
 
 El **límite de Shannon** indica la máxima cantidad de información que puede transmitirse o almacenarse de forma fiable en un canal con un cierto ancho de banda y con ruido. En términos simples: aunque mejores la tecnología, hay un punto en que el ruido y las interferencias impiden seguir aumentando indefinidamente la cantidad de información útil.
 
+¿Qué es el “ruido” en un SSD?
+En SSD el ruido NO es solo eléctrico, también es físico:
+
+- 🔋 Interferencias entre celdas
+- 🌡️ Variaciones térmicas
+- ⚡ Errores al leer cargas eléctricas
+- 🧬 Desgaste de las celdas (wear)
+
 ### 5) Factores que determinan el límite de Shannon
 
 Los factores clave son:
 
 - Ancho de banda disponible
-
 - Relación señal/ruido (SNR)
-
 - Nivel de ruido del sistema
-
 - Calidad de la codificación/corrección de errores
 
 ### 6) Cuatro dificultades principales para sobrepasarlo
 
 - Aplicado al almacenamiento magnético y a la electrónica real, las dificultades más importantes son:
-
 - Ruido e interferencias
-
 - Límite físico al reducir el tamaño del bit
-
 - Problemas de estabilidad térmica de bits muy pequeños
-
 - Dificultad de leer/escribir señales cada vez más débiles y densas
-
 - En HDD modernos esto se relaciona mucho con el límite superparamagnético y con la necesidad de tecnologías como HAMR para seguir aumentando densidad.
 
-7) ¿Qué propiedad ha crecido más rápido?
+### 7) ¿Qué propiedad ha crecido más rápido?
 
 La propiedad que más rápido ha crecido en estas décadas ha sido la capacidad, especialmente por:
 
 - aumento de densidad de grabación en HDD,
-
 - apilamiento 3D NAND en SSD,
-
 - mejora de la fabricación de chips.
 
-La velocidad ha mejorado mucho, pero la capacidad ha crecido más de forma más espectacular.
-
-Ley de Moore
+*La velocidad ha mejorado mucho, pero la capacidad ha crecido más de forma más espectacular.*
 
 ### 8) ¿Qué es la Ley de Moore?
 
