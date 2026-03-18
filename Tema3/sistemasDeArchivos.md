@@ -46,7 +46,7 @@ En una partición FAT32 suele haber estas zonas:
 
 * **Boot Sector / BPB**
 * **FSInfo**
-* **FAT #1 y FAT #2**
+* **FAT duplicado (FAT1 y FAT2)**
 * **Zona de datos**
 
 ---
@@ -91,9 +91,9 @@ Sirve para saber cuántos clusters libres hay en el sistema. Debe recorrer toda 
 
 ---
 
-### 🚩FAT #1 y FAT #2 (copia): 
+### 🚩FAT Duplicado  (FAT1 y FAT2): 
 
-Si la FAT principal se corrompe (apagado brusco), el sistema puede recuperar la información usando la copia. 
+Si la FAT1 principal se corrompe (apagado brusco), el sistema puede recuperar la información usando la copia. 
 Esto existe para proteger el sistema de archivos. En la **tabla FAT**, cada posición corresponde a **un cluster del disco**.  
 El valor almacenado indica **qué ocurre con ese cluster**.
 
@@ -147,7 +147,7 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 ### 🤼‍♂️ Comparación de FAT32 con otros
 
 | Comparación | Diferencia principal |
-|---|---|
+|-------------|----------------------|
 | **FAT16 vs FAT32** | FAT32 permite **muchos más clusters**, por lo que puede manejar **volúmenes mucho más grandes**. Además, el **directorio raíz no está en una posición fija** como en FAT16. |
 | **FAT32 vs exFAT** | **exFAT** está diseñado para **memorias flash modernas** y soporta **archivos mucho más grandes**, mientras que FAT32 tiene un **límite de 4 GB por archivo**. |
 | **FAT32 vs NTFS / EXT4 / APFS** | FAT32 es más simple y compatible, pero **carece de funciones avanzadas** presentes en sistemas modernos. |
@@ -157,11 +157,11 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 ### ⚒️ Funciones que FAT32 no tiene
 
 | Característica | Explicación |
-|---|---|
+|----------------|-------------|
 | Permisos / ACL | No permite definir **seguridad por usuario o grupo** |
-| Journaling | No registra cambios antes de realizarlos, por lo que es **más vulnerable a corrupción** si se apaga el sistema inesperadamente |
+| Journaling ----| No registra cambios antes de realizarlos, por lo que es **más vulnerable a corrupción** si se apaga el sistema inesperadamente |
 | Cifrado / Compresión | No tiene **cifrado ni compresión integrada** como NTFS |
-| Tolerancia a fallos | Tiene **peor recuperación ante cortes de energía o errores** |
+| Tolerancia a fallos -| Tiene **peor recuperación ante cortes de energía o errores** |
 
 ---
 
