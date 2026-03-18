@@ -29,7 +29,7 @@ $$
 
 ---
 
-## Hexadecimal
+## 🔢 Hexadecimal
 
 Pasa lo mismo que con decial pero hasta 16 en vez de 10.
 ```
