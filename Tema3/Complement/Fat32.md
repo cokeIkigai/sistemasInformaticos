@@ -127,13 +127,13 @@ Cluster siguiente = 13
 ```
 dirección = inicio_FAT + (cluster × 4)
 dirección = 00002000   + (4    ×    13) 
-Pasar (4 × 13) = 52 -> Hexadecimal 0000031
-dirección = 00002000 + 0000031 = 00002031
+Pasar (4 × 13) = 52 -> Hexadecimal 0000034
+dirección = 00002000 + 0000034 = 00002034
 -----------------------------------------
-dirección = 00002031
+dirección = 00002034
 
 TABLA FAT  
-*00002030  0d 00 00 00  *ff ff ff 0f*  00 00 00 00  00 00 00 00*
+*00002034 0d 00 00 00  00 00 00 00   00 00 00 00  *ff ff ff 0f**
 ```
 
 ```
