@@ -1,25 +1,26 @@
 # 🎂 Particiones | Montaje de volúmenes | LVM
 
-En cualquier sistema operativo, el almacenamiento no se usa directamente "tal cual" viene de
-fábrica. Antes de guardar archivos, los discos deben organizarse y dividirse en zonas
-llamadas particiones, donde se crean y montan los sistemas de archivos. Comprender este
-proceso es esencial para cualquier profesional que gestione servidores o entornos Linux, ya
-que de él depende la seguridad y la flexibilidad del almacenamiento.
+En cualquier sistema operativo, el almacenamiento no se usa directamente hay que prepararlo. 
+Antes de guardar archivos, los discos deben **organizarse** y **dividirse** en zonas llamadas particiones, donde se **crean** y **montan** los sistemas de archivos. 
+Comprender este proceso es esencial para cualquier profesional que gestione servidores o entornos Linux, ya que de él depende la seguridad y la flexibilidad del almacenamiento.
 
-<img src="./img/particiones01.jpg"></img>
+- En **Windows**, las unidades suelen identificarse con letras (C:, D:, E:).
+- En sistemas como **Linux o macOS**, todo el sistema de archivos se estructura como un árbol único, donde los dispositivos se integran bajo un mismo punto raíz (/). 
 
-En Windows, las unidades suelen identificarse con letras (C:, D:, E:), pero en sistemas Unix-like
-como Linux o macOS, todo el sistema de archivos se estructura como un árbol único, donde
-los dispositivos se integran bajo un mismo punto raíz (/). El proceso de montaje (mounting)
-consiste en asignar un sistema de archivos físico a un directorio lógico dentro de ese árbol.
-Por ejemplo:
+<div align="center"> <img src="./img/particiones02.jpg"> </div>
+
+## 🗄️ El proceso de montaje (mounting)
+
+Consiste en asignar un sistema de archivos físico a un directorio lógico dentro de ese árbol.
+
 Montar un disco externo en /mnt/disco permite acceder a sus archivos desde esa carpeta.
-Si se desmonta (umount /mnt/disco), la carpeta sigue existiendo, pero el contenido del
-disco deja de ser visible.
-Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga enorme
-flexibilidad, ya que puedes montar diferentes discos o particiones en distintas rutas sin que el
-usuario perciba una ruptura entre ellos.
+Si se desmonta (umount /mnt/disco), la carpeta sigue existiendo, pero el contenido del disco deja de ser visible.
+Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga enorme flexibilidad, ya que puedes montar diferentes discos o particiones en distintas rutas sin que el usuario perciba una ruptura entre ellos.
+
+<div align="center"> <img src="./img/particiones01.jpg"> </div>
+
 El papel del particionado
+
 Un disco físico se puede dividir en particiones para separar datos del sistema, copias de
 seguridad, o zonas específicas (por ejemplo, /home, /var, /boot). En Linux, los dispositivos se
 identifican como /dev/sda, /dev/sdb, etc., y sus particiones como /dev/sda1, /dev/sda2, etc.
