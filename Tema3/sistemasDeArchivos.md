@@ -126,7 +126,9 @@ FAT32 funciona como un **mapa de clusters** que indica dónde está cada parte d
 2. **Escribe el contenido del archivo** en esos clusters.
 3. En la **tabla FAT** guarda la **cadena de clusters** que forman el archivo.
 
+```
 Cluster 120 → 121, Cluster 121 → 122, Cluster 122 → EOF
+```
 
 ---
 
