@@ -15,16 +15,35 @@ Consiste en asignar un sistema de archivos físico a un directorio lógico dentr
 
 Montar un disco externo en /mnt/disco permite acceder a sus archivos desde esa carpeta.
 Si se desmonta (umount /mnt/disco), la carpeta sigue existiendo, pero el contenido del disco deja de ser visible.
+
 Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga enorme flexibilidad, ya que puedes montar diferentes discos o particiones en distintas rutas sin que el usuario perciba una ruptura entre ellos.
 
 *¿Qué es /mnt/disco y umount /mnt/disco?*
+
+- `/mnt/disco` → es una carpeta del sistema (punto de montaje)  
+- `mount` → conecta un disco a esa carpeta  
+- `umount` → desconecta ese disco de la carpeta
+
+> La carpeta no contiene los datos, solo es el “punto de acceso” al disco.
+
+### 🪟 Equivalente en Windows
+
+En Windows normalmente usamos:
+
+```text
+C:, D:, E:
+```
 
 <div align="center"> <img src="./img/particiones01.jpg"> </div>
 
 ### 📋 El papel del particionado
 
 Un disco físico se puede dividir en particiones para separar datos del sistema, copias de seguridad, o zonas específicas (/home, /var, /boot). 
-En Linux, los dispositivos se identifican como `/dev/sda`, `/dev/sdb`, y sus particiones como `/dev/sda1`, `/dev/sda2`, etc.
+
+En Linux, los dispositivos se identifican como:
+* Discos -> `/dev/sda`, `/dev/sdb`. 
+* Particiones -> `/dev/sda1`, `/dev/sda2`.
+  
 Cada partición se puede formatear con un sistema de archivos diferente (EXT4, XFS, Btrfs, etc.), lo que permite adaptar el rendimiento y la seguridad a las necesidades del sistema.
 
 ---
@@ -68,8 +87,6 @@ Estos LV pueden ampliarse, reducirse o duplicarse mediante snapshots, sin tener
 que tocar los discos físicos.
 Este modelo aporta elasticidad al almacenamiento: puedes modificar el tamaño de
 los volúmenes "en vivo", algo impensable con el particionado convencional.
-
-22
 
 Caso de Estudio
 Red Hat Enterprise Linux (RHEL)
@@ -169,38 +186,3 @@ Comprende la estructura base:
 Discos físicos 3 PV 3 VG 3 LV 3 sistema de archivos 3 montaje. Es el flujo de creación
 que siempre se debe respetar.
 
-25
-
-Mitos y Realidades
-
-o MITO: "LVM ralentiza el
-rendimiento del disco."
-3 FALSO. El impacto de LVM en el
-rendimiento es insignificante en la
-mayoría de los casos. La capa de
-abstracción añade una sobrecarga
-mínima, mientras que las ventajas en
-flexibilidad y escalabilidad compensan
-ampliamente. De hecho, en entornos SSD
-o RAID, el impacto puede ser inferior al 1%.
-
-o MITO: "Si añado un disco
-nuevo a LVM, tengo que reinstalar
-todo."
-3 FALSO. Esa es precisamente su
-fortaleza: puedes añadir un disco
-(vgextend) a un grupo de volúmenes
-existente y luego expandir un volumen
-lógico (lvextend) en caliente, sin pérdida
-de datos ni reinstalación del sistema
-operativo.
-
-Resumen Final
-Montaje = proceso de hacer un sistema de archivos accesible desde un
-directorio del sistema.
-En Linux, no existen letras de unidad, sino puntos de montaje dentro del árbol /.
-LVM crea una capa flexible entre discos físicos y sistemas de archivos.
-Permite agregar, redimensionar o eliminar volúmenes sin reinstalar.
-El archivo /etc/fstab gestiona los montajes automáticos.
-Ideal para servidores y entornos dinámicos que crecen o cambian con
-frecuencia.
