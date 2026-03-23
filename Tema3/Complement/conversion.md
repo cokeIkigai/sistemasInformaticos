@@ -55,7 +55,7 @@ $$
 
 Para pasar de decimal (base 10) a hexadecimal (base 16) se usa siempre el mismo proceso: dividir entre 16 y quedarse con los restos.
 
-*Ejemplo: Pasar 345 a decimal*
+*Ejemplo: Pasar 345 a hexadecimal*
 
 ```
 345 ÷ 16 = 21  resto 9
@@ -64,7 +64,7 @@ Para pasar de decimal (base 10) a hexadecimal (base 16) se usa siempre el mismo 
 
 Resultado: 159
 ```
-*Ejemplo: Pasar 986 a decimal*
+*Ejemplo: Pasar 986 a hexadecimal*
 ```
 986 ÷ 16 = 61   resto 10 → A
 61 ÷ 16 = 3     resto 13 → D
