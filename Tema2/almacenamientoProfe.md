@@ -1,4 +1,4 @@
-# 🧪 Ejercicios prácticos II — Resueltos
+<!-- # 🧪 Ejercicios prácticos II — Resueltos
 
 ## 🟣 Ejercicio 1. Evolución memoria y velocidad
 
@@ -316,4 +316,4 @@ más velocidad, sobre todo con el salto de HDD a SSD y después a NVMe.
 
 La capacidad ha sido la propiedad que más ha crecido, mientras que la Ley de Moore y la miniaturización del transistor han hecho posible controlar y fabricar dispositivos muchísimo más potentes y compactos. A futuro, el usuario normal seguirá dependiendo sobre todo de almacenamiento sólido, y las tecnologías experimentales quedarán primero para archivado masivo o casos muy especializados.
 
-Puedo convertirte esto en una versión para alumnos, más corta, con lenguaje más directo y formato Markdown para entregar.
+Puedo convertirte esto en una versión para alumnos, más corta, con lenguaje más directo y formato Markdown para entregar. -->
