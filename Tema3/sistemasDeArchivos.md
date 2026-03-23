@@ -147,7 +147,7 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 
 ---
 
-### 🤼‍♂️ Comparación de FAT32 con otros
+### 🤼‍♂️ Comparación de FAT32
 
 | Comparación | Diferencia principal |
 |-------------|----------------------|
@@ -157,7 +157,7 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 
 ---
 
-### ⚒️ Funciones que FAT32 no tiene
+### ⚒️ Carece 
 
 | Característica | Explicación |
 |----------------|-------------|
