@@ -194,8 +194,8 @@ A este fenómeno se le llama **fragmentación**.
 
 ## 🗃 NTFS (Windows)
 
-[NTFS](https://learn.microsoft.com/es-es/windows-server/storage/file-server/ntfs-overview)
-[NTFS](https://www.neoteo.com/es/viaje-por-la-historia-de-los-sistemas-de-archivos)
+[NTFS1](https://learn.microsoft.com/es-es/windows-server/storage/file-server/ntfs-overview)
+[NTFS2](https://www.neoteo.com/es/viaje-por-la-historia-de-los-sistemas-de-archivos)
 
 <img src="./img/nfts01.jpg" width="130px" align="right" style="margin-left: 80px;">
 
