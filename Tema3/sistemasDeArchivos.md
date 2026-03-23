@@ -147,7 +147,7 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 
 ---
 
-### 🤼‍♂️ Comparación de FAT32
+### 🤼‍♂️ Capacidad
 
 | Comparación | Diferencia principal |
 |-------------|----------------------|
@@ -168,19 +168,12 @@ Por eso **un archivo borrado puede recuperarse** si esos clusters **no se han so
 
 ---
 
-### ⛔ Limitaciones de FAT32
-
-1. **Tamaño máximo de archivo:**  4 GB − 1 byte
-2. **Tamaño de partición:** Técnicamente hasta ~2 TB, aunque muchas herramientas como Windows solo permiten formatear hasta 32 GB en FAT32 
-
----
-
 ### 🧩 Fragmentación
 
 Un archivo **no siempre se guarda en clusters consecutivos**.
-
+```
 Tenemos por ejemplo: Cluster 120 → 121 → 130 → 131
-
+```
 Esto ocurre porque **el sistema va utilizando el espacio libre disponible**.
 
 Consecuencia:
