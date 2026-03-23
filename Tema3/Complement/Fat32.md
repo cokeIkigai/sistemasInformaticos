@@ -54,8 +54,10 @@ dirección = 00002000 + 0000010 = 00002010
 -----------------------------------------
 dirección = 00002010
 
-TABLA FAT
 *00002010  14 00 00 00  00 00 00 00  32 00 00 00  00 00 00 00*
+
+En la dirección 00002010, la entrada FAT[4] ocupa los primeros 4 bytes:
+14 00 00 00
 ```
 
 En la dirección **00002010** encontramos *14 00 00 00*, pero eso está en litte endian, ppor lo que tenemos que interpretarlo:
@@ -75,7 +77,7 @@ Cluster siguiente = 20
 
 ```
 dirección = inicio_FAT + (cluster × 4)
-dirección = 00002000   + (4    ×    20) 
+dirección = 00002000   + (20    ×    4) 
 Pasar (4 × 20) = 80 -> Hexadecimal 0000050
 dirección = 00002000 + 0000050 = 00002050
 -----------------------------------------
@@ -83,6 +85,9 @@ dirección = 00002050
 
 TABLA FAT
 *00002050  0c 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00*
+
+En la dirección 00002050, la entrada FAT[20] ocupa los primeros 4 bytes:
+0c 00 00 00
 ```
 
 ```
@@ -100,7 +105,7 @@ Cluster siguiente = 12
 
 ```
 dirección = inicio_FAT + (cluster × 4)
-dirección = 00002000   + (4    ×    12) 
+dirección = 00002000   + (12    ×    4) 
 Pasar (4 × 12) = 48 -> Hexadecimal 0000030
 dirección = 00002000 + 0000030 = 00002030
 -----------------------------------------
@@ -108,6 +113,9 @@ dirección = 00002030
 
 TABLA FAT
 *00002030  0d 00 00 00  ff ff ff 0f  00 00 00 00  00 00 00 00*
+
+En la dirección 00002030, la entrada FAT[12] ocupa los primeros 4 bytes:
+0d 00 00 00
 ```
 
 ```
@@ -125,17 +133,23 @@ Cluster siguiente = 13
 
 ```
 dirección = inicio_FAT + (cluster × 4)
-dirección = 00002000   + (4    ×    13) 
+dirección = 00002000   + (15    ×    4) 
 Pasar (4 × 13) = 52 -> Hexadecimal 0000034
 dirección = 00002000 + 0000034 = 00002034
 -----------------------------------------
 dirección = 00002034
 
-TABLA FAT  
-*00002034 0d 00 00 00  00 00 00 00   00 00 00 00  *ff ff ff 0f**
+TABLA FAT
+*00002030  0d 00 00 00  ff ff ff 0f  00 00 00 00  00 00 00 00
+
+La dirección 00002034 cae dentro de esta fila, en la segunda entrada.
+Por tanto, FAT[13] = ff ff ff 0f
+
+ff ff ff 0f -> 0x0FFFFFFF -> EOF (fin de archivo)
 ```
 
 ```
-ff ff ff 0f -> EOF (fin de archivo)
+Cadena de clústeres de index.html:
+4 -> 20 -> 12 -> 13 -> EOF
 ``` 
 
