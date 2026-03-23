@@ -9,7 +9,7 @@ Comprender este proceso es esencial para cualquier profesional que gestione serv
 
 <div align="center"> <img src="./img/particiones02.jpg"> </div>
 
-## 🗄️ El proceso de montaje (mounting)
+### 🗄️ El proceso de montaje (mounting)
 
 Consiste en asignar un sistema de archivos físico a un directorio lógico dentro de ese árbol.
 
@@ -19,38 +19,34 @@ Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga
 
 <div align="center"> <img src="./img/particiones01.jpg"> </div>
 
-El papel del particionado
+### 📋 El papel del particionado
 
-Un disco físico se puede dividir en particiones para separar datos del sistema, copias de
-seguridad, o zonas específicas (por ejemplo, /home, /var, /boot). En Linux, los dispositivos se
-identifican como /dev/sda, /dev/sdb, etc., y sus particiones como /dev/sda1, /dev/sda2, etc.
-Cada partición se puede formatear con un sistema de archivos diferente (EXT4, XFS, Btrfs, etc.),
-lo que permite adaptar el rendimiento y la seguridad a las necesidades del sistema.
+Un disco físico se puede dividir en particiones para separar datos del sistema, copias de seguridad, o zonas específicas (/home, /var, /boot). 
+En Linux, los dispositivos se identifican como `/dev/sda`, `/dev/sdb`, y sus particiones como `/dev/sda1`, `/dev/sda2`, etc.
+Cada partición se puede formatear con un sistema de archivos diferente (EXT4, XFS, Btrfs, etc.), lo que permite adaptar el rendimiento y la seguridad a las necesidades del sistema.
 
-20
+---
 
-LVM: flexibilidad sobre el particionado tradicional
-En sistemas modernos, el esquema de particiones fijo tiene limitaciones. ¿Qué ocurre si el
-espacio de /home se agota pero /var tiene gigas libres? Con el sistema clásico, habría que
-reparticionar el disco, lo que implica riesgo y tiempo de inactividad.
-Ahí entra LVM (Logical Volume Manager): una capa de abstracción entre los discos físicos y
-los sistemas de archivos que ofrece una gestión mucho más flexible.
-LVM funciona agrupando los discos o particiones físicas en un grupo de volúmenes (Volume
-Group, VG). De ese grupo se crean volúmenes lógicos (Logical Volumes, LV), que se
-comportan como si fueran particiones normales, pero que pueden redimensionarse
-fácilmente, incluso en caliente, sin afectar los datos.Por ejemplo:
-Puedes tener tres discos de 1 TB cada uno, combinarlos en un solo grupo de volúmenes de
-3 TB y crear dentro volúmenes lógicos para /home, /var y /srv.
-Si /home necesita más espacio, puedes ampliarlo con el comando lvextend sin interrumpir
-el servicio.
-Este enfoque convierte la administración de discos en un proceso dinámico y escalable, ideal
-para servidores, entornos de virtualización o empresas en crecimiento.
-Ventajas de LVM
-Flexibilidad total: redimensionar particiones sin necesidad de formatear.
-Gestión avanzada: crear instantáneas (snapshots) para realizar backups o pruebas sin
+## LVM: flexibilidad sobre el particionado tradicional
+
+En sistemas modernos, el esquema de particiones fijo tiene limitaciones. ¿Qué ocurre si el espacio de /home se agota pero /var tiene gigas libres? 
+Con el sistema clásico, habría que reparticionar el disco, lo que implica riesgo y tiempo de inactividad.
+
+**Ahí entra LVM (Logical Volume Manager):** una capa de abstracción entre los discos físicos y los sistemas de archivos que ofrece una gestión mucho más flexible.
+LVM funciona agrupando los discos o particiones físicas en un grupo de volúmenes (Volume Group, VG). De ese grupo se crean volúmenes lógicos (Logical Volumes, LV), que se comportan como si fueran particiones normales, pero que pueden redimensionarse fácilmente, incluso en caliente, sin afectar los datos. 
+
+Por ejemplo:
+Puedes tener tres discos de 1 TB cada uno, combinarlos en un solo grupo de volúmenes de 3 TB y crear dentro volúmenes lógicos para /home, /var y /srv.
+Si /home necesita más espacio, puedes ampliarlo con el comando lvextend sin interrumpir el servicio.
+Este enfoque convierte la administración de discos en un proceso dinámico y escalable, ideal para servidores, entornos de virtualización o empresas en crecimiento.
+
+**Ventajas de LVM**
+
+**Flexibilidad total:** redimensionar particiones sin necesidad de formatear.
+**Gestión avanzada:** crear instantáneas (snapshots) para realizar backups o pruebas sin
 interrumpir el servicio.
-Agregación de almacenamiento: varios discos se comportan como una sola unidad.
-Extensibilidad: añadir discos nuevos sin reinstalar el sistema.
+**Agregación de almacenamiento: varios discos se comportan como una sola unidad.
+**Extensibilidad:** añadir discos nuevos sin reinstalar el sistema.
 En definitiva, LVM ofrece una gestión "modular" del almacenamiento, similar a cómo un
 arquitecto diseña un edificio con bloques que pueden ampliarse o modificarse sin derrumbar
 la estructura.
