@@ -17,6 +17,8 @@ Montar un disco externo en /mnt/disco permite acceder a sus archivos desde esa c
 Si se desmonta (umount /mnt/disco), la carpeta sigue existiendo, pero el contenido del disco deja de ser visible.
 Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga enorme flexibilidad, ya que puedes montar diferentes discos o particiones en distintas rutas sin que el usuario perciba una ruptura entre ellos.
 
+*¿Qué es /mnt/disco y umount /mnt/disco?*
+
 <div align="center"> <img src="./img/particiones01.jpg"> </div>
 
 ### 📋 El papel del particionado
