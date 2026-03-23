@@ -24,6 +24,8 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
 </p>
 
 [FAT16](./Complement/Fat16.md)
+
+
 ---
 
 ## 🗃 FAT32  (Windows, Linux, macOS, cámaras, consolas, TVs)
@@ -191,6 +193,9 @@ A este fenómeno se le llama **fragmentación**.
 ---
 
 ## 🗃 NTFS (Windows)
+
+[NTFS](https://learn.microsoft.com/es-es/windows-server/storage/file-server/ntfs-overview)
+[NTFS](https://www.neoteo.com/es/viaje-por-la-historia-de-los-sistemas-de-archivos)
 
 <img src="./img/nfts01.jpg" width="130px" align="right" style="margin-left: 80px;">
 
