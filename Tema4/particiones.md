@@ -93,7 +93,7 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
 
 ---
 
-### Caso de Estudio
+<!--### Caso de Estudio
 
 **Red Hat Enterprise Linux (RHEL)**
 
