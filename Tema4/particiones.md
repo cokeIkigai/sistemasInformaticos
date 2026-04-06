@@ -48,7 +48,7 @@ Cada partición se puede formatear con un sistema de archivos diferente (EXT4, X
 
 ---
 
-## LVM: flexibilidad sobre el particionado tradicional
+### 🗄 LVM: flexibilidad sobre el particionado tradicional
 
 En sistemas modernos, el esquema de particiones fijo tiene limitaciones. ¿Qué ocurre si el espacio de /home se agota pero /var tiene gigas libres? 
 Con el sistema clásico, habría que reparticionar el disco, lo que implica riesgo y tiempo de inactividad.
@@ -73,6 +73,172 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
 * **Extensibilidad:** añadir discos nuevos sin reinstalar el sistema.
   
 *En definitiva, LVM ofrece una gestión "modular" del almacenamiento, con bloques que pueden ampliarse o modificarse.*
+
+# 🧪 Actividad ampliada: Investigación sobre LVM
+
+## 🎯 Objetivo  
+Comprender en profundidad cómo funciona LVM y su utilidad real en la gestión de almacenamiento.
+
+---
+
+## 🔍 Parte 1: Investigación guiada
+
+Responde de forma desarrollada (no tipo definición corta):
+
+---
+
+### **1. Definición y contexto**
+
+- ¿Qué es LVM? Explica la idea general con un ejemplo sencillo  
+- ¿Qué limitaciones tienen las particiones tradicionales?  
+- ¿En qué situaciones reales usarías LVM? (servidores, bases de datos, etc.)
+
+---
+
+### **2. Conceptos clave (explicación + ejemplo)**
+
+Explica cada uno con:
+- definición  
+- ejemplo real  
+
+- **PV (Physical Volume)**  
+- **VG (Volume Group)**  
+- **LV (Logical Volume)**  
+
+---
+
+### **3. Funcionamiento (razonamiento)**
+
+Explica el flujo completo: Disco → PV → VG → LV → Sistema de archivos
+
+
+- ¿Qué ocurre si añades un disco nuevo al sistema?  
+- ¿Qué pasaría si necesitas más espacio en un LV ya creado?
+
+---
+
+### **4. Ventajas y comparativa**
+
+- Enumera al menos **4 ventajas** de LVM  
+- Compara LVM vs particiones tradicionales en:
+  - Flexibilidad  
+  - Escalabilidad  
+  - Mantenimiento  
+
+---
+
+### **5. Caso práctico razonado**
+
+Tienes:
+- Disco 1 → 500GB  
+- Disco 2 → 500GB  
+
+Responde:
+- ¿Cómo los unirías con LVM?  
+- ¿Qué VG crearías?  
+- ¿Qué LVs podrías definir? (ej: sistema, datos, backups)  
+- ¿Qué ventaja tiene frente a usar 2 discos separados?
+
+---
+
+### **6. Investigación extra (nivel medio-alto)**
+
+- ¿Qué es un **snapshot en LVM**?  
+- ¿Para qué se usa en entornos reales?  
+- ¿Tiene alguna limitación?
+
+---
+
+## 🧠 Entrega
+
+- Documento estructurado  
+- Uso de esquemas o dibujos  
+- Lenguaje propio (no copiar/pegar)
+
+---
+
+---
+
+# 🧪 Actividad 2: Particiones vs LVM (práctica)
+
+## 🎯 Objetivo  
+Entender la diferencia entre particiones tradicionales y LVM mediante práctica o simulación.
+
+---
+
+## 🔧 Parte A: Particiones tradicionales
+
+### **Ejercicio 1**
+
+Imagina un disco de **100GB**.
+
+Define cómo lo particionarías para:
+
+- Sistema operativo → 30GB  
+- Datos → 50GB  
+- Backup → 20GB  
+
+Responde:
+
+- ¿Qué tipo de particiones crearías?  
+- ¿Qué pasaría si necesitas más espacio en “Datos”?  
+- ¿Qué limitaciones encuentras?
+
+---
+
+### **Ejercicio 2 (análisis)**
+
+- ¿Se puede ampliar una partición fácilmente?  
+- ¿Qué riesgos hay al modificar particiones?
+
+---
+
+## ⚙️ Parte B: LVM aplicado
+
+### **Ejercicio 3**
+
+Ahora con el mismo disco (100GB):
+
+Diseña el mismo esquema usando LVM:
+
+- Define:
+  - PV  
+  - VG  
+  - LVs (con tamaños)
+
+---
+
+### **Ejercicio 4 (escenario real)**
+
+El volumen de **Datos (50GB)** se queda pequeño.
+
+Responde:
+
+- ¿Qué harías en LVM?  
+- ¿Necesitas borrar algo?  
+- ¿Cómo sería el proceso?
+
+---
+
+### **Ejercicio 5 (ampliación)**
+
+Añades un nuevo disco de **100GB** al sistema.
+
+Responde:
+
+- ¿Cómo lo añadirías a LVM?  
+- ¿Qué comando o paso conceptual realizarías?  
+- ¿Cómo ampliarías un LV existente?
+
+---
+
+## 🚀 Extra (para subir nota)
+
+- Investiga la diferencia entre:
+  - LVM y RAID  
+  - LVM y particiones tradicionales  
+
+- Explica si se pueden combinar LVM y RAID
 
 ---
 
