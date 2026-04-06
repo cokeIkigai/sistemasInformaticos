@@ -78,20 +78,8 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
   
 *En definitiva, LVM ofrece una gestión "modular" del almacenamiento, con bloques que pueden ampliarse o modificarse.*
 
-[Ejercicio](../Ejercicio01.md)
----
-
-
-
----
-
-## 🚀 Extra (para subir nota)
-
-- Investiga la diferencia entre:
-  - LVM y RAID  
-  - LVM y particiones tradicionales  
-
-- Explica si se pueden combinar LVM y RAID
+[Ejercicio 1](../Ejercicio01.md)
+[Ejercicio 2](../Ejercicio02.md)
 
 ---
 
