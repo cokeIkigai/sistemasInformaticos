@@ -9,7 +9,7 @@ Comprender este proceso es esencial para cualquier profesional que gestione serv
 
 <div align="center"> <img src="./img/particiones02.jpg"> </div>
 
-### 🗄️ El proceso de montaje (mounting)
+## 🗄️ El proceso de montaje (mounting)
 
 Consiste en asignar un sistema de archivos físico a un directorio lógico dentro de ese árbol.
 
@@ -26,7 +26,7 @@ Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga
 
 > La carpeta no contiene los datos, solo es el “punto de acceso” al disco.
 
-### 🪟 Equivalente en Windows
+## 🪟 Equivalente en Windows
 
 En Windows normalmente usamos:
 
@@ -36,7 +36,7 @@ C:, D:, E:
 
 <div align="center"> <img src="./img/particiones01.jpg"> </div>
 
-### 📋 El papel del particionado
+## 📋 El papel del particionado
 
 Un disco físico se puede dividir en particiones para separar datos del sistema, copias de seguridad, o zonas específicas (/home, /var, /boot). 
 
@@ -48,7 +48,7 @@ Cada partición se puede formatear con un sistema de archivos diferente (EXT4, X
 
 ---
 
-### 🗄 LVM: flexibilidad sobre el particionado tradicional
+## 🗄 LVM: flexibilidad sobre el particionado tradicional
 
 En sistemas modernos, el esquema de particiones fijo tiene limitaciones. ¿Qué ocurre si el espacio de /home se agota pero /var tiene gigas libres? 
 Con el sistema clásico, habría que reparticionar el disco, lo que implica riesgo y tiempo de inactividad.
@@ -58,6 +58,8 @@ Con el sistema clásico, habría que reparticionar el disco, lo que implica ries
 - Una capa de abstracción entre los discos físicos y los sistemas de archivos que ofrece una gestión mucho más flexible.
 - LVM funciona agrupando los discos o particiones físicas en un grupo de volúmenes (Volume Group, VG).
 - De ese grupo se crean volúmenes lógicos (Logical Volumes, LV), que se comportan como si fueran particiones normales, pero que pueden redimensionarse fácilmente, incluso en caliente, sin afectar los datos.
+
+<div align="center"> <img src="./img/lvm1.png"> </div>
 
 *Por ejemplo:*
 
@@ -71,91 +73,13 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
 * **Gestión avanzada:** crear instantáneas (snapshots) para realizar backups o pruebas sin interrumpir el servicio.
 * **Agregación de almacenamiento:** varios discos se comportan como una sola unidad.
 * **Extensibilidad:** añadir discos nuevos sin reinstalar el sistema.
+
+<div align="center"> <img src="./img/lvm2.png"  width="550px"> </div>
   
 *En definitiva, LVM ofrece una gestión "modular" del almacenamiento, con bloques que pueden ampliarse o modificarse.*
 
-# 🧪 Actividad ampliada: Investigación sobre LVM
-
-## 🎯 Objetivo  
-Comprender en profundidad cómo funciona LVM y su utilidad real en la gestión de almacenamiento.
-
 ---
 
-## 🔍 Parte 1: Investigación guiada
-
-Responde de forma desarrollada (no tipo definición corta):
-
----
-
-### **1. Definición y contexto**
-
-- ¿Qué es LVM? Explica la idea general con un ejemplo sencillo  
-- ¿Qué limitaciones tienen las particiones tradicionales?  
-- ¿En qué situaciones reales usarías LVM? (servidores, bases de datos, etc.)
-
----
-
-### **2. Conceptos clave (explicación + ejemplo)**
-
-Explica cada uno con:
-- definición  
-- ejemplo real  
-
-- **PV (Physical Volume)**  
-- **VG (Volume Group)**  
-- **LV (Logical Volume)**  
-
----
-
-### **3. Funcionamiento (razonamiento)**
-
-Explica el flujo completo: Disco → PV → VG → LV → Sistema de archivos
-
-
-- ¿Qué ocurre si añades un disco nuevo al sistema?  
-- ¿Qué pasaría si necesitas más espacio en un LV ya creado?
-
----
-
-### **4. Ventajas y comparativa**
-
-- Enumera al menos **4 ventajas** de LVM  
-- Compara LVM vs particiones tradicionales en:
-  - Flexibilidad  
-  - Escalabilidad  
-  - Mantenimiento  
-
----
-
-### **5. Caso práctico razonado**
-
-Tienes:
-- Disco 1 → 500GB  
-- Disco 2 → 500GB  
-
-Responde:
-- ¿Cómo los unirías con LVM?  
-- ¿Qué VG crearías?  
-- ¿Qué LVs podrías definir? (ej: sistema, datos, backups)  
-- ¿Qué ventaja tiene frente a usar 2 discos separados?
-
----
-
-### **6. Investigación extra (nivel medio-alto)**
-
-- ¿Qué es un **snapshot en LVM**?  
-- ¿Para qué se usa en entornos reales?  
-- ¿Tiene alguna limitación?
-
----
-
-## 🧠 Entrega
-
-- Documento estructurado  
-- Uso de esquemas o dibujos  
-- Lenguaje propio (no copiar/pegar)
-
----
 
 ---
 
