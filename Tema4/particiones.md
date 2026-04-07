@@ -1,7 +1,9 @@
 # 🎂 Particiones | Montaje de volúmenes | LVM
 
 En cualquier sistema operativo, el almacenamiento no se usa directamente hay que prepararlo. 
+
 Antes de guardar archivos, los discos deben **organizarse** y **dividirse** en zonas llamadas particiones, donde se **crean** y **montan** los sistemas de archivos. 
+
 Comprender este proceso es esencial para cualquier profesional que gestione servidores o entornos Linux, ya que de él depende la seguridad y la flexibilidad del almacenamiento.
 
 - En **Windows**, las unidades suelen identificarse con letras (C:, D:, E:).
@@ -14,6 +16,7 @@ Comprender este proceso es esencial para cualquier profesional que gestione serv
 Consiste en asignar un sistema de archivos físico a un directorio lógico dentro de ese árbol.
 
 Montar un disco externo en /mnt/disco permite acceder a sus archivos desde esa carpeta.
+
 Si se desmonta (umount /mnt/disco), la carpeta sigue existiendo, pero el contenido del disco deja de ser visible.
 
 Cada punto de montaje es una "ventana" hacia un sistema de archivos. Esto otorga enorme flexibilidad, ya que puedes montar diferentes discos o particiones en distintas rutas sin que el usuario perciba una ruptura entre ellos.
