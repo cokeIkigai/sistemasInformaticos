@@ -81,11 +81,6 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
   
 *En definitiva, LVM ofrece una gestión "modular" del almacenamiento, con bloques que pueden ampliarse o modificarse.*
 
-[Ejercicio 1](../Ejercicio01.md)
-[Ejercicio 2](../Ejercicio02.md)
-
----
-
 **Descripción del diagrama:**
 
 - Los discos físicos se dividen en particiones y se inicializan como volúmenes físicos (PVs).
@@ -93,6 +88,10 @@ Este enfoque convierte la administración de discos en un proceso dinámico y es
 - A partir del VG se crean Logical Volumes (LVs), que se formatean y montan como particiones tradicionales.
 - Estos LV pueden ampliarse, reducirse o duplicarse mediante snapshots, sin tener que tocar los discos físicos.
 - Este modelo aporta elasticidad al almacenamiento: puedes modificar el tamaño de los volúmenes "en vivo", algo impensable con el particionado convencional.
+
+[Ejercicio 1](./Ejercicio01.md)
+
+[Ejercicio 2](./Ejercicio02.md)
 
 ---
 
