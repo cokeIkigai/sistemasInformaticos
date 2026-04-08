@@ -249,7 +249,7 @@ Uso recomendado: estaciones de trabajo y servidores Windows.
 
 ---
 
-## 🗃 EXT4 (Linux) ![EXT4](https://docs.redhat.com/es/documentation/red_hat_enterprise_linux/8/html/managing_file_systems/the-ext4-file-system_overview-of-available-file-systems)
+## 🗃 EXT4 (Linux) [EXT4](https://docs.redhat.com/es/documentation/red_hat_enterprise_linux/8/html/managing_file_systems/the-ext4-file-system_overview-of-available-file-systems)
 EXT4 es uno de los sistemas de archivos más utilizados en `GNU/Linux`. Prioriza estabilidad y rendimiento constante.
 
 Características principales:
@@ -265,7 +265,7 @@ Uso recomendado: entornos Linux generales, servidores y estaciones de desarrollo
 
 ---
 
-## 🗃 APFS (Apple) ![APFS](https://support.apple.com/es-us/guide/disk-utility/dsku19ed921c/mac)
+## 🗃 APFS (Apple) [APFS](https://support.apple.com/es-us/guide/disk-utility/dsku19ed921c/mac)
 APFS es el sistema de archivos moderno de Apple, optimizado para SSD y NVMe.
 
 Características principales:
@@ -281,7 +281,7 @@ Uso recomendado: macOS y dispositivos Apple, especialmente en unidades SSD.
 
 ---
 
-## 🗃 ZFS y Btrfs: nueva generación [ZFS](https://docs.oracle.com/cd/E19253-01/820-2314/gbscy/index.html) 
+## 🗃 ZFS y Btrfs: nueva generación [ZFS](https://docs.oracle.com/cd/E19253-01/820-2314/gbscy/index.html) [Btrfs](https://recoverhdd.es/blog/btrfs-file-system.html)
 
 **ZFS y Btrfs** representan una `evolución` al integrar sistema de archivos y gestión de volúmenes en una sola capa. Ambos utilizan `Copy-on-Write` y `checksums` para detectar corrupción silenciosa.
 
