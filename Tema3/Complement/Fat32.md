@@ -133,7 +133,7 @@ Cluster siguiente = 13
 
 ```
 dirección = inicio_FAT + (cluster × 4)
-dirección = 00002000   + (15    ×    4) 
+dirección = 00002000   + (13    ×    4) 
 Pasar (4 × 13) = 52 -> Hexadecimal 0000034
 dirección = 00002000 + 0000034 = 00002034
 -----------------------------------------
