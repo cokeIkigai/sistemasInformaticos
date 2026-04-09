@@ -1,139 +1,180 @@
-# PARTICIONES
+# 🟢 Particiones vs LVM (modo exploración)
 
-## Ejercicio práctico 1 (manos a la obra)
-
-Crear las particiones del ejercicio:
-
-```
-sudo fdisk /dev/sdb
-```
-
-Dentro de fdisk:
-
-n → nueva partición
-
-Crear 3 particiones:
-- 300MB (simula 30GB)
-- 500MB
-- 200MB
-
-p → ver tabla
-
-w → guardar
+## Objetivo
+Configurar almacenamiento en Linux y resolver un problema real de falta de espacio.
+Debes investigar, probar y decidir qué comandos son lo que hay que utilizar.
 
 ---
 
-## Ejercicio práctico 2 (formateo y montaje)
 
-Formatear:
+## 🔹 Diseña el disco
 
-```
-sudo mkfs.ext4 /dev/sdb1
-sudo mkfs.ext4 /dev/sdb2
-sudo mkfs.ext4 /dev/sdb3
-```
+Dispones de un disco vacío (`/dev/sdb`).
 
-Montar:
-```
-sudo mkdir /mnt/os /mnt/datos /mnt/backup
+Debes:
 
-sudo mount /dev/sdb1 /mnt/os
-sudo mount /dev/sdb2 /mnt/datos
-sudo mount /dev/sdb3 /mnt/backup
-```
+- Crear 3 particiones:
+  - Sistema → 300MB (1/3 total)
+  - Datos → 500MB (1/2 total)
+  - Backup → 200MB (1/3 total)
 
-Comprobar:
-```
-df -h
-```
+Se debe guardar en tu documento de entrega lo siguiente:
+
+- Esquema de particiones (tabla o dibujo o captura)
+- Comandos utilizados
+- Captura de `lsblk` o `fdisk -l`
+
 ---
 
-## Ejercicio práctico 3 (llenar y provocar problema)
+## 🔹Preparar el sistema
 
-**Simular uso real:**
-```
-sudo dd if=/dev/zero of=/mnt/datos/archivo_grande bs=1M count=400
-```
+1. Formatear las particiones creadas anterioremente
+2. Montarlas en:
+  - `/mnt/os`
+  - `/mnt/datos`
+  - `/mnt/backup`
+
+Se debe guardar en tu documento de entrega lo siguiente:
+- Comandos utilizados
+- Captura de `df -h`
+
 ---
 
-## Ejercicio práctico 4 (dolor real 😈)
+## 🔹Simular uso real
 
-Plantearles:
+Genera datos dentro de `/mnt/datos` hasta casi llenarlo.
 
-👉 “Ahora DATOS necesita más espacio”
+### 💡 Pista:
+- Existe un comando en Linux que permite generar archivos grandes rápidamente
 
-Que intenten:
+### 📌 Entrega:
+- Comando usado
+- Estado final del disco (`df -h`)
 
-¿pueden coger espacio de backup?
-¿pueden ampliar sin borrar?
+---
 
-👉 Que prueben (y fallen):
+## 🧩 Reto 4: Problema real
 
-sudo fdisk /dev/sdb
+👉 El volumen `/mnt/datos` se queda sin espacio.
 
-Conclusión práctica:
+Debes intentar:
 
-No es flexible
-Riesgo de pérdida de datos
-Muy limitado
-⚙️ PARTE 2 — LVM (aquí viene la magia)
+- Aumentar su tamaño usando el espacio de backup
 
-👉 Borrar particiones anteriores (o usar otro disco /dev/sdc)
+### ❓ Preguntas:
+- ¿Has podido hacerlo sin perder datos?
+- ¿Qué pasos serían necesarios?
+- ¿Qué riesgos hay?
 
-## Ejercicio práctico 5 (crear LVM)
+### 📌 Entrega:
+- Explicación (no solo comandos)
+- Conclusión sobre particiones tradicionales
 
-1. Crear PV
+---
 
-```
-sudo pvcreate /dev/sdb
-```
+# 🔹 PARTE 2 — LVM (resuelve el problema)
 
-2. Crear VG
+## 🧩 Reto 5: Nuevo diseño con LVM
 
-```  
-sudo vgcreate mi_vg /dev/sdb
-```
+Usando el mismo disco (o uno nuevo):
 
-3. Crear LVs
+Debes:
 
-```
-sudo lvcreate -L 300M -n lv_os mi_vg
-sudo lvcreate -L 500M -n lv_datos mi_vg
-sudo lvcreate -L 200M -n lv_backup mi_vg
-```
+- Crear un sistema LVM con:
+  - 1 PV
+  - 1 VG
+  - 3 LVs (mismos tamaños que antes)
 
-## Ejercicio práctico 6 (formatear y montar)
+### 📌 Entrega:
+- Esquema:
+  - PV → VG → LV
+- Comandos utilizados
+- Salida de `lvdisplay` o `lsblk`
 
-```js
-sudo mkfs.ext4 /dev/mi_vg/lv_os
-sudo mkfs.ext4 /dev/mi_vg/lv_datos
-sudo mkfs.ext4 /dev/mi_vg/lv_backup
+---
 
-sudo mount /dev/mi_vg/lv_os /mnt/os
-sudo mount /dev/mi_vg/lv_datos /mnt/datos
-sudo mount /dev/mi_vg/lv_backup /mnt/backup
-```
+## 🧩 Reto 6: Preparación
 
-## Ejercicio práctico 7 (mismo problema… distinta solución)
+Debes:
 
-👉 Volver a llenar /mnt/datos
-```
-sudo dd if=/dev/zero of=/mnt/datos/archivo_grande bs=1M count=450
-```
-🚀 Ejercicio clave (lo potente)
+- Formatear y montar los LVs igual que antes
 
-👉 “DATOS necesita más espacio”
+### 📌 Entrega:
+- Evidencia de montaje (`df -h`)
 
-SIN borrar nada:
-```
-sudo lvextend -L +200M /dev/mi_vg/lv_datos
-```
-Y luego:
+---
 
-```
-sudo resize2fs /dev/mi_vg/lv_datos
-```
-👉 Comprobar:
-```
-df -h
-```
+## 🧩 Reto 7: Mismo problema
+
+Llena `/mnt/datos` otra vez hasta que esté casi completo.
+
+---
+
+## 🧩 Reto 8: Resolver sin romper nada
+
+👉 Ahora debes ampliar `/mnt/datos`
+
+### ⚠️ Condiciones:
+- ❌ No puedes borrar datos  
+- ❌ No puedes recrear el sistema desde cero  
+- ✅ Debes usar LVM  
+
+### 📌 Entrega:
+- Comandos usados
+- Resultado final
+- Explicación de qué ha pasado internamente
+
+---
+
+# 🔥 PARTE 3 — NIVEL PRO
+
+## 🧩 Reto 9: Añadir nuevo disco
+
+Se añade `/dev/sdc` al sistema.
+
+Debes:
+
+- Integrarlo en el sistema LVM
+- Usarlo para ampliar `/mnt/datos`
+
+### ❓ Preguntas:
+- ¿Qué ventaja aporta esto frente a particiones?
+- ¿Qué capa estás modificando (PV, VG o LV)?
+
+### 📌 Entrega:
+- Comandos utilizados
+- Explicación breve
+
+---
+
+# 🧠 REFLEXIÓN FINAL (obligatoria)
+
+Responde:
+
+1. ¿Qué sistema es más flexible? ¿por qué?
+2. ¿Dónde has tenido más riesgo de pérdida de datos?
+3. ¿Qué pasaría en un servidor real?
+4. Explica con tus palabras qué es LVM (sin copiar definiciones)
+
+---
+
+# 💡 RETO INICIAL (opcional, nivel avanzado)
+
+Solo con este enunciado:
+
+> “Tienes un disco de 1GB.  
+> Necesitas organizarlo para sistema, datos y copias de seguridad.  
+> Además, debes poder ampliar ‘datos’ en el futuro sin perder información.”
+
+👉 Diseña la solución SIN comandos al inicio.
+
+Luego ejecútala.
+
+---
+
+# 🎓 OBJETIVO REAL DE LA PRÁCTICA
+
+- Pensar antes de ejecutar  
+- Equivocarse de forma controlada  
+- Entender el problema real del almacenamiento  
+- Descubrir por qué existe LVM  
