@@ -1,13 +1,14 @@
-# 🟢 Particiones vs LVM (modo exploración)
+# 📕 Particiones vs LVM (modo exploración)
 
-## Objetivo
+**Objetivo**
+
 Configurar almacenamiento en Linux y resolver un problema real de falta de espacio.
 Debes investigar, probar y decidir qué comandos son lo que hay que utilizar.
 
 ---
 
 
-## 🔹 Diseña el disco
+### 1. Diseña el disco
 
 Dispones de un disco vacío (`/dev/sdb`).
 
@@ -26,7 +27,7 @@ Se debe guardar en tu documento de entrega lo siguiente:
 
 ---
 
-## 🔹Preparar el sistema
+## 2. Preparar el sistema
 
 1. Formatear las particiones creadas anterioremente
 2. Montarlas en:
@@ -40,38 +41,27 @@ Se debe guardar en tu documento de entrega lo siguiente:
 
 ---
 
-## 🔹Simular uso real
+## 3. Simular uso real
 
 Genera datos dentro de `/mnt/datos` hasta casi llenarlo.
 
-### 💡 Pista:
-- Existe un comando en Linux que permite generar archivos grandes rápidamente
-
-### 📌 Entrega:
+Se debe guardar en tu documento de entrega lo siguiente:
 - Comando usado
 - Estado final del disco (`df -h`)
 
 ---
 
-## 🧩 Reto 4: Problema real
+## 4. Problema real
 
-👉 El volumen `/mnt/datos` se queda sin espacio.
+El volumen `/mnt/datos` se queda sin espacio. Debes intentar aumentar su tamaño usando el espacio de backup
 
-Debes intentar:
-
-- Aumentar su tamaño usando el espacio de backup
-
-### ❓ Preguntas:
 - ¿Has podido hacerlo sin perder datos?
 - ¿Qué pasos serían necesarios?
 - ¿Qué riesgos hay?
-
-### 📌 Entrega:
-- Explicación (no solo comandos)
 - Conclusión sobre particiones tradicionales
 
 ---
-
+<!--
 # 🔹 PARTE 2 — LVM (resuelve el problema)
 
 ## 🧩 Reto 5: Nuevo diseño con LVM
