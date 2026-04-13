@@ -1,4 +1,4 @@
-📊 Comparativa de sistemas de archivos
+## 📊 Comparativa de sistemas de archivos
 |Característica	|FAT32	|exFAT	|NTFS	|EXT4	|APFS	|ZFS	|Btrfs|
 |---|---|---|---|---|---|---|---|
 |Tipo	|Básico	|Básico moderno	|Journaling	|Journaling	|CoW	|CoW	|CoW|
