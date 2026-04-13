@@ -5,21 +5,21 @@ Te encargan analizar qué sistema de archivos conviene en cada caso y detectar r
 
 La empresa tiene estas necesidades:
 
-- PC de administración con Windows
+- **PC de administración con Windows**
   - Guarda documentos, PDFs, hojas Excel y datos sensibles.
   - Hay varios usuarios en el mismo equipo.
   - Quieren permisos por usuario y cifrado.
-- Servidor Linux de desarrollo
+- **Servidor Linux de desarrollo**
   - Guarda proyectos, bases de datos de pruebas y logs.
   - Necesitan estabilidad y buen rendimiento.
   - No quieren complicarse demasiado.
-- MacBook del diseñador
+- **MacBook del diseñador**
   - Trabaja con SSD.
   - Necesita seguridad, rapidez y copias rápidas del sistema.
-- NAS de copias de seguridad
+- **NAS de copias de seguridad**
   - Guarda backups de máquinas virtuales y carpetas compartidas.
   - Lo más importante es detectar corrupción silenciosa y poder recuperar datos.
-- Pendrive para intercambiar archivos
+- **Pendrive para intercambiar archivos**
   - Se conecta en Windows, Linux, macOS, televisores y consolas.
   - A veces meten vídeos grandes de más de 4 GB.
 
