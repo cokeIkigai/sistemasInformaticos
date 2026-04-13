@@ -23,7 +23,7 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
   <img src="./img/sistemas01.jpg" width="950px">
 </p>
 
-[FAT16](./Complement/Fat16.md)
+[FS](./.md)
 
 
 ---
@@ -35,7 +35,7 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
 - **FAT**: File Allocation Table (Tabla de Asignación de Archivos).
 - Es una **tabla** o índice que **GUARDA** el sistema para saber en qué partes del disco está almacenado cada archivo.
 - En lugar de guardar un archivo en un único lugar continuo, el sistema puede dividirlo en varios **clusters** (bloques del disco).
-- La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer.
+- La FAT es la estructura que registra qué bloques pertenecen a cada archivo y en qué orden se deben leer. [FAT16](./Complement/Fat16.md)
 
 <p align="left">
   <img src="./img/fat32tabla.PNG" width="750px">
