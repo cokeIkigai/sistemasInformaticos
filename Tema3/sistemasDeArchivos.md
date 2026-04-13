@@ -23,7 +23,7 @@ Cada sistema tiene objetivos distintos: **COMPATIBILIDAD**, **ESTABILIDAD**, **O
   <img src="./img/sistemas01.jpg" width="950px">
 </p>
 
-[FS](.comparativaFS.md)
+[FS](./comparativaFS.md)
 
 ---
 
