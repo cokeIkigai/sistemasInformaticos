@@ -20,8 +20,8 @@ La empresa tiene estas necesidades:
   - Guarda backups de máquinas virtuales y carpetas compartidas.
   - Lo más importante es detectar corrupción silenciosa y poder recuperar datos.
 - Pendrive para intercambiar archivos
- - Se conecta en Windows, Linux, macOS, televisores y consolas.
- - A veces meten vídeos grandes de más de 4 GB.
+  - Se conecta en Windows, Linux, macOS, televisores y consolas.
+  - A veces meten vídeos grandes de más de 4 GB.
 
 ## Tarea principal
 
