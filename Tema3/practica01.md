@@ -1,4 +1,4 @@
-# Ejercicio práctico nuevo: “Forense de almacenamiento en una empresa”
+# Ejercicio: “Forense de almacenamiento en una empresa”
 
 Imaginaos que trabajas como técnico/a junior de sistemas en una pequeña empresa que tiene varios equipos y servidores.
 Te encargan analizar qué sistema de archivos conviene en cada caso y detectar riesgos reales.
@@ -23,13 +23,11 @@ La empresa tiene estas necesidades:
   - Se conecta en Windows, Linux, macOS, televisores y consolas.
   - A veces meten vídeos grandes de más de 4 GB.
 
-## Tarea principal
+## 🔹Tarea principal
 
-Debes elaborar un informe técnico comparativo proponiendo el sistema de archivos más adecuado para cada caso.
-No vale solo con poner el nombre.
-Hay que justificarlo técnicamente.
+Debes elaborar un informe técnico comparativo proponiendo el sistema de archivos más adecuado para cada caso. No vale solo con poner el nombre. Hay que justificarlo técnicamente.
 
-### Parte 1. Tabla comparativa completa
+### 🔹 Parte 1. Tabla comparativa completa
 
 Completa estemodelo de tabla, en caso de ser pequeña, utilizar excel para completarla.
 
@@ -45,7 +43,7 @@ Completa estemodelo de tabla, en caso de ser pequeña, utilizar excel para compl
 
 ---
 
-### Parte 2. Justificación técnica real
+### 🔹 Parte 2. Justificación técnica real
 
 Para cada uno de los 5 necesidades, escribe entre 8 y 12 líneas explicando:
 
@@ -58,7 +56,7 @@ Para cada uno de los 5 necesidades, escribe entre 8 y 12 líneas explicando:
 
 ---
 
-### Parte 3. “Corregir al técnico”
+### 🔹 Parte 3. “Corregir al técnico”
 
 En cada necesidad, imagina que un técnico ha elegido mal el sistema de archivos. Debes explicar qué fallo real aparecería.
 
@@ -72,10 +70,9 @@ Ejemplos del tipo de respuesta que se espera:
 
 ---
 
-### Parte 4. Caso práctico de incidencia
+### 🔹 Parte 4. Caso práctico de incidencia
 
-“Tras un apagón, un usuario dice que varios archivos del servidor parecen corruptos.
-Además, en el NAS de copias hay sospecha de corrupción silenciosa en algunos datos antiguos.”
+“Tras un apagón, un usuario dice que varios archivos del servidor parecen corruptos. Además, en el NAS de copias hay sospecha de corrupción silenciosa en algunos datos antiguos.”
 
 **Debes responder:**
 
@@ -89,7 +86,7 @@ Además, en el NAS de copias hay sospecha de corrupción silenciosa en algunos d
 
 ---
 
-### Parte 5. Diseño de propuesta final
+### 🔹 Parte 5. Diseño de propuesta final
 
 La empresa te pide una propuesta definitiva. Debes entregar una arquitectura breve como esta:
 
@@ -110,7 +107,7 @@ La empresa te pide una propuesta definitiva. Debes entregar una arquitectura bre
 
 ---
 
-### Parte 6. Mini parte de investigación
+### 🔹 Parte 6. Parte de investigación
 
 Busca y explica:
 
@@ -126,7 +123,7 @@ Busca y explica:
 
 ---
 
-### ENTREGA
+### 📕 ENTREGA
 
 Se realizará por grupos
 
@@ -134,9 +131,11 @@ El trabajo debe incluir:
 
 - Portada
 - Introcucción al problema que se nos plantea de forma general
-- Cada parte
-- conclusión final grupal de 8 líneas
+- Cada parte del análisis
+- Conclusión final grupal de 8 líneas
 - Formato de entrega:
     - Markdown
     - Word
     - PDF
+ 
+- Preparación de la exposición.
