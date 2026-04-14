@@ -1,6 +1,3 @@
-# Cómo hacer un snapshot en VirtualBox
-
-[Guía](https://raywoodcockslatest.wordpress.com/2018/02/20/virtualbox-snapshots/)
 
 # 💻 Ejercicio completo: Snapshot, NTFS y VirtualBox
 
@@ -133,3 +130,5 @@ Explica con tus palabras:
 - Por qué no aparece en NTFS
 - Cuándo usar snapshot
 - Cuándo usar backup
+
+  [Guía](https://raywoodcockslatest.wordpress.com/2018/02/20/virtualbox-snapshots/)
