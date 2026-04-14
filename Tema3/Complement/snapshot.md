@@ -2,33 +2,134 @@
 
 [Guía](https://raywoodcockslatest.wordpress.com/2018/02/20/virtualbox-snapshots/)
 
-* Abre **VirtualBox**. En la ventana principal verás la lista de máquinas virtuales. Selecciona la máquina de **Windows**, pero no hace falta entrar todavía.
+# 💻 Ejercicio completo: Snapshot, NTFS y VirtualBox
 
-* Con la máquina seleccionada, busca la zona donde aparecen las opciones de la máquina. Ahí debe aparecer una pestaña o apartado llamado **Snapshots** o **Instantáneas**. En algunas versiones está en la parte superior derecha y en otras puede aparecer como un botón o icono.
+## 🎯 Objetivo
+Analizar y comprender:
+- Qué es un snapshot
+- Dónde se almacena
+- Diferencias entre NTFS, VSS y VirtualBox
+- Relación con backup
 
-* Entra en **Snapshots**. Ahora pulsa en **Take Snapshot** o **Tomar instantánea**. VirtualBox te pedirá un nombre. Escribe por ejemplo:
+---
 
-`Antes de cambios`
+## 🔹 PARTE 1: Experimento con snapshot
 
-* Acepta y espera un momento. Cuando termine, verás que la instantánea ya aparece guardada.
+Crea un archivo en el escritorio llamado `datos.txt` con contenido `version1`.
 
-* Ahora puedes iniciar la máquina virtual. Una vez dentro de Windows, crea un archivo en el escritorio, por ejemplo:
+Realiza un snapshot desde VirtualBox con nombre `estado_inicial`.
 
-`archivo.txt`
+Modifica el archivo a `version2` y crea otro archivo llamado `nuevo.txt`.
 
-Escribe dentro algo como:
+Restaura el snapshot.
 
-`version1`
+¿Que ocurre con `datos.txt` tras restaurar?
+¿Que ocurre con `nuevo.txt`?
+¿Que demuestra este comportamiento?
 
-* Después apaga o deja abierta la máquina, y vuelve a VirtualBox para crear otra instantánea si quieres, o haz primero la instantánea y luego cambia el archivo. Por ejemplo, después del snapshot cambia el contenido del archivo a:
+---
 
-`version2`
+## 🔹 PARTE 2: Búsqueda dentro del sistema (trampa)
 
-* Para restaurar la instantánea, vuelve a la ventana principal de **VirtualBox**. Selecciona otra vez la máquina virtual y entra en **Snapshots**. Verás la instantánea que habías creado. Haz clic derecho sobre ella o selecciónala y pulsa **Restore** o **Restaurar**.
+Busca dentro de Windows:
 
-* VirtualBox te preguntará si quieres volver a ese estado. Acepta. Si la máquina estaba encendida, normalmente se apagará o volverá al estado guardado por la instantánea.
+- Disco C:
+- Escritorio
+- Documentos
+- Archivos de programa
 
-* Cuando vuelvas a arrancar Windows, el sistema estará exactamente como estaba en el momento en que hiciste el snapshot. Si el archivo se creó antes del snapshot, volverá a esa versión. Si el cambio se hizo después, desaparecerá al restaurar.
+¿Dónde se encuentran los snapshots?
+¿Aparecen como archivos normales?
+¿Por qué no puedes encontrarlos?
 
-* La idea importante es esta: el snapshot no lo hace NTFS, lo hace **VirtualBox** sobre la máquina completa. Por eso funciona aunque dentro tengas Windows con NTFS.
+---
 
+## 🔹 PARTE 3: Investigación fuera de la máquina virtual
+
+Busca en el PC real la carpeta de la máquina virtual.
+
+¿Dónde está ubicada la máquina virtual?
+¿Que archivos principales encuentras?
+¿Que extensión tiene el disco virtual?
+¿Existe una carpeta llamada `Snapshots`?
+¿Que tipo de archivos hay dentro?
+
+---
+
+## 🔹 PARTE 4: Análisis técnico
+
+¿Quién crea realmente el snapshot?
+¿Depende del sistema de archivos NTFS?
+¿Funciona dentro o fuera del sistema operativo?
+¿Que diferencia hay entre snapshot de VirtualBox y snapshot de ZFS/Btrfs?
+
+---
+
+## 🔹 PARTE 5: Comparación con NTFS
+
+¿NTFS tiene snapshots reales?
+¿Que es VSS (Volume Shadow Copy)?
+¿En qué se diferencia VSS de un snapshot real?
+¿Que guarda VSS frente a VirtualBox?
+
+---
+
+## 🔹 PARTE 6: Snapshot vs Backup
+
+Imagina que tienes:
+
+- Snapshot pero no backup
+- Se rompe el disco del PC
+
+¿Puedes recuperar la máquina?
+¿Por qué?
+
+Ahora imagina que tienes backup en otro disco:
+
+¿Puedes recuperar?
+¿Que diferencia clave hay?
+
+---
+
+## 🔹 PARTE 7: Funcionamiento interno
+
+Tras crear un snapshot, aparecen nuevos archivos en la carpeta de la VM.
+
+¿Que extensión tienen?
+¿Son copias completas?
+¿Que almacenan realmente?
+¿Que ocurre con el disco base tras el snapshot?
+
+---
+
+## 🔹 PARTE 8: Rendimiento y uso
+
+Crea varios snapshots y trabaja dentro de la máquina.
+
+¿Notas cambios en el rendimiento?
+¿A qué crees que se debe?
+
+---
+
+## 🔹 PARTE 9: Dibujo obligatorio
+
+Representa mediante un esquema:
+
+- PC real
+- VirtualBox
+- Disco base (.vdi)
+- Snapshots (.vdi diferenciales)
+
+Explica el flujo de datos entre ellos.
+
+---
+
+## 🔹 PARTE 10: Reflexión final
+
+Explica con tus palabras:
+
+- Qué es un snapshot
+- Dónde se guarda realmente
+- Por qué no aparece en NTFS
+- Cuándo usar snapshot
+- Cuándo usar backup
