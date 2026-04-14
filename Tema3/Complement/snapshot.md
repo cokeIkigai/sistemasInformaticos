@@ -10,7 +10,7 @@ Analizar y comprender:
 
 ---
 
-###🔹Modificación con snapshot
+###🔹 Modificación con snapshot
 
 Crea un archivo en el escritorio llamado `datos.txt` con contenido `version1`.
 
@@ -41,7 +41,7 @@ Busca dentro de Windows:
 
 ---
 
-## 🔹 PARTE 3: Investigación fuera de la máquina virtual
+### 🔹 Investigación fuera de la máquina virtual
 
 Busca en el PC real la carpeta de la máquina virtual.
 
@@ -53,7 +53,7 @@ Busca en el PC real la carpeta de la máquina virtual.
 
 ---
 
-## 🔹 PARTE 4: Análisis técnico
+### 🔹 Análisis técnico
 
 ¿Quién crea realmente el snapshot?
 ¿Depende del sistema de archivos NTFS?
@@ -62,7 +62,7 @@ Busca en el PC real la carpeta de la máquina virtual.
 
 ---
 
-## 🔹 PARTE 5: Comparación con NTFS
+### 🔹 Comparación con NTFS
 
 ¿NTFS tiene snapshots reales?
 ¿Que es VSS (Volume Shadow Copy)?
@@ -71,7 +71,7 @@ Busca en el PC real la carpeta de la máquina virtual.
 
 ---
 
-## 🔹 PARTE 6: Snapshot vs Backup
+### 🔹 Snapshot vs Backup
 
 Imagina que tienes:
 
@@ -88,7 +88,7 @@ Ahora imagina que tienes backup en otro disco:
 
 ---
 
-## 🔹 PARTE 7: Funcionamiento interno
+### 🔹 Funcionamiento interno
 
 Tras crear un snapshot, aparecen nuevos archivos en la carpeta de la VM.
 
@@ -99,7 +99,7 @@ Tras crear un snapshot, aparecen nuevos archivos en la carpeta de la VM.
 
 ---
 
-## 🔹 PARTE 8: Rendimiento y uso
+### 🔹 Rendimiento y uso
 
 Crea varios snapshots y trabaja dentro de la máquina.
 
@@ -108,20 +108,7 @@ Crea varios snapshots y trabaja dentro de la máquina.
 
 ---
 
-## 🔹 PARTE 9: Dibujo obligatorio
-
-Representa mediante un esquema:
-
-- PC real
-- VirtualBox
-- Disco base (.vdi)
-- Snapshots (.vdi diferenciales)
-
-Explica el flujo de datos entre ellos.
-
----
-
-## 🔹 PARTE 10: Reflexión final
+### 🔹 Reflexión final
 
 Explica con tus palabras:
 
