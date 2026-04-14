@@ -10,7 +10,7 @@ Analizar y comprender:
 
 ---
 
-## 🔹 PARTE 1: Experimento con snapshot
+###🔹Modificación con snapshot
 
 Crea un archivo en el escritorio llamado `datos.txt` con contenido `version1`.
 
@@ -26,7 +26,7 @@ Restaura el snapshot.
 
 ---
 
-## 🔹 PARTE 2: Búsqueda dentro del sistema (trampa)
+### 🔹 Búsqueda dentro del sistema 
 
 Busca dentro de Windows:
 
