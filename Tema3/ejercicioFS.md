@@ -1,6 +1,6 @@
 # 🧠 PREGUNTAS – SISTEMAS DE ARCHIVOS
 
-###🔹 Bloque 1: Espacio y almacenamiento
+### 🔹 Bloque 1: Espacio y almacenamiento
 
 ¿Por qué un conjunto de archivos pequeños ocupa más espacio en disco del esperado?
 
@@ -12,7 +12,7 @@
 
 ---
 
-###🔹 Bloque 2: Organización y estructura
+### 🔹 Bloque 2: Organización y estructura
 
 ¿Por qué es importante organizar archivos en carpetas?
 
@@ -22,7 +22,7 @@
 
 ---
 
-###🔹 Bloque 3: Tipos de archivos
+### 🔹 Bloque 3: Tipos de archivos
 
 ¿Dónde se encuentran la mayoría de archivos ejecutables (.exe)?
 
@@ -32,7 +32,7 @@
 
 ---
 
-###🔹 Bloque 4: Permisos y seguridad
+### 🔹 Bloque 4: Permisos y seguridad
 
 ¿Qué ocurre al intentar crear o modificar archivos en carpetas del sistema?
 
@@ -44,7 +44,7 @@
 
 ---
 
-###🔹 Bloque 5: Límites del sistema
+### 🔹 Bloque 5: Límites del sistema
 
 ¿Existe un límite en la longitud del nombre de archivos o rutas?
 
@@ -52,7 +52,7 @@
 
 ---
 
-###🔹 Bloque 6: Eliminación de archivos
+### 🔹 Bloque 6: Eliminación de archivos
 
 ¿Qué ocurre realmente cuando eliminas un archivo?
 
@@ -62,7 +62,7 @@
 
 --- 
 
-###🔹 Bloque 7: Uso del disco
+### 🔹 Bloque 7: Uso del disco
 
 ¿Cómo cambia el espacio libre al copiar archivos repetidamente?
 
@@ -72,7 +72,7 @@
 
 --- 
 
-###🔹 Bloque 8: Análisis del sistema
+### 🔹 Bloque 8: Análisis del sistema
 
 ¿Dónde se encuentran los archivos más grandes del sistema?
 
