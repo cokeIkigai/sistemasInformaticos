@@ -34,8 +34,6 @@
 
 ¿Qué tipo de archivos son, qué extensión tienen?
 
-¿Qué tipo de archivos hay dentro?
-
 ¿Qué pasa cuando borras uno de ellos?
 
 ---
